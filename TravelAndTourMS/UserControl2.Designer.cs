@@ -1,6 +1,6 @@
 ﻿namespace TravelAndTourMS
 {
-    partial class UserControl1
+    partial class UserControl2
     {
         /// <summary> 
         /// Required designer variable.
@@ -36,6 +36,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.userControl11 = new TravelAndTourMS.UserControl1();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,14 +49,14 @@
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Location = new System.Drawing.Point(65, -36);
+            this.panel1.Location = new System.Drawing.Point(19, 3);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(228, 742);
             this.panel1.TabIndex = 1;
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(65, 588);
+            this.button8.Location = new System.Drawing.Point(52, 629);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(121, 54);
             this.button8.TabIndex = 7;
@@ -64,7 +65,7 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(65, 496);
+            this.button6.Location = new System.Drawing.Point(52, 553);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(121, 54);
             this.button6.TabIndex = 5;
@@ -73,7 +74,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(65, 416);
+            this.button5.Location = new System.Drawing.Point(52, 478);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(121, 54);
             this.button5.TabIndex = 4;
@@ -82,7 +83,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(74, 335);
+            this.button4.Location = new System.Drawing.Point(52, 397);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(121, 54);
             this.button4.TabIndex = 3;
@@ -91,7 +92,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(65, 259);
+            this.button3.Location = new System.Drawing.Point(52, 318);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(121, 58);
             this.button3.TabIndex = 2;
@@ -100,30 +101,38 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(52, 174);
+            this.button2.Location = new System.Drawing.Point(52, 255);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(143, 60);
+            this.button2.Size = new System.Drawing.Size(118, 48);
             this.button2.TabIndex = 1;
             this.button2.Text = "Ticket Booking";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(52, 108);
+            this.button1.Location = new System.Drawing.Point(52, 191);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(130, 60);
+            this.button1.Size = new System.Drawing.Size(118, 48);
             this.button1.TabIndex = 0;
             this.button1.Text = "Hotel Booking";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // UserControl1
+            // userControl11
+            // 
+            this.userControl11.Location = new System.Drawing.Point(497, 587);
+            this.userControl11.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.userControl11.Name = "userControl11";
+            this.userControl11.Size = new System.Drawing.Size(8, 8);
+            this.userControl11.TabIndex = 2;
+            // 
+            // UserControl2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.userControl11);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "UserControl1";
-            this.Size = new System.Drawing.Size(359, 671);
+            this.Name = "UserControl2";
+            this.Size = new System.Drawing.Size(1210, 757);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -139,5 +148,6 @@
         private Button button3;
         private Button button2;
         private Button button1;
+        private UserControl1 userControl11;
     }
 }
