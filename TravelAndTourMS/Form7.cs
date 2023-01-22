@@ -23,5 +23,25 @@ namespace TravelAndTourMS
             Form4 employeeform = new Form4();
             employeeform.ShowDialog();
         }
+
+        private void iconButton9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void iconButton2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void iconButton2_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
