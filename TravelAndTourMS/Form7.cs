@@ -43,5 +43,19 @@ namespace TravelAndTourMS
         {
 
         }
+
+        private void iconButton4_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form4 employeeform = new Form4();
+            employeeform.ShowDialog();
+        }
+
+        private void iconButton3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form10 employeeform = new Form10();
+            employeeform.ShowDialog();
+        }
     }
 }

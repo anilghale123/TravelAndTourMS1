@@ -48,23 +48,12 @@ namespace TravelAndTourMS
         private void textBox4_TextChanged(object sender, EventArgs e)
         {
 
-            using (var path = new GraphicsPath())
-            {
-                path.AddEllipse(90, 77, textBox4.Width, textBox4.Height);
-                textBox4.Region = new Region(path);
-            }
+            
 
 
 
         }
-        private void textBox4_Paint(object sender, PaintEventArgs e)
-        {
-            using (var path = new GraphicsPath())
-            {
-                path.AddEllipse(24, 40, textBox4.Width, textBox4.Height);
-                textBox4.Region = new Region(path);
-            }
-        }
+      
 
 
         private void button2_Click(object sender, EventArgs e)
@@ -122,6 +111,11 @@ namespace TravelAndTourMS
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void rjButton1_Click(object sender, EventArgs e)
         {
 
         }
