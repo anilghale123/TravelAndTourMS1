@@ -1,6 +1,6 @@
 ﻿namespace TravelAndTourMS
 {
-    partial class login
+    partial class admin
     {
         /// <summary>
         /// Required designer variable.
@@ -28,12 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(login));
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
@@ -45,15 +44,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox1
+            // label2
             // 
-            this.textBox1.Location = new System.Drawing.Point(167, 249);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.PasswordChar = '*';
-            this.textBox1.PlaceholderText = "Enter Password";
-            this.textBox1.Size = new System.Drawing.Size(163, 37);
-            this.textBox1.TabIndex = 0;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(66, 250);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(85, 23);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "Password";
             // 
             // textBox4
             // 
@@ -64,7 +63,18 @@
             this.textBox4.PlaceholderText = "Enter UserName";
             this.textBox4.Size = new System.Drawing.Size(163, 37);
             this.textBox4.TabIndex = 4;
-            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label3.ForeColor = System.Drawing.SystemColors.Control;
+            this.label3.Location = new System.Drawing.Point(52, 86);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(262, 46);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "ADMIN LOGIN ";
             // 
             // label1
             // 
@@ -77,28 +87,15 @@
             this.label1.TabIndex = 7;
             this.label1.Text = "User NAme";
             // 
-            // label2
+            // textBox1
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(66, 250);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(85, 23);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "Password";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.ForeColor = System.Drawing.SystemColors.Control;
-            this.label3.Location = new System.Drawing.Point(106, 90);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(133, 46);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "LOGIN ";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            this.textBox1.Location = new System.Drawing.Point(167, 249);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.PasswordChar = '*';
+            this.textBox1.PlaceholderText = "Enter Password";
+            this.textBox1.Size = new System.Drawing.Size(163, 37);
+            this.textBox1.TabIndex = 0;
             // 
             // panel1
             // 
@@ -113,11 +110,10 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.ForeColor = System.Drawing.Color.Transparent;
-            this.panel1.Location = new System.Drawing.Point(509, 134);
+            this.panel1.Location = new System.Drawing.Point(576, 109);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(361, 493);
-            this.panel1.TabIndex = 11;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.panel1.TabIndex = 19;
             // 
             // iconPictureBox2
             // 
@@ -199,32 +195,24 @@
             this.materialDrawer1.HighlightWithAccent = true;
             this.materialDrawer1.IndicatorWidth = 0;
             this.materialDrawer1.IsOpen = false;
-            this.materialDrawer1.Location = new System.Drawing.Point(-312, 190);
+            this.materialDrawer1.Location = new System.Drawing.Point(-312, 176);
             this.materialDrawer1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialDrawer1.Name = "materialDrawer1";
             this.materialDrawer1.ShowIconsWhenHidden = false;
             this.materialDrawer1.Size = new System.Drawing.Size(312, 150);
-            this.materialDrawer1.TabIndex = 18;
+            this.materialDrawer1.TabIndex = 20;
             this.materialDrawer1.Text = "materialDrawer1";
             this.materialDrawer1.UseColors = false;
             // 
-            // login
+            // admin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSize = true;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1344, 785);
-            this.Controls.Add(this.materialDrawer1);
+            this.ClientSize = new System.Drawing.Size(1513, 733);
             this.Controls.Add(this.panel1);
-            this.DoubleBuffered = true;
-            this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.Name = "Form2";
-            this.Padding = new System.Windows.Forms.Padding(7, 8, 9, 0);
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "                                   ";
-            this.Load += new System.EventHandler(this.Form2_Load_1);
+            this.Controls.Add(this.materialDrawer1);
+            this.Name = "admin";
+            this.Text = "admin";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).EndInit();
@@ -235,16 +223,16 @@
 
         #endregion
 
-        private TextBox textBox1;
-        private TextBox textBox4;
-        private Label label1;
         private Label label2;
+        private TextBox textBox4;
         private Label label3;
+        private Label label1;
+        private TextBox textBox1;
         private Panel panel1;
-        private MaterialSkin.Controls.MaterialDrawer materialDrawer1;
-        private RJButton rjButton1;
-        private RJButton rjButton2;
-        private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox2;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
+        private RJButton rjButton2;
+        private RJButton rjButton1;
+        private MaterialSkin.Controls.MaterialDrawer materialDrawer1;
     }
 }

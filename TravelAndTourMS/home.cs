@@ -54,8 +54,13 @@ namespace TravelAndTourMS
         private void iconButton3_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form10 employeeform = new Form10();
+            image1 employeeform = new image1();
             employeeform.ShowDialog();
+        }
+
+        private void home_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

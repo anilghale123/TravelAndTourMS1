@@ -23,7 +23,7 @@ namespace TravelAndTourMS
                 {
                     MessageBox.Show("Password Matched");
 
-                    string query = "INSERT INTO Login  (username,passwords) VALUES ('" + textBox4.Text + "','" + textBox1.Text + "') ";
+                    string query = "INSERT INTO Login  (username,password) VALUES ('" + textBox4.Text + "','" + textBox1.Text + "') ";
                     SqlCommand cmd = new SqlCommand(query, con);
                     cmd.ExecuteNonQuery();
 

@@ -1,6 +1,6 @@
 ﻿namespace TravelAndTourMS
 {
-    partial class hotelbill
+    partial class tourbill
     {
         /// <summary>
         /// Required designer variable.

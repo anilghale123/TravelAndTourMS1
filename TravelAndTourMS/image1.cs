@@ -22,7 +22,7 @@ namespace TravelAndTourMS
         {
             SqlConnection con = new SqlConnection(@"Data Source =.\SQLEXPRESS01; Initial Catalog= TravelandTour ; Integrated Security = True ; ");
             //SqlCommand cmd = new SqlCommand("SELECT id, name, image_path, bookNow FROM images2", con);
-            SqlCommand cmd = new SqlCommand("SELECT id, package_name, Photo, bookNow FROM Table1", con);
+            SqlCommand cmd = new SqlCommand("SELECT id, package_name, price, Photo, bookNow FROM Table1", con);
 
             SqlDataAdapter sd = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
@@ -31,12 +31,16 @@ namespace TravelAndTourMS
             // dt.Columns.Add("image", Type.GetType("System.Bytes[]"));
           //  dt.Columns.Add("image", typeof(byte[]));
             dt.Columns["bookNow"].SetOrdinal(dt.Columns.Count - 1);
+           
 
             // dt.Columns.Add("image", typeof(System.Byte[]));
             foreach (DataRow drow in dt.Rows)
             {
                 // drow["image"] = File.ReadAllBytes(drow["image_path"].ToString());
-               // drow["image"] = drow["Photo"];
+                // drow["image"] = drow["Photo"];
+
+                drow["bookNow"] = "Book Now";
+
             }
 
 
@@ -58,9 +62,18 @@ namespace TravelAndTourMS
 
         private void rjButton1_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            tourbooking employeeform = new tourbooking("5000");
-            employeeform.ShowDialog();
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                int selectedRowIndex = dataGridView1.SelectedRows[0].Index;
+                string price = dataGridView1.Rows[selectedRowIndex].Cells["price"].Value.ToString();
+                this.Hide();
+                tourbooking employeeform = new tourbooking(price);
+                employeeform.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Please select a row first.");
+            }
         }
     }
 }

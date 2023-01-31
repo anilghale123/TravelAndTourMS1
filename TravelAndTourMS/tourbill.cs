@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace TravelAndTourMS
 {
-    public partial class hotelbill : Form
+    public partial class tourbill : Form
     {
-        public hotelbill()
+        public tourbill()
         {
             InitializeComponent();
         }

@@ -34,7 +34,7 @@ namespace TravelAndTourMS
             dataGridView1.RowTemplate.Height = 100;
             dataGridView1.DataSource = dt;
             DataGridViewImageColumn Pic1 = new DataGridViewImageColumn();
-            Pic1 = (DataGridViewImageColumn)dataGridView1.Columns[2];
+            Pic1 = (DataGridViewImageColumn)dataGridView1.Columns[3];
             Pic1.ImageLayout = DataGridViewImageCellLayout.Stretch;
         }
 
@@ -60,9 +60,14 @@ namespace TravelAndTourMS
 
         private void button1_Click(object sender, EventArgs e)
         {
-            cmd = new SqlCommand("INSERT INTO Table1 (package_name,Photo) VALUES (@package_name,@Photo)", con);
+            cmd = new SqlCommand("INSERT INTO Table1 (package_name,price,Photo) VALUES (@package_name,@price,@Photo)", con);
             cmd.Parameters.AddWithValue("package_name", textBox1.Text);
             MemoryStream memstr = new MemoryStream();
+
+            cmd.Parameters.AddWithValue("price", textBox2.Text);
+            //MemoryStream memstr = new MemoryStream();
+
+
             pictureBox1.Image.Save(memstr, pictureBox1.Image.RawFormat);
             cmd.Parameters.AddWithValue("Photo", memstr.ToArray());  
             con.Open();
@@ -93,16 +98,19 @@ namespace TravelAndTourMS
         {
             id1.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
             textBox1.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
-            MemoryStream ms = new MemoryStream((byte[])dataGridView1.CurrentRow.Cells[2].Value);
+            MemoryStream ms = new MemoryStream((byte[])dataGridView1.CurrentRow.Cells[3].Value);
             pictureBox1.Image = Image.FromStream(ms);
 
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            cmd = new SqlCommand("UPDATE Table1 SET package_name = @package_name, Photo = @Photo WHERE id = @id", con);
+            cmd = new SqlCommand("UPDATE Table1 SET package_name = @package_name,price = @price, Photo = @Photo WHERE id = @id", con);
             cmd.Parameters.AddWithValue("package_name", textBox1.Text);
             MemoryStream memstr = new MemoryStream();
+
+            cmd.Parameters.AddWithValue("price", textBox2.Text);
+
             pictureBox1.Image.Save(memstr, pictureBox1.Image.RawFormat);
             cmd.Parameters.AddWithValue("Photo", memstr.ToArray());
             cmd.Parameters.AddWithValue("id", id1.Text);
@@ -110,6 +118,7 @@ namespace TravelAndTourMS
             cmd.ExecuteNonQuery();
             MessageBox.Show("Package Updated ");
             load_data();
+            con.Close();
 
         }
 
@@ -124,6 +133,11 @@ namespace TravelAndTourMS
             pictureBox1.Image = null;
             textBox1.Text = "";
             id1.Text = "";
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 

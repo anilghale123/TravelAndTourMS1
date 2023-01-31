@@ -129,5 +129,54 @@ namespace TravelAndTourMS
         {
 
         }
+
+        private void printDocument2_PrintPage(object sender, PrintPageEventArgs e)
+        {
+            e.Graphics.DrawString("Tour Management System", new Font("Arial", 20, FontStyle.Bold), Brushes.Black, new Point(185, 10));
+            e.Graphics.DrawString("YOUR RECEIPT", new Font("Arial", 20, FontStyle.Bold), Brushes.Black, new Point(205, 80));
+            e.Graphics.DrawString("Name : " + Naam.Text, new Font("Arial", 20, FontStyle.Bold), Brushes.Black, new Point(185, 140));
+            e.Graphics.DrawString("Total Price : " + textBox2.Text, new Font("Arial", 20, FontStyle.Bold), Brushes.Black, new Point(185, 180));
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+            PrintPreviewDialog printPreviewDialog2 = new PrintPreviewDialog();
+            printPreviewDialog2.Document = printDocument2;
+            printPreviewDialog2.ShowDialog();
+
+            //PrintDialog printDialog2 = new PrintDialog();
+            //printDialog2.Document = printDocument2;
+
+            // printDocument2.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("Bill Paper", 285, 600);
+            //   printPreviewDialog2.ShowDialog();
+
+            //   printDocument2.Print();
+
+            /*   DialogResult result = printDialog2.ShowDialog();
+               if (result == DialogResult.OK)
+               {
+                   printDocument2.Print();
+               }   */
+        }
+
+        private void printPreviewDialog2_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+            PrintDialog printDialog2 = new PrintDialog();
+            printDialog2.Document = printDocument2;
+
+            DialogResult result = printDialog2.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                printDocument2.Print();
+            }
+
+        }
     }
 }

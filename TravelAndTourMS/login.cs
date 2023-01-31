@@ -117,7 +117,45 @@ namespace TravelAndTourMS
 
         private void rjButton1_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            register employeeform = new register();
+            employeeform.ShowDialog();
 
         }
-    }
+
+        private void rjButton2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                con.Open();
+                string query = " select count(*) from Login where username='" + textBox4.Text + "' and passwords='" + textBox1.Text + "'";
+                SqlCommand cmd = new SqlCommand(query, con);
+                int count = Convert.ToInt32(cmd.ExecuteScalar());
+                if (count > 0)
+                {
+                    MessageBox.Show("Login  Successfully");
+                    this.Hide();
+                    home employeeform = new home();
+                    employeeform.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("Login  fAILED");
+                }
+
+
+
+                con.Close();
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Error:" + ex.InnerException);
+            }
+       
+        
+        }
+            }
+    
 }

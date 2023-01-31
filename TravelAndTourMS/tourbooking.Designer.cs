@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(tourbooking));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -54,26 +53,20 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
-            this.printDocument2 = new System.Drawing.Printing.PrintDocument();
-            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
-            this.printDialog1 = new System.Windows.Forms.PrintDialog();
-            this.printPreviewDialog2 = new System.Windows.Forms.PrintPreviewDialog();
-            this.printDocument3 = new System.Drawing.Printing.PrintDocument();
-            this.printDocument4 = new System.Drawing.Printing.PrintDocument();
-            this.printDocument5 = new System.Drawing.Printing.PrintDocument();
-            this.helpProvider1 = new System.Windows.Forms.HelpProvider();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.printDialog2 = new System.Windows.Forms.PrintDialog();
+            this.printPreviewDialog4 = new System.Windows.Forms.PrintPreviewDialog();
             this.printDialog3 = new System.Windows.Forms.PrintDialog();
             this.printDocument6 = new System.Drawing.Printing.PrintDocument();
             this.printDocument7 = new System.Drawing.Printing.PrintDocument();
             this.printPreviewDialog3 = new System.Windows.Forms.PrintPreviewDialog();
             this.printDocument8 = new System.Drawing.Printing.PrintDocument();
-            this.printDocument9 = new System.Drawing.Printing.PrintDocument();
-            this.printDocument10 = new System.Drawing.Printing.PrintDocument();
             this.printDocument11 = new System.Drawing.Printing.PrintDocument();
-            this.printPreviewDialog4 = new System.Windows.Forms.PrintPreviewDialog();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            this.printDocument9 = new System.Drawing.Printing.PrintDocument();
+            this.printDocument2 = new System.Drawing.Printing.PrintDocument();
+            this.button3 = new System.Windows.Forms.Button();
+            this.printPreviewDialog2 = new System.Windows.Forms.PrintPreviewDialog();
+            this.printPreviewDialog5 = new System.Windows.Forms.PrintPreviewDialog();
+            this.button4 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -311,41 +304,15 @@
             // 
             this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
             // 
-            // printDocument2
+            // printPreviewDialog4
             // 
-            this.printDocument2.OriginAtMargins = true;
-            // 
-            // printPreviewDialog1
-            // 
-            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
-            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
-            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
-            this.printPreviewDialog1.Enabled = true;
-            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
-            this.printPreviewDialog1.Name = "printPreviewDialog1";
-            this.printPreviewDialog1.Visible = false;
-            // 
-            // printDialog1
-            // 
-            this.printDialog1.UseEXDialog = true;
-            // 
-            // printPreviewDialog2
-            // 
-            this.printPreviewDialog2.AutoScrollMargin = new System.Drawing.Size(0, 0);
-            this.printPreviewDialog2.AutoScrollMinSize = new System.Drawing.Size(0, 0);
-            this.printPreviewDialog2.ClientSize = new System.Drawing.Size(400, 300);
-            this.printPreviewDialog2.Enabled = true;
-            this.printPreviewDialog2.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog2.Icon")));
-            this.printPreviewDialog2.Name = "printPreviewDialog2";
-            this.printPreviewDialog2.Visible = false;
-            // 
-            // errorProvider1
-            // 
-            this.errorProvider1.ContainerControl = this;
-            // 
-            // printDialog2
-            // 
-            this.printDialog2.UseEXDialog = true;
+            this.printPreviewDialog4.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog4.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog4.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog4.Enabled = true;
+            this.printPreviewDialog4.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog4.Icon")));
+            this.printPreviewDialog4.Name = "printPreviewDialog4";
+            this.printPreviewDialog4.Visible = false;
             // 
             // printDialog3
             // 
@@ -362,23 +329,69 @@
             this.printPreviewDialog3.UseAntiAlias = true;
             this.printPreviewDialog3.Visible = false;
             // 
-            // printPreviewDialog4
+            // printPreviewDialog1
             // 
-            this.printPreviewDialog4.AutoScrollMargin = new System.Drawing.Size(0, 0);
-            this.printPreviewDialog4.AutoScrollMinSize = new System.Drawing.Size(0, 0);
-            this.printPreviewDialog4.ClientSize = new System.Drawing.Size(400, 300);
-            this.printPreviewDialog4.Enabled = true;
-            this.printPreviewDialog4.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog4.Icon")));
-            this.printPreviewDialog4.Name = "printPreviewDialog4";
-            this.helpProvider1.SetShowHelp(this.printPreviewDialog4, true);
-            this.printPreviewDialog4.Visible = false;
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
             // 
-            // Form9
+            // printDocument2
+            // 
+            this.printDocument2.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument2_PrintPage);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(831, 546);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(119, 59);
+            this.button3.TabIndex = 28;
+            this.button3.Text = "Preview";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // printPreviewDialog2
+            // 
+            this.printPreviewDialog2.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog2.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog2.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog2.Enabled = true;
+            this.printPreviewDialog2.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog2.Icon")));
+            this.printPreviewDialog2.Name = "printPreviewDialog2";
+            this.printPreviewDialog2.Visible = false;
+            this.printPreviewDialog2.Load += new System.EventHandler(this.printPreviewDialog2_Load);
+            // 
+            // printPreviewDialog5
+            // 
+            this.printPreviewDialog5.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog5.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog5.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog5.Enabled = true;
+            this.printPreviewDialog5.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog5.Icon")));
+            this.printPreviewDialog5.Name = "printPreviewDialog5";
+            this.printPreviewDialog5.Visible = false;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(987, 541);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(119, 59);
+            this.button4.TabIndex = 29;
+            this.button4.Text = "Save";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // tourbooking
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.ClientSize = new System.Drawing.Size(1552, 791);
+            this.ClientSize = new System.Drawing.Size(1215, 791);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label11);
@@ -402,10 +415,9 @@
             this.Controls.Add(this.Naam);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "Form9";
+            this.Name = "tourbooking";
             this.Text = "Form9";
             this.Load += new System.EventHandler(this.Form9_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -437,24 +449,19 @@
         private TextBox textBox1;
         private TextBox textBox2;
         private System.Drawing.Printing.PrintDocument printDocument1;
-        private PrintPreviewDialog printPreviewDialog1;
-        private PrintDialog printDialog1;
-        private PrintPreviewDialog printPreviewDialog2;
-        private System.Drawing.Printing.PrintDocument printDocument3;
-        public System.Drawing.Printing.PrintDocument printDocument2;
-        private System.Drawing.Printing.PrintDocument printDocument4;
-        private System.Drawing.Printing.PrintDocument printDocument5;
-        private HelpProvider helpProvider1;
-        private ErrorProvider errorProvider1;
-        private PrintDialog printDialog2;
         private PrintDialog printDialog3;
         private System.Drawing.Printing.PrintDocument printDocument6;
         private System.Drawing.Printing.PrintDocument printDocument7;
         private PrintPreviewDialog printPreviewDialog3;
         private System.Drawing.Printing.PrintDocument printDocument8;
-        private System.Drawing.Printing.PrintDocument printDocument9;
-        private System.Drawing.Printing.PrintDocument printDocument10;
         private System.Drawing.Printing.PrintDocument printDocument11;
         private PrintPreviewDialog printPreviewDialog4;
+        private PrintPreviewDialog printPreviewDialog1;
+        private System.Drawing.Printing.PrintDocument printDocument9;
+        private System.Drawing.Printing.PrintDocument printDocument2;
+        private Button button3;
+        private PrintPreviewDialog printPreviewDialog2;
+        private PrintPreviewDialog printPreviewDialog5;
+        private Button button4;
     }
 }

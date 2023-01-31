@@ -32,7 +32,7 @@ namespace TravelAndTourMS
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            hotelbill employeeform = new hotelbill();
+            tourbill employeeform = new tourbill();
             employeeform.ShowDialog();
         }
 
