@@ -22,7 +22,7 @@ namespace TravelAndTourMS
         {
             SqlConnection con = new SqlConnection(@"Data Source =.\SQLEXPRESS01; Initial Catalog= TravelandTour ; Integrated Security = True ; ");
             //SqlCommand cmd = new SqlCommand("SELECT id, name, image_path, bookNow FROM images2", con);
-            SqlCommand cmd = new SqlCommand("SELECT id, package_name, price, Photo, bookNow FROM Table1", con);
+            SqlCommand cmd = new SqlCommand("SELECT id, package_name, price, Photo FROM Table1", con);
 
             SqlDataAdapter sd = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
@@ -30,7 +30,7 @@ namespace TravelAndTourMS
 
             // dt.Columns.Add("image", Type.GetType("System.Bytes[]"));
           //  dt.Columns.Add("image", typeof(byte[]));
-            dt.Columns["bookNow"].SetOrdinal(dt.Columns.Count - 1);
+          //  dt.Columns["bookNow"].SetOrdinal(dt.Columns.Count - 1);
            
 
             // dt.Columns.Add("image", typeof(System.Byte[]));
@@ -39,7 +39,7 @@ namespace TravelAndTourMS
                 // drow["image"] = File.ReadAllBytes(drow["image_path"].ToString());
                 // drow["image"] = drow["Photo"];
 
-                drow["bookNow"] = "Book Now";
+               // drow["bookNow"] = "Book Now";
 
             }
 
@@ -74,6 +74,16 @@ namespace TravelAndTourMS
             {
                 MessageBox.Show("Please select a row first.");
             }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void iconButton3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

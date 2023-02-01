@@ -41,6 +41,8 @@ namespace TravelAndTourMS
         private void image_Load(object sender, EventArgs e)
         {
             load_data();
+            dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
         private void openFileDialog1_FileOk(object sender, CancelEventArgs e)

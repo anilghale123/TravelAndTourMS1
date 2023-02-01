@@ -93,11 +93,11 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.SystemColors.Control;
-            this.label3.Location = new System.Drawing.Point(106, 90);
+            this.label3.Location = new System.Drawing.Point(66, 86);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(133, 46);
+            this.label3.Size = new System.Drawing.Size(226, 46);
             this.label3.TabIndex = 9;
-            this.label3.Text = "LOGIN ";
+            this.label3.Text = "USER LOGIN ";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // panel1
@@ -123,7 +123,7 @@
             // 
             this.iconPictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.iconPictureBox2.ForeColor = System.Drawing.Color.Crimson;
-            this.iconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.PeopleLine;
+            this.iconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.Lock;
             this.iconPictureBox2.IconColor = System.Drawing.Color.Crimson;
             this.iconPictureBox2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconPictureBox2.IconSize = 39;
@@ -220,7 +220,7 @@
             this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.Name = "Form2";
+            this.Name = "login";
             this.Padding = new System.Windows.Forms.Padding(7, 8, 9, 0);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "                                   ";
