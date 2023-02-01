@@ -85,5 +85,34 @@ namespace TravelAndTourMS
         {
 
         }
+
+        private void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            e.CellStyle.BackColor = Color.Black;
+            e.CellStyle.ForeColor = Color.White;
+            e.CellStyle.Font = new Font("Arial", 16, FontStyle.Bold);
+        }
+
+        private void dataGridView1_RowPrePaint(object sender, DataGridViewRowPrePaintEventArgs e)
+        {
+            e.PaintParts &= ~DataGridViewPaintParts.SelectionBackground;
+            if ((e.State & DataGridViewElementStates.Selected) == DataGridViewElementStates.Selected)
+            {
+                using (Brush brush = new SolidBrush(Color.Red))
+                {
+                    e.Graphics.FillRectangle(brush, e.RowBounds);
+                }
+            }
+        }
+
+        private void dataGridView1_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            foreach (DataGridViewColumn column in dataGridView1.Columns)
+            {
+                column.HeaderCell.Style.BackColor = Color.Black;
+                column.HeaderCell.Style.ForeColor = Color.White;
+                column.HeaderCell.Style.Font = new Font("Arial", 12, FontStyle.Bold);
+            }
+        }
     }
 }

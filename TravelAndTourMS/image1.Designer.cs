@@ -41,17 +41,19 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.AppWorkspace;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(278, 103);
+            this.dataGridView1.Location = new System.Drawing.Point(278, 104);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 140;
@@ -59,6 +61,9 @@
             this.dataGridView1.Size = new System.Drawing.Size(1623, 834);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridView1_CellFormatting);
+            this.dataGridView1.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_ColumnHeaderMouseClick);
+            this.dataGridView1.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.dataGridView1_RowPrePaint);
             // 
             // rjButton1
             // 
@@ -71,7 +76,7 @@
             this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton1.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.rjButton1.ForeColor = System.Drawing.Color.White;
-            this.rjButton1.Location = new System.Drawing.Point(981, 957);
+            this.rjButton1.Location = new System.Drawing.Point(939, 10);
             this.rjButton1.Name = "rjButton1";
             this.rjButton1.Size = new System.Drawing.Size(208, 77);
             this.rjButton1.TabIndex = 1;
@@ -164,7 +169,7 @@
             this.iconButton7.Padding = new System.Windows.Forms.Padding(20, 0, 10, 0);
             this.iconButton7.Size = new System.Drawing.Size(290, 85);
             this.iconButton7.TabIndex = 13;
-            this.iconButton7.Text = "Places";
+            this.iconButton7.Text = "Places Info";
             this.iconButton7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iconButton7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton7.UseVisualStyleBackColor = true;
@@ -241,15 +246,24 @@
             this.label1.Text = "TOUR MANAGEMENT SYSTEM";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel4.Controls.Add(this.rjButton1);
+            this.panel4.Location = new System.Drawing.Point(-7, 934);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(2029, 130);
+            this.panel4.TabIndex = 4;
+            // 
             // image1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1924, 1055);
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.rjButton1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "image1";
             this.Text = "image1";
@@ -259,6 +273,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -277,5 +292,6 @@
         private Panel panel2;
         private Panel panel3;
         private Label label1;
+        private Panel panel4;
     }
 }

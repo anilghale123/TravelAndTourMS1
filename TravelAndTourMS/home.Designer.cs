@@ -125,7 +125,7 @@
             this.iconButton7.Padding = new System.Windows.Forms.Padding(20, 0, 10, 0);
             this.iconButton7.Size = new System.Drawing.Size(284, 85);
             this.iconButton7.TabIndex = 13;
-            this.iconButton7.Text = "Customer ";
+            this.iconButton7.Text = "Place Info";
             this.iconButton7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iconButton7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton7.UseVisualStyleBackColor = true;

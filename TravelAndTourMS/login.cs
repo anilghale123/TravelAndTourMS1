@@ -2,19 +2,54 @@
 using System.Drawing.Drawing2D;
 using System.Windows.Media;
 //using System.Windows;
+using Timer = System.Windows.Forms.Timer;
+
 using MaterialDesignThemes.Wpf;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace TravelAndTourMS
 {
     public partial class login : Form
     {
+        System.Windows.Forms.Timer timer;
+        int index1;
+        int index2;
+        string[] messages = { "TOUR MANAGEMENT SYSTEM" };
 
         SqlConnection con = new SqlConnection(@"Data Source =.\SQLEXPRESS01; Initial Catalog= TravelandTour ; Integrated Security = True ; ");
         public login()
         {
+
             InitializeComponent();
-           
-           
+           label1.BringToFront();
+
+           // label4.Location = new Point(40, 10);
+            label4.ForeColor = System.Drawing.Color.Black;
+            index1 = 0;
+            index2 = 0;
+
+            
+            timer = new Timer();
+            timer.Interval = 80; // animation interval in milliseconds
+            timer.Tick += Timer_Tick;
+            timer.Start();
+
+
+        }
+
+        private void Timer_Tick(object sender, EventArgs e)
+        {
+            string message = messages[index1];
+            if (index2 < message.Length)
+            {
+                label4.Text = message.Substring(0, index2 + 1);
+                index2++;
+            }
+            else
+            {
+                index1 = (index1 + 1) % messages.Length;
+                index2 = 0;
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -156,6 +191,16 @@ namespace TravelAndTourMS
        
         
         }
-            }
+
+        private void iconPictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
     
 }

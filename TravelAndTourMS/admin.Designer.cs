@@ -71,7 +71,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.SystemColors.Control;
-            this.label3.Location = new System.Drawing.Point(52, 86);
+            this.label3.Location = new System.Drawing.Point(61, 72);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(262, 46);
             this.label3.TabIndex = 9;
@@ -111,9 +111,9 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.ForeColor = System.Drawing.Color.Transparent;
-            this.panel1.Location = new System.Drawing.Point(576, 109);
+            this.panel1.Location = new System.Drawing.Point(467, 135);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(361, 493);
+            this.panel1.Size = new System.Drawing.Size(361, 515);
             this.panel1.TabIndex = 19;
             // 
             // iconPictureBox2
@@ -157,9 +157,9 @@
             this.rjButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.rjButton2.ForeColor = System.Drawing.Color.White;
-            this.rjButton2.Location = new System.Drawing.Point(87, 409);
+            this.rjButton2.Location = new System.Drawing.Point(21, 409);
             this.rjButton2.Name = "rjButton2";
-            this.rjButton2.Size = new System.Drawing.Size(178, 46);
+            this.rjButton2.Size = new System.Drawing.Size(316, 46);
             this.rjButton2.TabIndex = 22;
             this.rjButton2.Text = "LogIn";
             this.rjButton2.TextColor = System.Drawing.Color.White;
@@ -177,9 +177,9 @@
             this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.rjButton1.ForeColor = System.Drawing.Color.White;
-            this.rjButton1.Location = new System.Drawing.Point(87, 348);
+            this.rjButton1.Location = new System.Drawing.Point(21, 348);
             this.rjButton1.Name = "rjButton1";
-            this.rjButton1.Size = new System.Drawing.Size(178, 46);
+            this.rjButton1.Size = new System.Drawing.Size(316, 46);
             this.rjButton1.TabIndex = 21;
             this.rjButton1.Text = "Register";
             this.rjButton1.TextColor = System.Drawing.Color.White;
@@ -211,7 +211,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1513, 733);
+            this.ClientSize = new System.Drawing.Size(1357, 733);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.materialDrawer1);
             this.Name = "admin";

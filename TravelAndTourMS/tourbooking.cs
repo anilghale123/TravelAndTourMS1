@@ -178,5 +178,26 @@ namespace TravelAndTourMS
             }
 
         }
+
+        private void iconButton4_Click(object sender, EventArgs e)
+        {
+            PrintDialog printDialog2 = new PrintDialog();
+            printDialog2.Document = printDocument2;
+
+            DialogResult result = printDialog2.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                printDocument2.Print();
+            }
+        }
+
+        private void iconButton6_Click(object sender, EventArgs e)
+        {
+
+            PrintPreviewDialog printPreviewDialog2 = new PrintPreviewDialog();
+            printPreviewDialog2.Document = printDocument2;
+            printPreviewDialog2.ShowDialog();
+
+        }
     }
 }

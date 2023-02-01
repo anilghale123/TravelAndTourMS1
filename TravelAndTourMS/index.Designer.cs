@@ -38,8 +38,8 @@
             // 
             // rjButton1
             // 
-            this.rjButton1.BackColor = System.Drawing.Color.Crimson;
-            this.rjButton1.BackgroundColor = System.Drawing.Color.Crimson;
+            this.rjButton1.BackColor = System.Drawing.Color.Red;
+            this.rjButton1.BackgroundColor = System.Drawing.Color.Red;
             this.rjButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.rjButton1.BorderRadius = 20;
             this.rjButton1.BorderSize = 0;
@@ -47,7 +47,7 @@
             this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton1.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.rjButton1.ForeColor = System.Drawing.Color.White;
-            this.rjButton1.Location = new System.Drawing.Point(228, 356);
+            this.rjButton1.Location = new System.Drawing.Point(267, 407);
             this.rjButton1.Name = "rjButton1";
             this.rjButton1.Size = new System.Drawing.Size(188, 50);
             this.rjButton1.TabIndex = 0;
@@ -58,8 +58,8 @@
             // 
             // rjButton2
             // 
-            this.rjButton2.BackColor = System.Drawing.Color.Crimson;
-            this.rjButton2.BackgroundColor = System.Drawing.Color.Crimson;
+            this.rjButton2.BackColor = System.Drawing.Color.Red;
+            this.rjButton2.BackgroundColor = System.Drawing.Color.Red;
             this.rjButton2.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.rjButton2.BorderRadius = 20;
             this.rjButton2.BorderSize = 0;
@@ -67,7 +67,7 @@
             this.rjButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton2.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.rjButton2.ForeColor = System.Drawing.Color.White;
-            this.rjButton2.Location = new System.Drawing.Point(454, 356);
+            this.rjButton2.Location = new System.Drawing.Point(501, 407);
             this.rjButton2.Name = "rjButton2";
             this.rjButton2.Size = new System.Drawing.Size(188, 50);
             this.rjButton2.TabIndex = 1;
@@ -82,11 +82,12 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label1.Location = new System.Drawing.Point(102, 124);
+            this.label1.Location = new System.Drawing.Point(171, 219);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(737, 46);
+            this.label1.Size = new System.Drawing.Size(29, 46);
             this.label1.TabIndex = 4;
-            this.label1.Text = "WELCOME TO TOUR MANAGEMENT SYSTEM";
+            this.label1.Text = " ";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -94,7 +95,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(274, 210);
+            this.label2.Location = new System.Drawing.Point(319, 288);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(382, 35);
             this.label2.TabIndex = 5;
@@ -106,7 +107,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(348, 245);
+            this.label3.Location = new System.Drawing.Point(399, 333);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(184, 35);
             this.label3.TabIndex = 6;
@@ -118,7 +119,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(913, 550);
+            this.ClientSize = new System.Drawing.Size(993, 599);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -126,6 +127,7 @@
             this.Controls.Add(this.rjButton1);
             this.Name = "index";
             this.Text = "index";
+            this.Load += new System.EventHandler(this.index_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
