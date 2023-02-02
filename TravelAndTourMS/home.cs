@@ -62,5 +62,76 @@ namespace TravelAndTourMS
         {
 
         }
+
+        private void iconButton7_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            place employeeform = new place();
+            employeeform.ShowDialog();
+        }
+
+        private void iconButton10_MouseEnter(object sender, EventArgs e)
+        {
+            iconButton10.BackColor = Color.Orange;
+        }
+
+        private void iconButton10_MouseLeave(object sender, EventArgs e)
+        {
+            iconButton10.BackColor = Color.Transparent;
+        }
+
+        private void iconButton3_MouseEnter(object sender, EventArgs e)
+        {
+            iconButton3.BackColor = Color.Orange;
+        }
+
+        private void iconButton3_MouseLeave(object sender, EventArgs e)
+        {
+            iconButton3.BackColor = Color.Transparent;
+        }
+
+        private void iconButton7_MouseEnter(object sender, EventArgs e)
+        {
+            iconButton7.BackColor = Color.Orange;
+        }
+
+        private void iconButton7_MouseLeave(object sender, EventArgs e)
+        {
+            iconButton7.BackColor = Color.Transparent;
+        }
+
+        private void iconButton8_MouseEnter(object sender, EventArgs e)
+        {
+            iconButton8.BackColor = Color.Orange;
+        }
+
+        private void iconButton8_MouseLeave(object sender, EventArgs e)
+        {
+            iconButton8.BackColor = Color.Transparent;
+        }
+
+        private void iconButton8_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+           aboutus employeeform = new aboutus();
+            employeeform.ShowDialog();
+        }
+
+        private void iconButton1_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            login employeeform = new login();
+            employeeform.ShowDialog();
+        }
+
+        private void iconButton1_MouseEnter(object sender, EventArgs e)
+        {
+            iconButton1.BackColor = Color.Orange;
+        }
+
+        private void iconButton1_MouseLeave(object sender, EventArgs e)
+        {
+            iconButton1.BackColor = Color.Transparent;
+        }
     }
 }

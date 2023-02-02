@@ -27,7 +27,7 @@ namespace TravelAndTourMS
 
             InitializeComponent();
            timer = new Timer();
-            timer.Interval = 200; // animation interval in milliseconds
+            timer.Interval = 40; // animation interval in milliseconds
             timer.Tick += Timer_Tick;
             timer.Start();
         }
@@ -41,10 +41,18 @@ namespace TravelAndTourMS
             }
             else
             {
-                index1 = (index1 + 1) % messages.Length;
-                index2 = 0;
+                if (index1 == messages.Length - 1)
+                {
+                    timer.Stop();
+                }
+                else
+                {
+                    index1 = (index1 + 1) % messages.Length;
+                    index2 = 0;
+                }
             }
         }
+
 
         private void materialLabel1_Click(object sender, EventArgs e)
         {

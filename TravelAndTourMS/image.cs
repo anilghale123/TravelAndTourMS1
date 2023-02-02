@@ -74,6 +74,7 @@ namespace TravelAndTourMS
             cmd.Parameters.AddWithValue("Photo", memstr.ToArray());  
             con.Open();
             cmd.ExecuteNonQuery();
+            con.Close();
             MessageBox.Show("Package Added Successfullly");
             load_data();
 
@@ -140,6 +141,23 @@ namespace TravelAndTourMS
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            admin employeeform = new admin();
+            employeeform.ShowDialog();
+        }
+
+        private void iconButton1_MouseEnter(object sender, EventArgs e)
+        {
+            iconButton1.BackColor = Color.Orange;
+        }
+
+        private void iconButton1_MouseLeave(object sender, EventArgs e)
+        {
+            iconButton1.BackColor = Color.Transparent;
         }
     }
 

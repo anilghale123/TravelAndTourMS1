@@ -6,6 +6,8 @@ using Timer = System.Windows.Forms.Timer;
 
 using MaterialDesignThemes.Wpf;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+using Color = System.Drawing.Color;
+using FontAwesome.Sharp;
 
 namespace TravelAndTourMS
 {
@@ -21,23 +23,23 @@ namespace TravelAndTourMS
         {
 
             InitializeComponent();
-           label1.BringToFront();
+         //  label1.BringToFront();
 
            // label4.Location = new Point(40, 10);
-            label4.ForeColor = System.Drawing.Color.Black;
-            index1 = 0;
-            index2 = 0;
+          //  label4.ForeColor = System.Drawing.Color.Black;
+          //  index1 = 0;
+           // index2 = 0;
 
             
-            timer = new Timer();
-            timer.Interval = 80; // animation interval in milliseconds
-            timer.Tick += Timer_Tick;
-            timer.Start();
+           // timer = new Timer();
+           // timer.Interval = 80; // animation interval in milliseconds
+           // timer.Tick += Timer_Tick;
+           // timer.Start();
 
 
         }
 
-        private void Timer_Tick(object sender, EventArgs e)
+       /* private void Timer_Tick(object sender, EventArgs e)
         {
             string message = messages[index1];
             if (index2 < message.Length)
@@ -51,7 +53,7 @@ namespace TravelAndTourMS
                 index2 = 0;
             }
         }
-
+       */
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -132,7 +134,7 @@ namespace TravelAndTourMS
 
         private void Form2_Load_1(object sender, EventArgs e)
         {
-
+            panel1.BackColor = System.Drawing.Color.FromArgb(100, 0, 0, 0);
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -200,6 +202,23 @@ namespace TravelAndTourMS
         private void label4_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            index employeeform = new index();
+            employeeform.ShowDialog();
+        }
+
+        private void iconButton1_MouseEnter(object sender, EventArgs e)
+        {
+            iconButton1.BackColor = Color.Orange;
+        }
+
+        private void iconButton1_MouseLeave(object sender, EventArgs e)
+        {
+            iconButton1.BackColor = Color.Transparent;
         }
     }
     

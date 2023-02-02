@@ -22,12 +22,14 @@ namespace TravelAndTourMS
             set { textBox1.Text = value; }
         }
       */
-        public tourbooking(string value)
+        public tourbooking(string value,string value1)
         {
             InitializeComponent();
             textBox1.Text = value;
+            textBox3.Text = value1;
 
-            
+
+
         }
         private void printButton_Click(object sender, EventArgs e)
         {
@@ -44,7 +46,7 @@ namespace TravelAndTourMS
 
         private void Form9_Load(object sender, EventArgs e)
         {
-
+            panel1.BackColor = Color.FromArgb(100, 0, 0, 0);
         }
 
         private void label8_Click(object sender, EventArgs e)
@@ -69,9 +71,9 @@ namespace TravelAndTourMS
                 SqlCommand cmd = new SqlCommand(query, con);
                 cmd.Parameters.AddWithValue("@phoneNum", PhoneNum.Text);
                 cmd.Parameters.AddWithValue("@travelDate", TravelDate.Text);
-                cmd.Parameters.AddWithValue("@activities", Activities.Text);
-                cmd.Parameters.AddWithValue("@transportation", Transportation.Text);
-                cmd.Parameters.AddWithValue("@place", Place.Text);
+               // cmd.Parameters.AddWithValue("@activities", Activities.Text);
+             //   cmd.Parameters.AddWithValue("@transportation", Transportation.Text);
+               // cmd.Parameters.AddWithValue("@place", Place.Text);
                 cmd.Parameters.AddWithValue("@name", Naam.Text);
                 cmd.Parameters.AddWithValue("@address", Addresses.Text);
                 cmd.Parameters.AddWithValue("@numTravelers", NTraveller.Text);
@@ -132,11 +134,26 @@ namespace TravelAndTourMS
 
         private void printDocument2_PrintPage(object sender, PrintPageEventArgs e)
         {
-            e.Graphics.DrawString("Tour Management System", new Font("Arial", 20, FontStyle.Bold), Brushes.Black, new Point(185, 10));
-            e.Graphics.DrawString("YOUR RECEIPT", new Font("Arial", 20, FontStyle.Bold), Brushes.Black, new Point(205, 80));
-            e.Graphics.DrawString("Name : " + Naam.Text, new Font("Arial", 20, FontStyle.Bold), Brushes.Black, new Point(185, 140));
-            e.Graphics.DrawString("Total Price : " + textBox2.Text, new Font("Arial", 20, FontStyle.Bold), Brushes.Black, new Point(185, 180));
+            Font headerFont = new Font("Arial", 20, FontStyle.Bold);
+            Font bodyFont = new Font("Arial", 15, FontStyle.Regular);
+
+            // Draw the header text
+            e.Graphics.DrawString("Tour Management System", headerFont, Brushes.Black, new Point(200, 10));
+            e.Graphics.DrawString("YOUR RECEIPT", headerFont, Brushes.Black, new Point(240, 80));
+
+            // Draw the border line
+            e.Graphics.DrawRectangle(Pens.Black, 50, 120, 590, 180);
+
+            // Draw the body text
+            e.Graphics.DrawString("Name: " + Naam.Text, bodyFont, Brushes.Black, new Point(60, 140));
+            e.Graphics.DrawString("Address: " + Addresses.Text, bodyFont, Brushes.Black, new Point(60, 170));
+            e.Graphics.DrawString("Travel Date: " + TravelDate.Text, bodyFont, Brushes.Black, new Point(60, 200));
+            e.Graphics.DrawString("No. of Travellers: " + NTraveller.Text, bodyFont, Brushes.Black, new Point(60, 230));
+            e.Graphics.DrawString("Price: " + textBox1.Text, bodyFont, Brushes.Black, new Point(60, 260));
+            e.Graphics.DrawString("Place: " + textBox3.Text, bodyFont, Brushes.Black, new Point(350, 230));
+            e.Graphics.DrawString("Total Price: " + textBox2.Text, bodyFont, Brushes.Black, new Point(350, 260));
         }
+
 
         private void button3_Click(object sender, EventArgs e)
         {
@@ -198,6 +215,155 @@ namespace TravelAndTourMS
             printPreviewDialog2.Document = printDocument2;
             printPreviewDialog2.ShowDialog();
 
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+
+            PrintPreviewDialog printPreviewDialog2 = new PrintPreviewDialog();
+            printPreviewDialog2.Document = printDocument2;
+            printPreviewDialog2.ShowDialog();
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            PrintDialog printDialog2 = new PrintDialog();
+            printDialog2.Document = printDocument2;
+
+            DialogResult result = printDialog2.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                printDocument2.Print();
+            }
+        }
+
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        private void iconButton10_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            home employeeform = new home();
+            employeeform.ShowDialog();
+        }
+
+        private void iconButton3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            image1 employeeform = new image1();
+            employeeform.ShowDialog();
+        }
+
+        private void iconButton10_MouseEnter(object sender, EventArgs e)
+        {
+            iconButton10.BackColor = Color.Orange;
+        }
+
+        private void iconButton10_MouseLeave(object sender, EventArgs e)
+        {
+            iconButton10.BackColor = Color.Transparent;
+        }
+
+        private void iconButton3_MouseEnter(object sender, EventArgs e)
+        {
+            iconButton3.BackColor = Color.Orange;
+        }
+
+        private void iconButton3_MouseLeave(object sender, EventArgs e)
+        {
+            iconButton3.BackColor = Color.Transparent;
+        }
+
+        private void iconButton7_MouseEnter(object sender, EventArgs e)
+        {
+            iconButton7.BackColor = Color.Orange;
+        }
+
+        private void iconButton7_MouseLeave(object sender, EventArgs e)
+        {
+            iconButton7.BackColor = Color.Transparent;
+        }
+
+        private void iconButton8_MouseEnter(object sender, EventArgs e)
+        {
+            iconButton8.BackColor = Color.Orange;
+        }
+
+        private void iconButton8_MouseLeave(object sender, EventArgs e)
+        {
+            iconButton8.BackColor = Color.Transparent;
+        }
+
+        private void iconButton10_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            home employeeform = new home();
+            employeeform.ShowDialog();
+        }
+
+        private void iconButton3_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            image1 employeeform = new image1();
+            employeeform.ShowDialog();
+        }
+
+        private void iconButton7_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            place employeeform = new place();
+            employeeform.ShowDialog();
+        }
+
+        private void iconButton8_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            aboutus employeeform = new aboutus();
+            employeeform.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            image1 employeeform = new image1();
+            employeeform.ShowDialog();
         }
     }
 }
