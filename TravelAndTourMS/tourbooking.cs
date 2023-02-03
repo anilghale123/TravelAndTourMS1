@@ -67,13 +67,14 @@ namespace TravelAndTourMS
 
 
 
-                string query = "INSERT INTO TBook (Naam,Addresses,Place,PhoneNum,NTraveller,TravelDate,Activities,Transportation) VALUES (@name, @address,@place,@phoneNum,@numTravelers, @travelDate, @activities, @transportation  )";
+                string query = "INSERT INTO TBook (Naam,Addresses,Place,PhoneNum,NTraveller,TravelDate) VALUES (@name, @address,@Place,@phoneNum,@numTravelers, @travelDate )";
                 SqlCommand cmd = new SqlCommand(query, con);
+                
                 cmd.Parameters.AddWithValue("@phoneNum", PhoneNum.Text);
                 cmd.Parameters.AddWithValue("@travelDate", TravelDate.Text);
                // cmd.Parameters.AddWithValue("@activities", Activities.Text);
              //   cmd.Parameters.AddWithValue("@transportation", Transportation.Text);
-               // cmd.Parameters.AddWithValue("@place", Place.Text);
+                cmd.Parameters.AddWithValue("@place", textBox3.Text);
                 cmd.Parameters.AddWithValue("@name", Naam.Text);
                 cmd.Parameters.AddWithValue("@address", Addresses.Text);
                 cmd.Parameters.AddWithValue("@numTravelers", NTraveller.Text);
