@@ -74,9 +74,9 @@
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Location = new System.Drawing.Point(66, 149);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 23);
+            this.label1.Size = new System.Drawing.Size(89, 23);
             this.label1.TabIndex = 7;
-            this.label1.Text = "User NAme";
+            this.label1.Text = "Username";
             // 
             // label2
             // 

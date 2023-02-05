@@ -71,9 +71,9 @@
             this.label1.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.label1.Location = new System.Drawing.Point(16, 88);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(166, 28);
+            this.label1.Size = new System.Drawing.Size(162, 28);
             this.label1.TabIndex = 5;
-            this.label1.Text = "Enter UserName";
+            this.label1.Text = "Enter Username";
             // 
             // label2
             // 
@@ -83,9 +83,9 @@
             this.label2.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.label2.Location = new System.Drawing.Point(16, 153);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(160, 28);
+            this.label2.Size = new System.Drawing.Size(157, 28);
             this.label2.TabIndex = 6;
-            this.label2.Text = "Enter PassWord";
+            this.label2.Text = "Enter Password";
             // 
             // textBox2
             // 

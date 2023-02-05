@@ -15,7 +15,9 @@ namespace TravelAndTourMS
     public partial class admin : Form
     {
 
-
+        private Dictionary<Control, Size> originalSizes;
+        private Dictionary<Control, Point> originalLocations;
+        private Size originalFormSize;
 
         SqlConnection con = new SqlConnection(@"Data Source =.\SQLEXPRESS01; Initial Catalog= TravelandTour ; Integrated Security = True ; ");
         public admin()
@@ -70,6 +72,17 @@ namespace TravelAndTourMS
 
         private void admin_Load(object sender, EventArgs e)
         {
+            // Store the original size and location of the controls
+            originalSizes = new Dictionary<Control, Size>();
+            originalLocations = new Dictionary<Control, Point>();
+            foreach (Control control in this.Controls)
+            {
+                originalSizes[control] = control.Size;
+                originalLocations[control] = control.Location;
+            }
+
+            // Store the original size of the form
+            originalFormSize = this.ClientSize;
             panel1.BackColor = Color.FromArgb(100, 0, 0, 0);
         }
 
@@ -118,6 +131,20 @@ namespace TravelAndTourMS
         private void iconButton1_MouseLeave(object sender, EventArgs e)
         {
             iconButton1.BackColor = Color.Transparent;
+        }
+
+        private void admin_Resize(object sender, EventArgs e)
+        {
+            // Calculate the scale factor
+            float scaleX = (float)this.ClientSize.Width / (float)originalFormSize.Width;
+            float scaleY = (float)this.ClientSize.Height / (float)originalFormSize.Height;
+
+            // Resize and reposition the controls
+            foreach (Control control in this.Controls)
+            {
+                control.Size = new Size((int)(originalSizes[control].Width * scaleX), (int)(originalSizes[control].Height * scaleY));
+                control.Location = new Point((int)(originalLocations[control].X * scaleX), (int)(originalLocations[control].Y * scaleY));
+            }
         }
     }
 }

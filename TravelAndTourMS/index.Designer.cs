@@ -95,7 +95,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(319, 288);
+            this.label2.Location = new System.Drawing.Point(317, 284);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(382, 35);
             this.label2.TabIndex = 5;
@@ -119,13 +119,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(993, 599);
+            this.ClientSize = new System.Drawing.Size(959, 580);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.rjButton2);
             this.Controls.Add(this.rjButton1);
             this.Name = "index";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "index";
             this.Load += new System.EventHandler(this.index_Load);
             this.ResumeLayout(false);

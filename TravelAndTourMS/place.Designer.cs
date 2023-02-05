@@ -538,6 +538,7 @@
             this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.Color.Transparent;
             this.Name = "place";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "place";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

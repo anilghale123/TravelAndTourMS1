@@ -27,10 +27,7 @@ namespace TravelAndTourMS
             InitializeComponent();
             textBox1.Text = value;
             textBox3.Text = value1;
-
-
-
-        }
+          }
         private void printButton_Click(object sender, EventArgs e)
         {
             PrintDocument printDocument = new PrintDocument();
@@ -72,8 +69,6 @@ namespace TravelAndTourMS
                 
                 cmd.Parameters.AddWithValue("@phoneNum", PhoneNum.Text);
                 cmd.Parameters.AddWithValue("@travelDate", TravelDate.Text);
-               // cmd.Parameters.AddWithValue("@activities", Activities.Text);
-             //   cmd.Parameters.AddWithValue("@transportation", Transportation.Text);
                 cmd.Parameters.AddWithValue("@place", textBox3.Text);
                 cmd.Parameters.AddWithValue("@name", Naam.Text);
                 cmd.Parameters.AddWithValue("@address", Addresses.Text);
@@ -365,6 +360,11 @@ namespace TravelAndTourMS
             this.Hide();
             image1 employeeform = new image1();
             employeeform.ShowDialog();
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

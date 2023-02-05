@@ -187,7 +187,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.Snow;
-            this.label1.Location = new System.Drawing.Point(732, 347);
+            this.label1.Location = new System.Drawing.Point(575, 304);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(521, 67);
             this.label1.TabIndex = 25;
@@ -199,7 +199,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.OrangeRed;
-            this.label2.Location = new System.Drawing.Point(732, 414);
+            this.label2.Location = new System.Drawing.Point(575, 380);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(584, 57);
             this.label2.TabIndex = 26;
@@ -211,7 +211,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.Color.Snow;
-            this.label3.Location = new System.Drawing.Point(742, 471);
+            this.label3.Location = new System.Drawing.Point(589, 437);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(435, 67);
             this.label3.TabIndex = 25;
@@ -223,7 +223,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1331, 735);
+            this.ClientSize = new System.Drawing.Size(1185, 693);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -232,8 +232,10 @@
             this.Controls.Add(this.panel1);
             this.Name = "home";
             this.Padding = new System.Windows.Forms.Padding(20, 0, 10, 0);
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form7";
             this.Load += new System.EventHandler(this.home_Load);
+            this.Resize += new System.EventHandler(this.home_Resize);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

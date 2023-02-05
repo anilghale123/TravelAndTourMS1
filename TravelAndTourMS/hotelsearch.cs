@@ -2,16 +2,35 @@
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using Microsoft.Win32;
+using ZstdSharp.Unsafe;
 
 namespace TravelAndTourMS
 {
     public partial class hotelsearch : Form
     {
         SqlConnection con = new SqlConnection(@"Data Source = .\SQLEXPRESS01; Initial Catalog = TravelandTour;  user id = sa;password = anil123");
+        SqlCommand cmd;
         public hotelsearch()
         {
             InitializeComponent();
         }
+
+        private void load_data()
+        {
+            cmd = new SqlCommand("Select * from Hotel order by id desc", con);
+            SqlDataAdapter da = new SqlDataAdapter();
+            da.SelectCommand = cmd;
+            DataTable dt = new DataTable();
+            dt.Clear();
+            da.Fill(dt);
+            dataGridView1.RowTemplate.Height = 100;
+            dataGridView1.DataSource = dt;
+            //  DataGridViewImageColumn Pic1 = new DataGridViewImageColumn();
+            //  Pic1 = (DataGridViewImageColumn)dataGridView1.Columns[3];
+            // Pic1.ImageLayout = DataGridViewImageCellLayout.Stretch;
+        }
+
 
         private void button5_Click(object sender, EventArgs e)
         {
@@ -25,7 +44,7 @@ namespace TravelAndTourMS
                 int count = Convert.ToInt32(cmd.ExecuteScalar());
                 if (count > 0)
                 {
-                    MessageBox.Show("Here is list");
+                   // MessageBox.Show("Here is list");
                     string query2 = "select * from Hotel where place='" + place.Text + "' and category='" + categori.Text + "'";
                     SqlCommand cmd2 = new SqlCommand(query2, con);
                     SqlDataAdapter sda = new SqlDataAdapter(cmd2);
@@ -51,26 +70,7 @@ namespace TravelAndTourMS
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
-            if (e.RowIndex >= 0)
-            {
-                var selectedHotel = dataGridView1.Rows[e.RowIndex].Cells["hotel"].Value.ToString();
-                if (selectedHotel == "Marriot")
-                {
-                    this.Hide();
-                    roomsearch employeeform = new roomsearch();
-                    employeeform.ShowDialog();
-                }
-                else if (selectedHotel == "Yeti")
-                {
-                    //Form hotelBForm = new Form();
-                    // hotelBForm.Show();
-                    this.Hide();
-                    hotel1description employeeform = new hotel1description();
-                    employeeform.ShowDialog();
-                }
-                // Add more else if statements for each hotel you want to handle
-            }
-
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -92,6 +92,75 @@ namespace TravelAndTourMS
 
         private void button4_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void openFileDialog1_FileOk(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void hotelsearch_Load(object sender, EventArgs e)
+        {
+            load_data();
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+           
+                if (e.RowIndex >= 0)
+                {
+                    var selectedHotel = dataGridView1.Rows[e.RowIndex].Cells["hotel"].Value.ToString();
+                    if (selectedHotel == "Marriot" || selectedHotel == "marriot")
+                    {
+                        int selectedRowIndex = e.RowIndex;
+                        string price = dataGridView1.Rows[selectedRowIndex].Cells["price"].Value.ToString();
+                        string place = dataGridView1.Rows[selectedRowIndex].Cells["place"].Value.ToString();
+                    byte[] byteArray = (byte[])dataGridView1.Rows[selectedRowIndex].Cells["photo"].Value;
+                    Image image;
+                    using (var ms = new MemoryStream(byteArray))
+                    {
+                        image = Image.FromStream(ms);
+                    }
+
+                    this.Hide();
+                        marriot employeeform = new marriot(price, place, image);
+                        employeeform.ShowDialog();
+                    }
+
+                    else if(selectedHotel == "Yeti" || selectedHotel == "yeti")
+                          {
+                    int selectedRowIndex = e.RowIndex;
+                    string price = dataGridView1.Rows[selectedRowIndex].Cells["price"].Value.ToString();
+                    string place = dataGridView1.Rows[selectedRowIndex].Cells["place"].Value.ToString();
+                    byte[] byteArray = (byte[])dataGridView1.Rows[selectedRowIndex].Cells["photo"].Value;
+                    Image image;
+                    using (var ms = new MemoryStream(byteArray))
+                    {
+                        image = Image.FromStream(ms);
+                    }
+
+
+                    this.Hide();
+                    marriot employeeform = new marriot(price, place,image);
+                    employeeform.ShowDialog();
+
+                }
+
+
+
+                }
+            
 
         }
     }

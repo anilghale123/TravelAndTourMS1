@@ -24,7 +24,6 @@ namespace TravelAndTourMS
 
         private void load_data()
         {
-
             cmd = new SqlCommand("Select * from Table1 order by id desc", con);
             SqlDataAdapter da = new SqlDataAdapter();
             da.SelectCommand = cmd;
@@ -33,9 +32,9 @@ namespace TravelAndTourMS
             da.Fill(dt);
             dataGridView1.RowTemplate.Height = 100;
             dataGridView1.DataSource = dt;
-            DataGridViewImageColumn Pic1 = new DataGridViewImageColumn();
-            Pic1 = (DataGridViewImageColumn)dataGridView1.Columns[3];
-            Pic1.ImageLayout = DataGridViewImageCellLayout.Stretch;
+          //  DataGridViewImageColumn Pic1 = new DataGridViewImageColumn();
+          //  Pic1 = (DataGridViewImageColumn)dataGridView1.Columns[3];
+           // Pic1.ImageLayout = DataGridViewImageCellLayout.Stretch;
         }
 
         private void image_Load(object sender, EventArgs e)
@@ -67,9 +66,6 @@ namespace TravelAndTourMS
             MemoryStream memstr = new MemoryStream();
 
             cmd.Parameters.AddWithValue("price", textBox2.Text);
-            //MemoryStream memstr = new MemoryStream();
-
-
             pictureBox1.Image.Save(memstr, pictureBox1.Image.RawFormat);
             cmd.Parameters.AddWithValue("Photo", memstr.ToArray());  
             con.Open();

@@ -25,13 +25,11 @@ namespace TravelAndTourMS
 
         private void image1_Load(object sender, EventArgs e, DataGridView dataGridView1)
         {
-            SqlConnection con = new SqlConnection(@"Data Source =.\SQLEXPRESS01; Initial Catalog= TravelandTour ; Integrated Security = True ; ");
-            //SqlCommand cmd = new SqlCommand("SELECT id, name, image_path, bookNow FROM images2", con);
-            SqlCommand cmd = new SqlCommand("SELECT id, package_name, price, Photo FROM Table1", con);
-
-            SqlDataAdapter sd = new SqlDataAdapter(cmd);
-            DataTable dt = new DataTable();
-            sd.Fill(dt);
+             SqlConnection con = new SqlConnection(@"Data Source =.\SQLEXPRESS01; Initial Catalog= TravelandTour ; Integrated Security = True ; ");
+             SqlCommand cmd = new SqlCommand("SELECT id, package_name, price, Photo FROM Table1", con);
+             SqlDataAdapter sd = new SqlDataAdapter(cmd);
+             DataTable dt = new DataTable();
+             sd.Fill(dt);
 
             // dt.Columns.Add("image", Type.GetType("System.Bytes[]"));
           //  dt.Columns.Add("image", typeof(byte[]));
@@ -55,14 +53,11 @@ namespace TravelAndTourMS
 
             dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridView1.BackgroundColor = Color.SkyBlue;
+         /*   dataGridView1.BackgroundColor = Color.SkyBlue;
             dataGridView1.EnableHeadersVisualStyles = false;
             dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = Color.Transparent;
-            dataGridView1.RowHeadersDefaultCellStyle.BackColor = Color.Transparent;
-
-
-
-        }
+            dataGridView1.RowHeadersDefaultCellStyle.BackColor = Color.Transparent;  */
+      }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {

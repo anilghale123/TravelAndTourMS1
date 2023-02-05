@@ -155,8 +155,12 @@ namespace TravelAndTourMS
         private void rjButton1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            register employeeform = new register();
-            employeeform.ShowDialog();
+            var popupForm = new register();
+            popupForm.StartPosition = FormStartPosition.CenterScreen;
+            popupForm.ShowDialog();
+
+            //register employeeform = new register();
+           // employeeform.ShowDialog();
 
         }
 

@@ -88,5 +88,10 @@ namespace TravelAndTourMS
         {
 
         }
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+            //flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(0, 0, 0, 0);
+        }
     }
 }

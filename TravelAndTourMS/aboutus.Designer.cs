@@ -79,6 +79,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.richTextBox1);
             this.Name = "aboutus";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "aboutus";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
