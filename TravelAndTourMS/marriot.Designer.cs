@@ -139,6 +139,7 @@
             this.Controls.Add(this.label1);
             this.Name = "marriot";
             this.Text = "marriot";
+            this.Load += new System.EventHandler(this.marriot_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

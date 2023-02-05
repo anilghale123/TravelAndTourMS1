@@ -100,6 +100,7 @@
             this.pictureBox1.Size = new System.Drawing.Size(344, 253);
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // button4
             // 
@@ -126,6 +127,7 @@
             this.label1.Size = new System.Drawing.Size(143, 25);
             this.label1.TabIndex = 6;
             this.label1.Text = "Package Name";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // textBox1
             // 
@@ -154,6 +156,7 @@
             this.label2.Size = new System.Drawing.Size(56, 25);
             this.label2.TabIndex = 9;
             this.label2.Text = "Price";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // textBox2
             // 
@@ -162,6 +165,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(226, 38);
             this.textBox2.TabIndex = 10;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // iconButton1
             // 

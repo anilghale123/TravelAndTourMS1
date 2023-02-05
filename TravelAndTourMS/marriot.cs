@@ -34,5 +34,10 @@ namespace TravelAndTourMS
             hotelbooking employeeform = new hotelbooking (a,b,c);
             employeeform.ShowDialog();
         }
+
+        private void marriot_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
