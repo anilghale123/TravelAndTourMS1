@@ -18,6 +18,7 @@ namespace TravelAndTourMS
         public hoteladmin()
         {
             InitializeComponent();
+            load_data();
         }
         private void load_data()
         {
@@ -50,6 +51,18 @@ namespace TravelAndTourMS
             }
         }
 
+        private void dataGridView1_Click(object sender, EventArgs e)
+        {
+            id1.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            place.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            categori.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+            textBox6.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+            textBox8.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
+
+
+            MemoryStream ms = new MemoryStream((byte[])dataGridView1.CurrentRow.Cells[5].Value);
+            pictureBox1.Image = Image.FromStream(ms);
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             cmd = new SqlCommand("INSERT INTO Hotel (place,hotel,category,price,photo) VALUES (@place,@hotel,@category,@price,@photo)", con);
@@ -70,6 +83,50 @@ namespace TravelAndTourMS
             con.Close();
             MessageBox.Show("Hotel Added Successfullly");
             load_data();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            cmd = new SqlCommand("UPDATE Hotel SET place = @place,hotel=@hotel , category = @category,price = @price, photo = @photo WHERE id = @id", con);
+            cmd.Parameters.AddWithValue("place", place.Text);
+            MemoryStream memstr = new MemoryStream();
+
+            cmd.Parameters.AddWithValue("hotel", textBox6.Text);
+            cmd.Parameters.AddWithValue("category", categori.Text);
+            cmd.Parameters.AddWithValue("price", textBox8.Text);
+
+
+
+            pictureBox1.Image.Save(memstr, pictureBox1.Image.RawFormat);
+            cmd.Parameters.AddWithValue("photo", memstr.ToArray());
+
+            cmd.Parameters.AddWithValue("id", id1.Text);
+            con.Open();
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("Package Updated ");
+            load_data();
+            con.Close();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            cmd = new SqlCommand("DELETE FROM Hotel WHERE  id = @id", con);
+            cmd.Parameters.AddWithValue("id", id1.Text);
+            con.Open();
+            cmd.ExecuteNonQuery();
+            con.Close();
+            load_data();
+            pictureBox1.Image = null;
+            textBox8.Text = "";
+            textBox6.Text = "";
+            categori.Text = "";
+            place.Text = "";
+            id1.Text = "";
         }
     }
 }

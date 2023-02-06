@@ -43,6 +43,9 @@
             this.place = new System.Windows.Forms.ComboBox();
             this.button4 = new System.Windows.Forms.Button();
             this.openFileDialog2 = new System.Windows.Forms.OpenFileDialog();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.id1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -52,7 +55,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.SystemColors.Info;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(1084, 5);
+            this.label2.Location = new System.Drawing.Point(1101, 38);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(65, 30);
             this.label2.TabIndex = 44;
@@ -60,21 +63,21 @@
             // 
             // textBox8
             // 
-            this.textBox8.Location = new System.Drawing.Point(1068, 59);
+            this.textBox8.Location = new System.Drawing.Point(1084, 90);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(125, 27);
             this.textBox8.TabIndex = 43;
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(917, 59);
+            this.textBox6.Location = new System.Drawing.Point(929, 90);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(125, 27);
             this.textBox6.TabIndex = 41;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(1222, 44);
+            this.button1.Location = new System.Drawing.Point(1228, 81);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(106, 42);
             this.button1.TabIndex = 39;
@@ -91,7 +94,7 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.SystemColors.Info;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(929, 10);
+            this.label4.Location = new System.Drawing.Point(949, 38);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(66, 30);
             this.label4.TabIndex = 46;
@@ -120,7 +123,7 @@
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.textBox2.Location = new System.Drawing.Point(748, 10);
+            this.textBox2.Location = new System.Drawing.Point(748, 38);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(123, 27);
             this.textBox2.TabIndex = 32;
@@ -129,7 +132,7 @@
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.textBox1.Location = new System.Drawing.Point(581, 10);
+            this.textBox1.Location = new System.Drawing.Point(581, 41);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(104, 27);
             this.textBox1.TabIndex = 31;
@@ -144,6 +147,8 @@
             this.dataGridView1.RowTemplate.Height = 29;
             this.dataGridView1.Size = new System.Drawing.Size(1466, 677);
             this.dataGridView1.TabIndex = 30;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.Click += new System.EventHandler(this.dataGridView1_Click);
             // 
             // categori
             // 
@@ -152,7 +157,7 @@
             "High",
             "Medium",
             "Low"});
-            this.categori.Location = new System.Drawing.Point(738, 58);
+            this.categori.Location = new System.Drawing.Point(748, 89);
             this.categori.Name = "categori";
             this.categori.Size = new System.Drawing.Size(151, 28);
             this.categori.TabIndex = 29;
@@ -165,7 +170,7 @@
             "Rasuwa",
             "Chitwan",
             "Kathmandu"});
-            this.place.Location = new System.Drawing.Point(581, 58);
+            this.place.Location = new System.Drawing.Point(581, 89);
             this.place.Name = "place";
             this.place.Size = new System.Drawing.Size(151, 28);
             this.place.TabIndex = 28;
@@ -184,11 +189,42 @@
             // 
             this.openFileDialog2.FileName = "openFileDialog2";
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(1418, 94);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(94, 29);
+            this.button2.TabIndex = 47;
+            this.button2.Text = "update";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(1582, 82);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(94, 29);
+            this.button3.TabIndex = 48;
+            this.button3.Text = "delete";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // id1
+            // 
+            this.id1.AutoSize = true;
+            this.id1.Location = new System.Drawing.Point(460, 129);
+            this.id1.Name = "id1";
+            this.id1.Size = new System.Drawing.Size(0, 20);
+            this.id1.TabIndex = 49;
+            // 
             // hoteladmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1911, 888);
+            this.Controls.Add(this.id1);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox8);
             this.Controls.Add(this.textBox6);
@@ -229,5 +265,8 @@
         private ComboBox place;
         private Button button4;
         private OpenFileDialog openFileDialog2;
+        private Button button2;
+        private Button button3;
+        private Label id1;
     }
 }

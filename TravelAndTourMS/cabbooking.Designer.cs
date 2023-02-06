@@ -105,11 +105,11 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(366, 15);
+            this.label1.Location = new System.Drawing.Point(322, 20);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(190, 57);
+            this.label1.Size = new System.Drawing.Size(277, 57);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Booking";
+            this.label1.Text = "Cab Booking";
             // 
             // label2
             // 
@@ -294,7 +294,7 @@
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.NTraveller);
-            this.panel1.Location = new System.Drawing.Point(60, 76);
+            this.panel1.Location = new System.Drawing.Point(147, 105);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(895, 534);
             this.panel1.TabIndex = 32;
@@ -304,7 +304,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.ClientSize = new System.Drawing.Size(1015, 687);
+            this.ClientSize = new System.Drawing.Size(1169, 740);
             this.Controls.Add(this.panel1);
             this.Name = "cabbooking";
             this.Text = "cabbooking";
