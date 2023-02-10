@@ -12,11 +12,11 @@ namespace TravelAndTourMS
 {
     public partial class hotelbooking : Form
     {
-        public hotelbooking(string a, string b, Image c)
-        {
+        public hotelbooking( string a, string b, string c, string d)
+     {
             InitializeComponent();
-            textBox1.Text = a;
-            textBox3.Text = b;
+            textBox1.Text = d;
+            textBox3.Text = c;
            
         }
 

@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
@@ -48,14 +50,16 @@
             this.label7 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.NTraveller = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Controls.Add(this.label8);
+            this.panel1.Controls.Add(this.textBox4);
             this.panel1.Controls.Add(this.textBox3);
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.button4);
@@ -79,14 +83,28 @@
             this.panel1.Controls.Add(this.NTraveller);
             this.panel1.Location = new System.Drawing.Point(117, 85);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(895, 534);
+            this.panel1.Size = new System.Drawing.Size(895, 620);
             this.panel1.TabIndex = 31;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(634, 256);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(125, 27);
+            this.textBox3.TabIndex = 36;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(251, 316);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(125, 27);
+            this.textBox1.TabIndex = 35;
             // 
             // button4
             // 
             this.button4.BackColor = System.Drawing.SystemColors.Info;
             this.button4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button4.Location = new System.Drawing.Point(708, 462);
+            this.button4.Location = new System.Drawing.Point(712, 564);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(129, 50);
             this.button4.TabIndex = 34;
@@ -97,7 +115,7 @@
             // 
             this.button3.BackColor = System.Drawing.SystemColors.Info;
             this.button3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button3.Location = new System.Drawing.Point(708, 406);
+            this.button3.Location = new System.Drawing.Point(712, 508);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(129, 50);
             this.button3.TabIndex = 33;
@@ -109,7 +127,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(469, 312);
+            this.label3.Location = new System.Drawing.Point(548, 252);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(62, 28);
             this.label3.TabIndex = 31;
@@ -120,11 +138,11 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(366, 15);
+            this.label1.Location = new System.Drawing.Point(307, 26);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(190, 57);
+            this.label1.Size = new System.Drawing.Size(311, 57);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Booking";
+            this.label1.Text = "Hotel Booking";
             // 
             // label2
             // 
@@ -150,7 +168,7 @@
             // textBox2
             // 
             this.textBox2.BackColor = System.Drawing.SystemColors.Info;
-            this.textBox2.Location = new System.Drawing.Point(634, 260);
+            this.textBox2.Location = new System.Drawing.Point(634, 365);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
@@ -205,7 +223,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label5.Location = new System.Drawing.Point(469, 256);
+            this.label5.Location = new System.Drawing.Point(469, 361);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(112, 28);
             this.label5.TabIndex = 24;
@@ -225,7 +243,7 @@
             // 
             this.button2.BackColor = System.Drawing.SystemColors.Info;
             this.button2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button2.Location = new System.Drawing.Point(67, 462);
+            this.button2.Location = new System.Drawing.Point(70, 553);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(129, 50);
             this.button2.TabIndex = 23;
@@ -260,15 +278,15 @@
             this.label7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label7.Location = new System.Drawing.Point(46, 252);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(159, 28);
+            this.label7.Size = new System.Drawing.Size(131, 28);
             this.label7.TabIndex = 12;
-            this.label7.Text = "No. of Traveller";
+            this.label7.Text = "No. of Guest";
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.SystemColors.Info;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(67, 406);
+            this.button1.Location = new System.Drawing.Point(70, 497);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(129, 50);
             this.button1.TabIndex = 20;
@@ -281,23 +299,30 @@
             this.NTraveller.Location = new System.Drawing.Point(241, 252);
             this.NTraveller.Multiline = true;
             this.NTraveller.Name = "NTraveller";
-            this.NTraveller.PlaceholderText = "Number of Traveller";
+            this.NTraveller.PlaceholderText = "Number of Guest";
             this.NTraveller.Size = new System.Drawing.Size(182, 38);
             this.NTraveller.TabIndex = 13;
             // 
-            // textBox1
+            // label8
             // 
-            this.textBox1.Location = new System.Drawing.Point(251, 316);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(125, 27);
-            this.textBox1.TabIndex = 35;
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label8.Location = new System.Drawing.Point(46, 361);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(132, 28);
+            this.label8.TabIndex = 37;
+            this.label8.Text = "No. of Room";
             // 
-            // textBox3
+            // textBox4
             // 
-            this.textBox3.Location = new System.Drawing.Point(647, 316);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(125, 27);
-            this.textBox3.TabIndex = 36;
+            this.textBox4.BackColor = System.Drawing.SystemColors.Info;
+            this.textBox4.Location = new System.Drawing.Point(241, 361);
+            this.textBox4.Multiline = true;
+            this.textBox4.Name = "textBox4";
+            this.textBox4.PlaceholderText = "Number of Room";
+            this.textBox4.Size = new System.Drawing.Size(182, 38);
+            this.textBox4.TabIndex = 38;
             // 
             // hotelbooking
             // 
@@ -339,5 +364,7 @@
         private TextBox NTraveller;
         private TextBox textBox3;
         private TextBox textBox1;
+        private Label label8;
+        private TextBox textBox4;
     }
 }

@@ -12,7 +12,7 @@ namespace TravelAndTourMS
 {
     public partial class cabbooking : Form
     {
-        public cabbooking(string a, string b, string c, Image d)
+        public cabbooking(string a, string b, string c, string d)
         {
             InitializeComponent();
             PhoneNum.Text = a;
