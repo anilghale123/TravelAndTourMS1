@@ -12,12 +12,14 @@ namespace TravelAndTourMS
 {
     public partial class cabbooking : Form
     {
-        public cabbooking(string a, string b, string c, string d)
+        private Image x;
+        public cabbooking(string a, string b, string c, string d,Image ee)
         {
             InitializeComponent();
             PhoneNum.Text = a;
             Naam.Text = b;
             textBox1.Text = c;
+            x = ee;
         }
 
        
@@ -39,7 +41,7 @@ namespace TravelAndTourMS
             switch (selectedItem)
             {
                 case "esewa":
-                    esewa form1 = new esewa();
+                    esewa form1 = new esewa(Naam.Text, Addresses.Text, dateTimePicker1.Text, NTraveller.Text, textBox1.Text, textBox2.Text, textBox3.Text,x);
                     form1.Show();
                     break;
                

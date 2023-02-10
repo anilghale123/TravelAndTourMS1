@@ -50,8 +50,8 @@ namespace TravelAndTourMS
 
         private void button2_Click(object sender, EventArgs e)
         {
-            cmd = new SqlCommand("INSERT INTO cab (type,brand,model,seatnum,number,cab1,cab2,cab3,feature,driverinfo,driver,price,offerinfo,offerprice,offer) VALUES " +
-                "(@type,@brand,@model,@seatnum,@number,@cab1,@cab2,@cab3,@feature,@driverinfo,@driver,@price,@offerinfo,@offerprice,@offer)", con);
+            cmd = new SqlCommand("INSERT INTO cab (type,brand,model,seatnum,number,cab1,cab2,cab3,feature,driverinfo,driver,price,offerinfo,offerprice,offer,qr) VALUES " +
+                "(@type,@brand,@model,@seatnum,@number,@cab1,@cab2,@cab3,@feature,@driverinfo,@driver,@price,@offerinfo,@offerprice,@offer,@qr)", con);
            
                  cmd.Parameters.AddWithValue("type", textBox1.Text);
 
@@ -61,6 +61,7 @@ namespace TravelAndTourMS
             MemoryStream memstr2 = new MemoryStream();
             MemoryStream memstr3 = new MemoryStream();
             MemoryStream memstr4 = new MemoryStream();
+            MemoryStream memstr5 = new MemoryStream();
 
             cmd.Parameters.AddWithValue("brand", textBox5.Text);
             cmd.Parameters.AddWithValue("model", textBox4.Text);
@@ -89,6 +90,9 @@ namespace TravelAndTourMS
 
             pictureBox5.Image.Save(memstr4, pictureBox5.Image.RawFormat);
             cmd.Parameters.AddWithValue("offer", memstr4.ToArray());
+
+            pictureBox6.Image.Save(memstr5, pictureBox6.Image.RawFormat);
+            cmd.Parameters.AddWithValue("qr", memstr5.ToArray());
 
             con.Open();
             cmd.ExecuteNonQuery();
@@ -149,7 +153,7 @@ namespace TravelAndTourMS
 
         private void button9_Click(object sender, EventArgs e)
         {
-            cmd = new SqlCommand("UPDATE cab SET  type = @type,brand = @brand,model = @model,seatnum = @seatnum,number = @number,cab1 = @cab1,cab2 = @cab2,cab3 = @cab3,feature = @feature,driverinfo = @driverinfo,driver = @driver,price = @price,offerinfo = @offerinfo,offerprice = @offerprice,offer = @offer  WHERE id = @id", con);
+            cmd = new SqlCommand("UPDATE cab SET  type = @type,brand = @brand,model = @model,seatnum = @seatnum,number = @number,cab1 = @cab1,cab2 = @cab2,cab3 = @cab3,feature = @feature,driverinfo = @driverinfo,driver = @driver,price = @price,offerinfo = @offerinfo,offerprice = @offerprice,offer = @offer, qr = @qr  WHERE id = @id", con);
             cmd.Parameters.AddWithValue("type", textBox1.Text);
 
             MemoryStream memstr = new MemoryStream();
@@ -189,6 +193,9 @@ namespace TravelAndTourMS
             pictureBox5.Image.Save(memstr4, pictureBox5.Image.RawFormat);
             cmd.Parameters.AddWithValue("offer", memstr4.ToArray());
 
+            pictureBox6.Image.Save(memstr5, pictureBox6.Image.RawFormat);
+            cmd.Parameters.AddWithValue("qr", memstr5.ToArray());
+
             cmd.Parameters.AddWithValue("id", id1.Text);
 
             con.Open();
@@ -220,7 +227,8 @@ namespace TravelAndTourMS
             MemoryStream ms2 = new MemoryStream((byte[])dataGridView1.CurrentRow.Cells[8].Value);
             MemoryStream ms3 = new MemoryStream((byte[])dataGridView1.CurrentRow.Cells[11].Value);
             MemoryStream ms4 = new MemoryStream((byte[])dataGridView1.CurrentRow.Cells[15].Value);
-            
+            MemoryStream ms5 = new MemoryStream((byte[])dataGridView1.CurrentRow.Cells[16].Value);
+
 
 
             pictureBox1.Image = Image.FromStream(ms);
@@ -228,7 +236,8 @@ namespace TravelAndTourMS
             pictureBox3.Image = Image.FromStream(ms2);
             pictureBox4.Image = Image.FromStream(ms3);
             pictureBox5.Image = Image.FromStream(ms4);
-            
+            pictureBox6.Image = Image.FromStream(ms5);
+
 
 
 
@@ -251,6 +260,16 @@ namespace TravelAndTourMS
             //categori.Text = "";
           //  place.Text = "";
             id1.Text = "";
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.Filter = " Select image(*.JpG;*.jpeg*.; png; *. Gif) | *.JpG;  *. png; *. Gif ";
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                pictureBox6.Image = Image.FromFile(openFileDialog1.FileName);
+
+            }
         }
     }
 }

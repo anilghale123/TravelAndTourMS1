@@ -50,6 +50,9 @@ namespace TravelAndTourMS
             dataGridView1.Columns["number"].Visible = false;
             dataGridView1.Columns["price"].Visible = false;
 
+            dataGridView1.Columns["qr"].Visible = false;
+
+
             //  dataGridView1.Columns["cab2"].Visible = false;
 
 
@@ -88,9 +91,12 @@ namespace TravelAndTourMS
                 byte[] byteArray3 = (byte[])dataGridView1.Rows[selectedRowIndex].Cells["driver"].Value;
                 byte[] byteArray4 = (byte[])dataGridView1.Rows[selectedRowIndex].Cells["offer"].Value;
 
+                byte[] byteArray5 = (byte[])dataGridView1.Rows[selectedRowIndex].Cells["qr"].Value;
 
 
-                Image image,image1,image2,image3,image4;
+
+
+                Image image,image1,image2,image3,image4,image5;
 
 
                 using (var ms = new MemoryStream(byteArray))
@@ -122,10 +128,15 @@ namespace TravelAndTourMS
                     image4 = Image.FromStream(ms4);
                 }
 
+                using (var ms5 = new MemoryStream(byteArray5))
+                {
+                    image5 = Image.FromStream(ms5);
+                }
+
 
 
                 this.Hide();
-                    yatri employeeform = new yatri (type, brand,model,seatnum,number,image,image1,image2,feature,driverinfo,image3,price,offerinfo,offerprice,image4);
+                    yatri employeeform = new yatri (type, brand,model,seatnum,number,image,image1,image2,feature,driverinfo,image3,price,offerinfo,offerprice,image4,image5);
                     employeeform.ShowDialog();
                 
             }

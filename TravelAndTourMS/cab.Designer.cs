@@ -65,12 +65,15 @@
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.id1 = new System.Windows.Forms.Label();
+            this.button10 = new System.Windows.Forms.Button();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -189,9 +192,9 @@
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button4.Location = new System.Drawing.Point(1729, 722);
+            this.button4.Location = new System.Drawing.Point(1739, 721);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(98, 45);
+            this.button4.Size = new System.Drawing.Size(98, 38);
             this.button4.TabIndex = 16;
             this.button4.Text = "Upload";
             this.button4.UseVisualStyleBackColor = true;
@@ -403,11 +406,32 @@
             this.id1.Size = new System.Drawing.Size(0, 20);
             this.id1.TabIndex = 40;
             // 
+            // button10
+            // 
+            this.button10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button10.Location = new System.Drawing.Point(1697, 1011);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(193, 45);
+            this.button10.TabIndex = 42;
+            this.button10.Text = "Upload Qr";
+            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Location = new System.Drawing.Point(1659, 765);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(263, 240);
+            this.pictureBox6.TabIndex = 41;
+            this.pictureBox6.TabStop = false;
+            // 
             // cab
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1924, 1055);
+            this.Controls.Add(this.button10);
+            this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.id1);
             this.Controls.Add(this.button9);
             this.Controls.Add(this.button8);
@@ -453,6 +477,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -497,5 +522,7 @@
         private Button button8;
         private Button button9;
         private Label id1;
+        private Button button10;
+        private PictureBox pictureBox6;
     }
 }

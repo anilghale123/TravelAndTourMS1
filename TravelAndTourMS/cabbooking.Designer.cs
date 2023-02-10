@@ -30,8 +30,6 @@
         {
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -45,7 +43,6 @@
             this.PhoneNum = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            this.TravelDate = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.NTraveller = new System.Windows.Forms.TextBox();
@@ -58,10 +55,10 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(699, 260);
+            this.textBox3.Location = new System.Drawing.Point(681, 265);
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(169, 41);
+            this.textBox3.Size = new System.Drawing.Size(182, 36);
             this.textBox3.TabIndex = 36;
             // 
             // textBox1
@@ -69,37 +66,15 @@
             this.textBox1.Location = new System.Drawing.Point(241, 315);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(182, 33);
+            this.textBox1.Size = new System.Drawing.Size(233, 33);
             this.textBox1.TabIndex = 35;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.SystemColors.Info;
-            this.button4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button4.Location = new System.Drawing.Point(717, 637);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(129, 50);
-            this.button4.TabIndex = 34;
-            this.button4.Text = "Preview";
-            this.button4.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.SystemColors.Info;
-            this.button3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button3.Location = new System.Drawing.Point(717, 581);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(129, 50);
-            this.button3.TabIndex = 33;
-            this.button3.Text = "Save";
-            this.button3.UseVisualStyleBackColor = false;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(521, 256);
+            this.label3.Location = new System.Drawing.Point(551, 265);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(62, 28);
             this.label3.TabIndex = 31;
@@ -134,13 +109,13 @@
             this.Naam.Multiline = true;
             this.Naam.Name = "Naam";
             this.Naam.PlaceholderText = "Enter Name";
-            this.Naam.Size = new System.Drawing.Size(182, 36);
+            this.Naam.Size = new System.Drawing.Size(222, 36);
             this.Naam.TabIndex = 3;
             // 
             // textBox2
             // 
             this.textBox2.BackColor = System.Drawing.SystemColors.Info;
-            this.textBox2.Location = new System.Drawing.Point(691, 317);
+            this.textBox2.Location = new System.Drawing.Point(681, 317);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
@@ -152,7 +127,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label10.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label10.Location = new System.Drawing.Point(469, 134);
+            this.label10.Location = new System.Drawing.Point(521, 138);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(149, 28);
             this.label10.TabIndex = 4;
@@ -161,11 +136,11 @@
             // Addresses
             // 
             this.Addresses.BackColor = System.Drawing.SystemColors.Info;
-            this.Addresses.Location = new System.Drawing.Point(634, 130);
+            this.Addresses.Location = new System.Drawing.Point(681, 130);
             this.Addresses.Multiline = true;
             this.Addresses.Name = "Addresses";
             this.Addresses.PlaceholderText = "Enter Address";
-            this.Addresses.Size = new System.Drawing.Size(182, 36);
+            this.Addresses.Size = new System.Drawing.Size(182, 44);
             this.Addresses.TabIndex = 5;
             // 
             // label11
@@ -184,7 +159,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label4.Location = new System.Drawing.Point(526, 195);
+            this.label4.Location = new System.Drawing.Point(551, 193);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(57, 28);
             this.label4.TabIndex = 6;
@@ -205,18 +180,18 @@
             // PhoneNum
             // 
             this.PhoneNum.BackColor = System.Drawing.SystemColors.Info;
-            this.PhoneNum.Location = new System.Drawing.Point(634, 194);
+            this.PhoneNum.Location = new System.Drawing.Point(681, 197);
             this.PhoneNum.Multiline = true;
             this.PhoneNum.Name = "PhoneNum";
             this.PhoneNum.PlaceholderText = "Enter Phone Number";
-            this.PhoneNum.Size = new System.Drawing.Size(182, 39);
+            this.PhoneNum.Size = new System.Drawing.Size(182, 50);
             this.PhoneNum.TabIndex = 7;
             // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.SystemColors.Info;
             this.button2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button2.Location = new System.Drawing.Point(76, 637);
+            this.button2.Location = new System.Drawing.Point(632, 527);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(129, 50);
             this.button2.TabIndex = 23;
@@ -234,16 +209,6 @@
             this.label6.TabIndex = 10;
             this.label6.Text = "Travel Date";
             // 
-            // TravelDate
-            // 
-            this.TravelDate.BackColor = System.Drawing.SystemColors.Info;
-            this.TravelDate.Location = new System.Drawing.Point(36, 39);
-            this.TravelDate.Multiline = true;
-            this.TravelDate.Name = "TravelDate";
-            this.TravelDate.PlaceholderText = "Enter Date";
-            this.TravelDate.Size = new System.Drawing.Size(182, 38);
-            this.TravelDate.TabIndex = 11;
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -259,7 +224,7 @@
             // 
             this.button1.BackColor = System.Drawing.SystemColors.Info;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(76, 581);
+            this.button1.Location = new System.Drawing.Point(222, 527);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(129, 50);
             this.button1.TabIndex = 20;
@@ -274,7 +239,7 @@
             this.NTraveller.Multiline = true;
             this.NTraveller.Name = "NTraveller";
             this.NTraveller.PlaceholderText = "Number of Traveller";
-            this.NTraveller.Size = new System.Drawing.Size(182, 38);
+            this.NTraveller.Size = new System.Drawing.Size(233, 38);
             this.NTraveller.TabIndex = 13;
             // 
             // panel1
@@ -285,8 +250,6 @@
             this.panel1.Controls.Add(this.dateTimePicker1);
             this.panel1.Controls.Add(this.textBox3);
             this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label2);
@@ -300,13 +263,12 @@
             this.panel1.Controls.Add(this.PhoneNum);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.TravelDate);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.NTraveller);
-            this.panel1.Location = new System.Drawing.Point(200, 43);
+            this.panel1.Location = new System.Drawing.Point(75, 44);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(895, 713);
+            this.panel1.Size = new System.Drawing.Size(895, 649);
             this.panel1.TabIndex = 32;
             // 
             // label8
@@ -314,7 +276,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label8.Location = new System.Drawing.Point(526, 391);
+            this.label8.Location = new System.Drawing.Point(322, 403);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(163, 28);
             this.label8.TabIndex = 39;
@@ -327,7 +289,7 @@
             "esewa",
             "qr",
             "cash"});
-            this.comboBox1.Location = new System.Drawing.Point(695, 391);
+            this.comboBox1.Location = new System.Drawing.Point(491, 403);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(141, 28);
             this.comboBox1.TabIndex = 38;
@@ -335,9 +297,9 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(221, 197);
+            this.dateTimePicker1.Location = new System.Drawing.Point(235, 197);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(253, 27);
+            this.dateTimePicker1.Size = new System.Drawing.Size(239, 27);
             this.dateTimePicker1.TabIndex = 37;
             // 
             // cabbooking
@@ -345,7 +307,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.ClientSize = new System.Drawing.Size(1240, 759);
+            this.ClientSize = new System.Drawing.Size(1063, 744);
             this.Controls.Add(this.panel1);
             this.Name = "cabbooking";
             this.Text = "cabbooking";
@@ -360,8 +322,6 @@
 
         private TextBox textBox3;
         private TextBox textBox1;
-        private Button button4;
-        private Button button3;
         private Label label3;
         private Label label1;
         private Label label2;
@@ -375,7 +335,6 @@
         private TextBox PhoneNum;
         private Button button2;
         private Label label6;
-        private TextBox TravelDate;
         private Label label7;
         private Button button1;
         private TextBox NTraveller;

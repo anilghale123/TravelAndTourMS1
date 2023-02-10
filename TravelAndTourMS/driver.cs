@@ -35,6 +35,7 @@ namespace TravelAndTourMS
         private Image x3;
         private Image x4;
         private Image x5;
+        private Image x6;
 
         private string k;
         private string l;
@@ -43,7 +44,7 @@ namespace TravelAndTourMS
         private string n;
 
 
-        public driver(string v, string v1, string v2, string v3, string v4, Image i1, Image i2, Image i3, string v5, string v6, Image i4, string v7, string v8, string v9, Image i5)
+        public driver(string v, string v1, string v2, string v3, string v4, Image i1, Image i2, Image i3, string v5, string v6, Image i4, string v7, string v8, string v9, Image i5,Image i6)
         {
             InitializeComponent();
 
@@ -64,6 +65,7 @@ namespace TravelAndTourMS
             x3 = i3;
             x4 = i4;
              x5 = i5;
+            x6 = i6;
 
             richTextBox1.Text = g;
             pictureBox1.Image = x4;
@@ -87,7 +89,7 @@ namespace TravelAndTourMS
         private void rjButton2_Click(object sender, EventArgs e)
         {
             this.Hide();
-            yatri employeeform = new yatri(o  , p , c , d , ee , x1 , x2 , x3 , f , g , x4 , h , i , j , x5 );
+            yatri employeeform = new yatri(o  , p , c , d , ee , x1 , x2 , x3 , f , g , x4 , h , i , j , x5,x6 );
             employeeform.ShowDialog();
 
         }
@@ -97,7 +99,7 @@ namespace TravelAndTourMS
         
             
             this.Hide();
-            cabbooking employeeform = new cabbooking(o, p, c, d);
+            cabbooking employeeform = new cabbooking(o, p, c, d,x6);
             employeeform.ShowDialog();
         
         }
