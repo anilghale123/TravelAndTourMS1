@@ -44,8 +44,8 @@ namespace TravelAndTourMS
             pictureBox2.Image = i1;
             pictureBox3.Image = i2;
             pictureBox4.Image = i3;
-            pictureBox5.Image = i4;
-            pictureBox6.Image = i5;
+            pictureBox5.Image = i5;
+            pictureBox6.Image = i4;
             pictureBox7.Image = i6;
             pictureBox8.Image = i7;
 

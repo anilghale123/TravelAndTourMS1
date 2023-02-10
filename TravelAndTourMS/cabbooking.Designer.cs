@@ -50,28 +50,33 @@
             this.button1 = new System.Windows.Forms.Button();
             this.NTraveller = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(647, 316);
+            this.textBox3.Location = new System.Drawing.Point(699, 260);
+            this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(125, 27);
+            this.textBox3.Size = new System.Drawing.Size(169, 41);
             this.textBox3.TabIndex = 36;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(251, 316);
+            this.textBox1.Location = new System.Drawing.Point(241, 315);
+            this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(125, 27);
+            this.textBox1.Size = new System.Drawing.Size(182, 33);
             this.textBox1.TabIndex = 35;
             // 
             // button4
             // 
             this.button4.BackColor = System.Drawing.SystemColors.Info;
             this.button4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button4.Location = new System.Drawing.Point(708, 462);
+            this.button4.Location = new System.Drawing.Point(717, 637);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(129, 50);
             this.button4.TabIndex = 34;
@@ -82,7 +87,7 @@
             // 
             this.button3.BackColor = System.Drawing.SystemColors.Info;
             this.button3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button3.Location = new System.Drawing.Point(708, 406);
+            this.button3.Location = new System.Drawing.Point(717, 581);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(129, 50);
             this.button3.TabIndex = 33;
@@ -94,7 +99,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(469, 312);
+            this.label3.Location = new System.Drawing.Point(521, 256);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(62, 28);
             this.label3.TabIndex = 31;
@@ -135,7 +140,7 @@
             // textBox2
             // 
             this.textBox2.BackColor = System.Drawing.SystemColors.Info;
-            this.textBox2.Location = new System.Drawing.Point(634, 260);
+            this.textBox2.Location = new System.Drawing.Point(691, 317);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
@@ -168,7 +173,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label11.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label11.Location = new System.Drawing.Point(46, 312);
+            this.label11.Location = new System.Drawing.Point(116, 320);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(59, 28);
             this.label11.TabIndex = 25;
@@ -179,18 +184,19 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label4.Location = new System.Drawing.Point(469, 195);
+            this.label4.Location = new System.Drawing.Point(526, 195);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(98, 28);
+            this.label4.Size = new System.Drawing.Size(57, 28);
             this.label4.TabIndex = 6;
-            this.label4.Text = "Category";
+            this.label4.Text = "Type";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label5.Location = new System.Drawing.Point(469, 256);
+            this.label5.Location = new System.Drawing.Point(526, 328);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(112, 28);
             this.label5.TabIndex = 24;
@@ -210,7 +216,7 @@
             // 
             this.button2.BackColor = System.Drawing.SystemColors.Info;
             this.button2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button2.Location = new System.Drawing.Point(67, 462);
+            this.button2.Location = new System.Drawing.Point(76, 637);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(129, 50);
             this.button2.TabIndex = 23;
@@ -231,7 +237,7 @@
             // TravelDate
             // 
             this.TravelDate.BackColor = System.Drawing.SystemColors.Info;
-            this.TravelDate.Location = new System.Drawing.Point(241, 185);
+            this.TravelDate.Location = new System.Drawing.Point(36, 39);
             this.TravelDate.Multiline = true;
             this.TravelDate.Name = "TravelDate";
             this.TravelDate.PlaceholderText = "Enter Date";
@@ -253,12 +259,13 @@
             // 
             this.button1.BackColor = System.Drawing.SystemColors.Info;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(67, 406);
+            this.button1.Location = new System.Drawing.Point(76, 581);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(129, 50);
             this.button1.TabIndex = 20;
             this.button1.Text = "Confirm";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // NTraveller
             // 
@@ -273,6 +280,9 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Controls.Add(this.label8);
+            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.dateTimePicker1);
             this.panel1.Controls.Add(this.textBox3);
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.button4);
@@ -294,10 +304,41 @@
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.NTraveller);
-            this.panel1.Location = new System.Drawing.Point(200, 101);
+            this.panel1.Location = new System.Drawing.Point(200, 43);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(895, 530);
+            this.panel1.Size = new System.Drawing.Size(895, 713);
             this.panel1.TabIndex = 32;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label8.Location = new System.Drawing.Point(526, 391);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(163, 28);
+            this.label8.TabIndex = 39;
+            this.label8.Text = "Payment option";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "esewa",
+            "qr",
+            "cash"});
+            this.comboBox1.Location = new System.Drawing.Point(695, 391);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(141, 28);
+            this.comboBox1.TabIndex = 38;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(221, 197);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(253, 27);
+            this.dateTimePicker1.TabIndex = 37;
             // 
             // cabbooking
             // 
@@ -339,5 +380,8 @@
         private Button button1;
         private TextBox NTraveller;
         private Panel panel1;
+        private DateTimePicker dateTimePicker1;
+        private Label label8;
+        private ComboBox comboBox1;
     }
 }

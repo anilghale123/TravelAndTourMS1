@@ -1,6 +1,6 @@
 ﻿namespace TravelAndTourMS
 {
-    partial class driver
+    partial class esewa
     {
         /// <summary>
         /// Required designer variable.
@@ -28,31 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.rjButton1 = new TravelAndTourMS.RJButton();
             this.rjButton2 = new TravelAndTourMS.RJButton();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // label1
             // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox1.Location = new System.Drawing.Point(147, 63);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(314, 292);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Location = new System.Drawing.Point(38, 361);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(567, 507);
-            this.richTextBox1.TabIndex = 1;
-            this.richTextBox1.Text = "";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(191, 82);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(50, 20);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "label1";
             // 
             // rjButton1
             // 
@@ -63,16 +51,14 @@
             this.rjButton1.BorderSize = 0;
             this.rjButton1.FlatAppearance.BorderSize = 0;
             this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.rjButton1.ForeColor = System.Drawing.Color.White;
-            this.rjButton1.Location = new System.Drawing.Point(405, 895);
+            this.rjButton1.Location = new System.Drawing.Point(25, 156);
             this.rjButton1.Name = "rjButton1";
             this.rjButton1.Size = new System.Drawing.Size(188, 50);
-            this.rjButton1.TabIndex = 2;
-            this.rjButton1.Text = "Confirm";
+            this.rjButton1.TabIndex = 1;
+            this.rjButton1.Text = "Receipt Preview";
             this.rjButton1.TextColor = System.Drawing.Color.White;
             this.rjButton1.UseVisualStyleBackColor = false;
-            this.rjButton1.Click += new System.EventHandler(this.rjButton1_Click);
             // 
             // rjButton2
             // 
@@ -83,38 +69,33 @@
             this.rjButton2.BorderSize = 0;
             this.rjButton2.FlatAppearance.BorderSize = 0;
             this.rjButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.rjButton2.ForeColor = System.Drawing.Color.White;
-            this.rjButton2.Location = new System.Drawing.Point(77, 895);
+            this.rjButton2.Location = new System.Drawing.Point(230, 156);
             this.rjButton2.Name = "rjButton2";
             this.rjButton2.Size = new System.Drawing.Size(188, 50);
-            this.rjButton2.TabIndex = 3;
-            this.rjButton2.Text = "Back";
+            this.rjButton2.TabIndex = 2;
+            this.rjButton2.Text = "Receipt Download";
             this.rjButton2.TextColor = System.Drawing.Color.White;
             this.rjButton2.UseVisualStyleBackColor = false;
-            this.rjButton2.Click += new System.EventHandler(this.rjButton2_Click);
             // 
-            // driver
+            // esewa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(684, 974);
+            this.ClientSize = new System.Drawing.Size(478, 265);
             this.Controls.Add(this.rjButton2);
             this.Controls.Add(this.rjButton1);
-            this.Controls.Add(this.richTextBox1);
-            this.Controls.Add(this.pictureBox1);
-            this.Name = "driver";
-            this.Text = "driver";
-            this.Load += new System.EventHandler(this.driver_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.Controls.Add(this.label1);
+            this.Name = "esewa";
+            this.Text = "esewa";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private PictureBox pictureBox1;
-        private RichTextBox richTextBox1;
+        private Label label1;
         private RJButton rjButton1;
         private RJButton rjButton2;
     }

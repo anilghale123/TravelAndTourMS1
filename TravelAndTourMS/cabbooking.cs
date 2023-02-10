@@ -20,9 +20,45 @@ namespace TravelAndTourMS
             textBox1.Text = c;
         }
 
-        private void cabbooking_Load(object sender, EventArgs e)
+       
+
+        private void label4_Click(object sender, EventArgs e)
         {
 
         }
+        private string selectedItem;
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            selectedItem = comboBox1.SelectedItem.ToString();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("booking successful");
+
+            switch (selectedItem)
+            {
+                case "esewa":
+                    esewa form1 = new esewa();
+                    form1.Show();
+                    break;
+               
+                case "qr":
+                    qr form2 = new qr();
+                    form2.Show();
+                    break;
+                    // Add more cases as needed
+            }
+
+        }
+
+        private void cabbooking_Load(object sender, EventArgs e)
+        {
+            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
+
+        }
+
+
+
     }
 }

@@ -172,7 +172,7 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(257, 280);
+            this.dataGridView1.Location = new System.Drawing.Point(247, 272);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 29;
@@ -252,7 +252,7 @@
             // 
             this.pictureBox2.Location = new System.Drawing.Point(2, 285);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(249, 207);
+            this.pictureBox2.Size = new System.Drawing.Size(239, 207);
             this.pictureBox2.TabIndex = 50;
             this.pictureBox2.TabStop = false;
             // 
@@ -272,7 +272,7 @@
             // 
             this.pictureBox3.Location = new System.Drawing.Point(2, 528);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(249, 210);
+            this.pictureBox3.Size = new System.Drawing.Size(239, 210);
             this.pictureBox3.TabIndex = 52;
             this.pictureBox3.TabStop = false;
             // 
@@ -292,7 +292,7 @@
             // 
             this.pictureBox4.Location = new System.Drawing.Point(2, 774);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(249, 210);
+            this.pictureBox4.Size = new System.Drawing.Size(239, 210);
             this.pictureBox4.TabIndex = 54;
             this.pictureBox4.TabStop = false;
             // 
@@ -301,7 +301,7 @@
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.SystemColors.Info;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(1757, 987);
+            this.label7.Location = new System.Drawing.Point(1746, 752);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(88, 30);
             this.label7.TabIndex = 63;
@@ -310,7 +310,7 @@
             // 
             // pictureBox5
             // 
-            this.pictureBox5.Location = new System.Drawing.Point(1663, 790);
+            this.pictureBox5.Location = new System.Drawing.Point(1663, 544);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(249, 194);
             this.pictureBox5.TabIndex = 62;
@@ -321,7 +321,7 @@
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.SystemColors.Info;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label8.Location = new System.Drawing.Point(1757, 741);
+            this.label8.Location = new System.Drawing.Point(1746, 996);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(88, 30);
             this.label8.TabIndex = 61;
@@ -330,7 +330,7 @@
             // 
             // pictureBox6
             // 
-            this.pictureBox6.Location = new System.Drawing.Point(1663, 541);
+            this.pictureBox6.Location = new System.Drawing.Point(1663, 787);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(249, 197);
             this.pictureBox6.TabIndex = 60;

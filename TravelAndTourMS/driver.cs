@@ -65,7 +65,7 @@ namespace TravelAndTourMS
             x4 = i4;
              x5 = i5;
 
-            richTextBox1.Text = o;
+            richTextBox1.Text = g;
             pictureBox1.Image = x4;
             
           //  pictureBox1.visible = true;

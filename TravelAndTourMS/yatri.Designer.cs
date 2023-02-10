@@ -51,7 +51,7 @@
             this.rjButton1.FlatAppearance.BorderSize = 0;
             this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton1.ForeColor = System.Drawing.Color.White;
-            this.rjButton1.Location = new System.Drawing.Point(710, 815);
+            this.rjButton1.Location = new System.Drawing.Point(77, 855);
             this.rjButton1.Name = "rjButton1";
             this.rjButton1.Size = new System.Drawing.Size(188, 50);
             this.rjButton1.TabIndex = 0;
@@ -62,27 +62,27 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(212, 62);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 62);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(221, 214);
+            this.pictureBox1.Size = new System.Drawing.Size(270, 253);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(710, 62);
+            this.pictureBox2.Location = new System.Drawing.Point(314, 57);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(227, 214);
+            this.pictureBox2.Size = new System.Drawing.Size(282, 253);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Location = new System.Drawing.Point(1224, 62);
+            this.pictureBox3.Location = new System.Drawing.Point(631, 62);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(236, 214);
+            this.pictureBox3.Size = new System.Drawing.Size(303, 248);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 3;
             this.pictureBox3.TabStop = false;
@@ -91,7 +91,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(519, 9);
+            this.label1.Location = new System.Drawing.Point(334, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(86, 35);
             this.label1.TabIndex = 4;
@@ -101,7 +101,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(595, 9);
+            this.label2.Location = new System.Drawing.Point(505, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(86, 35);
             this.label2.TabIndex = 5;
@@ -110,9 +110,9 @@
             // richTextBox1
             // 
             this.richTextBox1.BackColor = System.Drawing.SystemColors.Info;
-            this.richTextBox1.Location = new System.Drawing.Point(239, 296);
+            this.richTextBox1.Location = new System.Drawing.Point(178, 331);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(1221, 504);
+            this.richTextBox1.Size = new System.Drawing.Size(515, 504);
             this.richTextBox1.TabIndex = 6;
             this.richTextBox1.Text = "";
             // 
@@ -126,7 +126,7 @@
             this.rjButton2.FlatAppearance.BorderSize = 0;
             this.rjButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton2.ForeColor = System.Drawing.Color.White;
-            this.rjButton2.Location = new System.Drawing.Point(1027, 815);
+            this.rjButton2.Location = new System.Drawing.Point(579, 855);
             this.rjButton2.Name = "rjButton2";
             this.rjButton2.Size = new System.Drawing.Size(188, 50);
             this.rjButton2.TabIndex = 9;
@@ -139,7 +139,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1787, 935);
+            this.ClientSize = new System.Drawing.Size(959, 935);
             this.Controls.Add(this.rjButton2);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.label2);

@@ -41,7 +41,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(1055, 135);
+            this.button4.Location = new System.Drawing.Point(535, 58);
             this.button4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(86, 31);
@@ -52,7 +52,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(929, 138);
+            this.button5.Location = new System.Drawing.Point(409, 61);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(94, 29);
             this.button5.TabIndex = 5;
@@ -68,7 +68,7 @@
             "Rasuwa",
             "Chitwan",
             "Kathmandu"});
-            this.place.Location = new System.Drawing.Point(534, 138);
+            this.place.Location = new System.Drawing.Point(14, 61);
             this.place.Name = "place";
             this.place.Size = new System.Drawing.Size(143, 28);
             this.place.TabIndex = 6;
@@ -80,7 +80,7 @@
             "High",
             "Medium",
             "Low"});
-            this.categori.Location = new System.Drawing.Point(691, 138);
+            this.categori.Location = new System.Drawing.Point(171, 61);
             this.categori.Name = "categori";
             this.categori.Size = new System.Drawing.Size(143, 28);
             this.categori.TabIndex = 7;
@@ -88,11 +88,11 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(521, 202);
+            this.dataGridView1.Location = new System.Drawing.Point(3, 95);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(1321, 677);
+            this.dataGridView1.Size = new System.Drawing.Size(672, 547);
             this.dataGridView1.TabIndex = 8;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -100,7 +100,7 @@
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.textBox1.Location = new System.Drawing.Point(534, 90);
+            this.textBox1.Location = new System.Drawing.Point(14, 13);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(96, 27);
             this.textBox1.TabIndex = 9;
@@ -109,7 +109,7 @@
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.textBox2.Location = new System.Drawing.Point(701, 90);
+            this.textBox2.Location = new System.Drawing.Point(181, 13);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(115, 27);
             this.textBox2.TabIndex = 10;
@@ -124,7 +124,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1873, 937);
+            this.ClientSize = new System.Drawing.Size(675, 633);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.dataGridView1);

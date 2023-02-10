@@ -35,6 +35,7 @@ namespace TravelAndTourMS
             //  Pic1 = (DataGridViewImageColumn)dataGridView1.Columns[3];
             // Pic1.ImageLayout = DataGridViewImageCellLayout.Stretch;
 
+            dataGridView1.Columns["cab1"].Visible = false;
             dataGridView1.Columns["cab2"].Visible = false;
             dataGridView1.Columns["cab3"].Visible = false;
             dataGridView1.Columns["feature"].Visible = false;
@@ -44,6 +45,12 @@ namespace TravelAndTourMS
             dataGridView1.Columns["offerinfo"].Visible = false;
             dataGridView1.Columns["offerprice"].Visible = false;
             dataGridView1.Columns["offer"].Visible = false;
+
+            dataGridView1.Columns["seatnum"].Visible = false;
+            dataGridView1.Columns["number"].Visible = false;
+            dataGridView1.Columns["price"].Visible = false;
+
+            //  dataGridView1.Columns["cab2"].Visible = false;
 
 
 
