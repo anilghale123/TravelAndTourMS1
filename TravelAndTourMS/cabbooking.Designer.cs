@@ -294,7 +294,7 @@
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.NTraveller);
-            this.panel1.Location = new System.Drawing.Point(147, 105);
+            this.panel1.Location = new System.Drawing.Point(200, 101);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(895, 530);
             this.panel1.TabIndex = 32;
@@ -304,7 +304,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.ClientSize = new System.Drawing.Size(1169, 740);
+            this.ClientSize = new System.Drawing.Size(1240, 759);
             this.Controls.Add(this.panel1);
             this.Name = "cabbooking";
             this.Text = "cabbooking";

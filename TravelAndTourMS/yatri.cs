@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace TravelAndTourMS
 {
     public partial class yatri : Form
@@ -17,7 +18,7 @@ namespace TravelAndTourMS
         private string c;
 
         private string d;
-        private string e;
+        private string ee;
         private string f;
 
         private string g;
@@ -40,7 +41,7 @@ namespace TravelAndTourMS
             b = v1;
             c = v2;
             d = v3;
-            e = v4;
+            ee = v4;
             f = v5;
             g = v6;
             h = v7;
@@ -48,18 +49,19 @@ namespace TravelAndTourMS
             j = v9;
 
 
-            Image x1 = i1;
-            Image x2 = i2;
-            Image x3 = i3;
-            Image x4 = i4;
-            Image x5 = i5;
+            x1 = i1;
+             x2 = i2;
+           x3 = i3;
+             x4 = i4;
+           x5 = i5;
             label1.Text = v1;
             label2.Text = v2;
             richTextBox1.Text = v5;
-            richTextBox2.Text = v6;
+           
             pictureBox1.Image = x1;
             pictureBox2.Image = x2;
             pictureBox3.Image = x3;
+           
            // pictureBox4.I
 
         }
@@ -74,6 +76,16 @@ namespace TravelAndTourMS
             this.Hide();
             cabbooking employeeform = new cabbooking(a, b, c, d);
             employeeform.ShowDialog(); 
+        }
+
+        private void rjButton2_Click(object sender, EventArgs e)
+        {
+
+            
+
+            this.Hide();
+            driver employeeform = new driver(a,b,c,d,ee,x1,x2,x3,f,g,x4,h,i,j,x5);
+            employeeform.ShowDialog();
         }
     }
 }
