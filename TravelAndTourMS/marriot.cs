@@ -35,8 +35,9 @@ namespace TravelAndTourMS
         private Image s;
         private Image t;
         private Image u;
+        private Image w;
 
-        public marriot(string v, string v1,string v2,string v3, string v4,string v5,string v6,string v7,string v8,string v9,string v10, string v11, string v12,Image i,Image i1,Image i2, Image i3, Image i4, Image i5, Image i6, Image i7)
+        public marriot(string v, string v1,string v2,string v3, string v4,string v5,string v6,string v7,string v8,string v9,string v10, string v11, string v12,Image i,Image i1,Image i2, Image i3, Image i4, Image i5, Image i6, Image i7, Image i8)
         {
             InitializeComponent();
            
@@ -83,12 +84,13 @@ namespace TravelAndTourMS
             s = i5;
             t = i6;
             u = i7;
+            w = i8;
    }
 
         public void rjButton1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            hotelbooking employeeform = new hotelbooking (b,ee,f,j);
+            hotelbooking employeeform = new hotelbooking (b,ee,f,j,w);
             employeeform.ShowDialog();
         }
 
@@ -100,21 +102,21 @@ namespace TravelAndTourMS
         private void rjButton2_Click(object sender, EventArgs e)
         {
             this.Hide();
-            hotelbooking employeeform = new hotelbooking(b,ee,g,k);
+            hotelbooking employeeform = new hotelbooking(b,ee,g,k,w);
             employeeform.ShowDialog();
         }
 
         private void rjButton4_Click(object sender, EventArgs e)
         {
             this.Hide();
-            hotelbooking employeeform = new hotelbooking(b,ee,h,l);
+            hotelbooking employeeform = new hotelbooking(b,ee,h,l,w);
             employeeform.ShowDialog();
         }
 
         private void rjButton3_Click(object sender, EventArgs e)
         {
             this.Hide();
-            hotelbooking employeeform = new hotelbooking(b,ee,ii,m);
+            hotelbooking employeeform = new hotelbooking(b,ee,ii,m,w);
             employeeform.ShowDialog();
         }
     }

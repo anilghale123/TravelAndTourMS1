@@ -53,6 +53,8 @@ namespace TravelAndTourMS
             dataGridView1.Columns["room4name"].Visible = false;
             dataGridView1.Columns["room4price"].Visible = false;
             dataGridView1.Columns["room4"].Visible = false;
+            dataGridView1.Columns["qr"].Visible = false;
+
 
 
 
@@ -183,10 +185,12 @@ namespace TravelAndTourMS
                 byte[] byteArray6 = (byte[])dataGridView1.Rows[selectedRowIndex].Cells["room3"].Value;
                 byte[] byteArray7 = (byte[])dataGridView1.Rows[selectedRowIndex].Cells["room4"].Value;
 
+                byte[] byteArray8 = (byte[])dataGridView1.Rows[selectedRowIndex].Cells["qr"].Value;
 
 
 
-                Image image,image1, image2, image3, image4, image5, image6, image7;
+
+                Image image,image1, image2, image3, image4, image5, image6, image7,image8;
                     using (var ms = new MemoryStream(byteArray))
                     {
                         image = Image.FromStream(ms);
@@ -223,12 +227,17 @@ namespace TravelAndTourMS
                     image7 = Image.FromStream(ms7);
                 }
 
+                using (var ms8 = new MemoryStream(byteArray8))
+                {
+                    image8 = Image.FromStream(ms8);
+                }
+
 
 
 
 
                 this.Hide();
-   marriot employeeform = new marriot(price, place,description,amenities,hotel,room1name,room2name,room3name,room4name,room1price,room2price,room3price,room4price, image,image1,image2,image3,image4,image5,image6,image7);
+   marriot employeeform = new marriot(price, place,description,amenities,hotel,room1name,room2name,room3name,room4name,room1price,room2price,room3price,room4price, image,image1,image2,image3,image4,image5,image6,image7,image8);
                         employeeform.ShowDialog();
                     }
 

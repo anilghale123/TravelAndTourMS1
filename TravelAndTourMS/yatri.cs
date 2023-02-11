@@ -26,6 +26,7 @@ namespace TravelAndTourMS
         private string h;
         private string i;
         private string j;
+     //   private string k;
 
 
         private Image x1;
@@ -77,7 +78,7 @@ namespace TravelAndTourMS
         private void rjButton1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            cabbooking employeeform = new cabbooking(a, b, c, d,x6);
+            cabbooking employeeform = new cabbooking(a, b, c, d,x6,h);
             employeeform.ShowDialog(); 
         }
 

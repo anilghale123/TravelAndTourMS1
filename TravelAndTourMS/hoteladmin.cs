@@ -86,6 +86,7 @@ namespace TravelAndTourMS
             MemoryStream ms5 = new MemoryStream((byte[])dataGridView1.CurrentRow.Cells[15].Value);
             MemoryStream ms6 = new MemoryStream((byte[])dataGridView1.CurrentRow.Cells[18].Value);
             MemoryStream ms7 = new MemoryStream((byte[])dataGridView1.CurrentRow.Cells[21].Value);
+            MemoryStream ms8 = new MemoryStream((byte[])dataGridView1.CurrentRow.Cells[22].Value);
 
 
             pictureBox1.Image = Image.FromStream(ms);
@@ -96,10 +97,13 @@ namespace TravelAndTourMS
             pictureBox6.Image = Image.FromStream(ms5);
             pictureBox7.Image = Image.FromStream(ms6);
             pictureBox8.Image = Image.FromStream(ms7);
+            pictureBox9.Image = Image.FromStream(ms8);
+
+
         }
         private void button1_Click(object sender, EventArgs e)
         {
-   cmd = new SqlCommand("INSERT INTO Hotel (place,hotel,description,amenities,price,room1name,room1price,room2name,room2price,room3name,room3price,room4name,room4price,picture1,picture2,picture3,picture4,room1,room2,room3,room4) VALUES (@place,@hotel,@description,@amenities,@price,@room1name,@room1price,@room2name,@room2price,@room3name,@room3price,@room4name,@room4price,@picture1,@picture2,@picture3,@picture4,@room1,@room2,@room3,@room4)", con);
+   cmd = new SqlCommand("INSERT INTO Hotel (place,hotel,description,amenities,price,room1name,room1price,room2name,room2price,room3name,room3price,room4name,room4price,picture1,picture2,picture3,picture4,room1,room2,room3,room4,qr) VALUES (@place,@hotel,@description,@amenities,@price,@room1name,@room1price,@room2name,@room2price,@room3name,@room3price,@room4name,@room4price,@picture1,@picture2,@picture3,@picture4,@room1,@room2,@room3,@room4,@qr)", con);
             cmd.Parameters.AddWithValue("place", place.Text);
             MemoryStream memstr = new MemoryStream();
             MemoryStream memstr1 = new MemoryStream();
@@ -109,6 +113,7 @@ namespace TravelAndTourMS
             MemoryStream memstr5 = new MemoryStream();
             MemoryStream memstr6 = new MemoryStream();
             MemoryStream memstr7 = new MemoryStream();
+            MemoryStream memstr8 = new MemoryStream();
 
             cmd.Parameters.AddWithValue("hotel", textBox6.Text);
             cmd.Parameters.AddWithValue("description", textBox8.Text);
@@ -153,6 +158,9 @@ namespace TravelAndTourMS
 
             pictureBox8.Image.Save(memstr7, pictureBox8.Image.RawFormat);
             cmd.Parameters.AddWithValue("room4", memstr7.ToArray());
+
+            pictureBox9.Image.Save(memstr8, pictureBox9.Image.RawFormat);
+            cmd.Parameters.AddWithValue("qr", memstr8.ToArray());
 
 
 
@@ -168,7 +176,7 @@ namespace TravelAndTourMS
 
         private void button2_Click(object sender, EventArgs e)
         {
-            cmd = new SqlCommand("UPDATE Hotel SET place = @place,hotel=@hotel ,description = @description,amenities = @amenities, price = @price,room1name = @room1name,room1price = @room1price,room2name = @room2name,room2price = @room2price,room3name = @room3name,room3price = @room3price,room4name = @room4name,room4price = @room4price,picture1 = @picture1,picture2 = @picture2,picture3 = @picture3,picture4 = @picture4,room1 = @room1,room2 = @room2,room3 = @room3,room4 = @room4  WHERE id = @id", con);
+            cmd = new SqlCommand("UPDATE Hotel SET place = @place,hotel=@hotel ,description = @description,amenities = @amenities, price = @price,room1name = @room1name,room1price = @room1price,room2name = @room2name,room2price = @room2price,room3name = @room3name,room3price = @room3price,room4name = @room4name,room4price = @room4price,picture1 = @picture1,picture2 = @picture2,picture3 = @picture3,picture4 = @picture4,room1 = @room1,room2 = @room2,room3 = @room3,room4 = @room4, qr = @qr  WHERE id = @id", con);
             cmd.Parameters.AddWithValue("place", place.Text);
 
             MemoryStream memstr = new MemoryStream();
@@ -179,6 +187,7 @@ namespace TravelAndTourMS
             MemoryStream memstr5 = new MemoryStream();
             MemoryStream memstr6 = new MemoryStream();
             MemoryStream memstr7 = new MemoryStream();
+            MemoryStream memstr8 = new MemoryStream();
 
             cmd.Parameters.AddWithValue("hotel", textBox6.Text);
             cmd.Parameters.AddWithValue("description", textBox8.Text);
@@ -223,6 +232,9 @@ namespace TravelAndTourMS
 
             pictureBox8.Image.Save(memstr7, pictureBox8.Image.RawFormat);
             cmd.Parameters.AddWithValue("room4", memstr7.ToArray());
+
+            pictureBox9.Image.Save(memstr8, pictureBox9.Image.RawFormat);
+            cmd.Parameters.AddWithValue("qr", memstr8.ToArray());
 
 
 
@@ -323,6 +335,19 @@ namespace TravelAndTourMS
                 pictureBox7.Image = Image.FromFile(openFileDialog1.FileName);
 
             }
+        }
+
+        private void label21_Click(object sender, EventArgs e)
+        {
+
+            openFileDialog1.Filter = " Select image(*.JpG;*.jpeg*.; png; *. Gif) | *.JpG;  *. png; *. Gif ";
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                pictureBox9.Image = Image.FromFile(openFileDialog1.FileName);
+
+            }
+
+
         }
     }
 }
