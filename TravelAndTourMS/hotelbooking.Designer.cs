@@ -28,7 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(hotelbooking));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label15 = new System.Windows.Forms.Label();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
@@ -61,7 +66,11 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.panel1.Controls.Add(this.label15);
+            this.panel1.Controls.Add(this.textBox7);
+            this.panel1.Controls.Add(this.textBox6);
+            this.panel1.Controls.Add(this.label14);
             this.panel1.Controls.Add(this.label13);
             this.panel1.Controls.Add(this.textBox5);
             this.panel1.Controls.Add(this.dateTimePicker2);
@@ -89,17 +98,57 @@
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.NTraveller);
-            this.panel1.Location = new System.Drawing.Point(107, 41);
+            this.panel1.Location = new System.Drawing.Point(433, 237);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(935, 666);
+            this.panel1.Size = new System.Drawing.Size(935, 754);
             this.panel1.TabIndex = 31;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label15.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label15.Location = new System.Drawing.Point(46, 311);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(118, 28);
+            this.label15.TabIndex = 50;
+            this.label15.Text = "Room Type";
+            // 
+            // textBox7
+            // 
+            this.textBox7.BackColor = System.Drawing.SystemColors.Info;
+            this.textBox7.Location = new System.Drawing.Point(241, 311);
+            this.textBox7.Multiline = true;
+            this.textBox7.Name = "textBox7";
+            this.textBox7.PlaceholderText = "Room Type";
+            this.textBox7.Size = new System.Drawing.Size(182, 38);
+            this.textBox7.TabIndex = 51;
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(636, 311);
+            this.textBox6.Multiline = true;
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(182, 43);
+            this.textBox6.TabIndex = 49;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label14.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label14.Location = new System.Drawing.Point(554, 311);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(64, 28);
+            this.label14.TabIndex = 48;
+            this.label14.Text = "Hotel";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label13.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label13.Location = new System.Drawing.Point(492, 307);
+            this.label13.Location = new System.Drawing.Point(492, 390);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(123, 28);
             this.label13.TabIndex = 46;
@@ -108,7 +157,7 @@
             // textBox5
             // 
             this.textBox5.BackColor = System.Drawing.SystemColors.Info;
-            this.textBox5.Location = new System.Drawing.Point(646, 307);
+            this.textBox5.Location = new System.Drawing.Point(646, 390);
             this.textBox5.Multiline = true;
             this.textBox5.Name = "textBox5";
             this.textBox5.PlaceholderText = "Number of Days";
@@ -118,7 +167,7 @@
             // 
             // dateTimePicker2
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(235, 349);
+            this.dateTimePicker2.Location = new System.Drawing.Point(221, 430);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(239, 27);
             this.dateTimePicker2.TabIndex = 45;
@@ -129,7 +178,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label6.Location = new System.Drawing.Point(46, 347);
+            this.label6.Location = new System.Drawing.Point(32, 428);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(160, 28);
             this.label6.TabIndex = 44;
@@ -137,7 +186,7 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(237, 307);
+            this.dateTimePicker1.Location = new System.Drawing.Point(223, 388);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(239, 27);
             this.dateTimePicker1.TabIndex = 43;
@@ -148,7 +197,7 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label12.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label12.Location = new System.Drawing.Point(46, 307);
+            this.label12.Location = new System.Drawing.Point(32, 388);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(143, 28);
             this.label12.TabIndex = 42;
@@ -159,7 +208,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label9.Location = new System.Drawing.Point(253, 508);
+            this.label9.Location = new System.Drawing.Point(253, 609);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(163, 28);
             this.label9.TabIndex = 41;
@@ -172,7 +221,7 @@
             "esewa",
             "qr",
             "cash"});
-            this.comboBox1.Location = new System.Drawing.Point(422, 508);
+            this.comboBox1.Location = new System.Drawing.Point(422, 609);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(213, 28);
             this.comboBox1.TabIndex = 40;
@@ -210,11 +259,12 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(267, 430);
+            this.textBox1.Location = new System.Drawing.Point(267, 531);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(156, 37);
             this.textBox1.TabIndex = 35;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label3
             // 
@@ -232,7 +282,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(307, 26);
+            this.label1.Location = new System.Drawing.Point(333, 26);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(311, 57);
             this.label1.TabIndex = 0;
@@ -262,7 +312,7 @@
             // textBox2
             // 
             this.textBox2.BackColor = System.Drawing.SystemColors.Info;
-            this.textBox2.Location = new System.Drawing.Point(636, 428);
+            this.textBox2.Location = new System.Drawing.Point(636, 529);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
@@ -296,7 +346,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label11.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label11.Location = new System.Drawing.Point(93, 442);
+            this.label11.Location = new System.Drawing.Point(93, 543);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(59, 28);
             this.label11.TabIndex = 25;
@@ -318,7 +368,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label5.Location = new System.Drawing.Point(494, 430);
+            this.label5.Location = new System.Drawing.Point(494, 531);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(112, 28);
             this.label5.TabIndex = 24;
@@ -338,7 +388,7 @@
             // 
             this.button2.BackColor = System.Drawing.SystemColors.Info;
             this.button2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button2.Location = new System.Drawing.Point(190, 563);
+            this.button2.Location = new System.Drawing.Point(186, 670);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(129, 50);
             this.button2.TabIndex = 23;
@@ -360,7 +410,7 @@
             // 
             this.button1.BackColor = System.Drawing.SystemColors.Info;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(538, 553);
+            this.button1.Location = new System.Drawing.Point(534, 660);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(129, 50);
             this.button1.TabIndex = 20;
@@ -383,8 +433,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1128, 704);
+            this.BackColor = System.Drawing.Color.Olive;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1924, 1055);
             this.Controls.Add(this.panel1);
             this.Name = "hotelbooking";
             this.Text = "hotelbooking";
@@ -425,5 +477,9 @@
         private Label label6;
         private Label label13;
         private TextBox textBox5;
+        private TextBox textBox6;
+        private Label label14;
+        private Label label15;
+        private TextBox textBox7;
     }
 }

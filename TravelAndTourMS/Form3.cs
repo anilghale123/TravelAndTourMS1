@@ -10,21 +10,19 @@ using System.Windows.Forms;
 
 namespace TravelAndTourMS
 {
-    public partial class UserControl1 : UserControl
+    public partial class Form3 : Form
     {
-        public UserControl1()
+        public Form3(string a, string b, string c, Image i1, Image i2, Image i3, Image i4)
         {
             InitializeComponent();
+            pictureBox1.Image = i1;
+            pictureBox2.Image = i2;
+            pictureBox3.Image = i3;
+            richTextBox1.Text = b;
         }
 
-        private void Menu_Click(object sender, EventArgs e)
+        private void Form3_Load(object sender, EventArgs e)
         {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            
 
         }
     }

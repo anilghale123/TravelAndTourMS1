@@ -211,11 +211,11 @@
             // button5
             // 
             this.button5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button5.Location = new System.Drawing.Point(61, 703);
+            this.button5.Location = new System.Drawing.Point(39, 701);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(98, 45);
+            this.button5.Size = new System.Drawing.Size(168, 40);
             this.button5.TabIndex = 18;
-            this.button5.Text = "Upload";
+            this.button5.Text = "Driver Upload";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 

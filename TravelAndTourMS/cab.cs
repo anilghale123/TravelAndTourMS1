@@ -40,7 +40,7 @@ namespace TravelAndTourMS
 
         private void button1_Click(object sender, EventArgs e)
         {
-            openFileDialog1.Filter = " Select image(*.JpG;*.jpeg*.; png; *. Gif) | *.JpG;  *. png; *. Gif ";
+            openFileDialog1.Filter = " Select image(*.JpG;*.jpeg*.; png; *. Gif) | *.JpG; *. jpeg;  *. png; *. Gif ";
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 pictureBox1.Image = Image.FromFile(openFileDialog1.FileName);
@@ -113,7 +113,7 @@ namespace TravelAndTourMS
 
         private void button5_Click(object sender, EventArgs e)
         {
-            openFileDialog1.Filter = " Select image(*.JpG;*.jpeg*.; png; *. Gif) | *.JpG;  *. png; *. Gif ";
+            openFileDialog1.Filter = " Select image(*.JpG;*.jpeg*.; png; *. Gif) | *.JpG; *. jpeg;  *. png; *. Gif ";
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 pictureBox4.Image = Image.FromFile(openFileDialog1.FileName);
@@ -123,7 +123,7 @@ namespace TravelAndTourMS
 
         private void button6_Click(object sender, EventArgs e)
         {
-            openFileDialog1.Filter = " Select image(*.JpG;*.jpeg*.; png; *. Gif) | *.JpG;  *. png; *. Gif ";
+            openFileDialog1.Filter = " Select image(*.JpG;*.jpeg*.; png; *. Gif) | *.JpG; *. jpeg;  *. png; *. Gif ";
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 pictureBox5.Image = Image.FromFile(openFileDialog1.FileName);
@@ -133,7 +133,7 @@ namespace TravelAndTourMS
 
         private void button3_Click(object sender, EventArgs e)
         {
-            openFileDialog1.Filter = " Select image(*.JpG;*.jpeg*.; png; *. Gif) | *.JpG;  *. png; *. Gif ";
+            openFileDialog1.Filter = " Select image(*.JpG;*.jpeg*.; png; *. Gif) | *.JpG; *. jpeg;  *. png; *. Gif ";
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 pictureBox2.Image = Image.FromFile(openFileDialog1.FileName);
@@ -143,7 +143,7 @@ namespace TravelAndTourMS
 
         private void button4_Click(object sender, EventArgs e)
         {
-            openFileDialog1.Filter = " Select image(*.JpG;*.jpeg*.; png; *. Gif) | *.JpG;  *. png; *. Gif ";
+            openFileDialog1.Filter = " Select image(*.JpG;*.jpeg*.; png; *. Gif) | *.JpG; *. jpeg;  *. png; *. Gif ";
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 pictureBox3.Image = Image.FromFile(openFileDialog1.FileName);
@@ -264,7 +264,7 @@ namespace TravelAndTourMS
 
         private void button10_Click(object sender, EventArgs e)
         {
-            openFileDialog1.Filter = " Select image(*.JpG;*.jpeg*.; png; *. Gif) | *.JpG;  *. png; *. Gif ";
+            openFileDialog1.Filter = " Select image(*.JpG;*.jpeg*.; png; *. Gif) | *.JpG; *. jpeg;  *. png; *. Gif ";
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 pictureBox6.Image = Image.FromFile(openFileDialog1.FileName);

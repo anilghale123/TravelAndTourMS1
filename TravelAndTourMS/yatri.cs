@@ -65,6 +65,7 @@ namespace TravelAndTourMS
             pictureBox1.Image = x1;
             pictureBox2.Image = x2;
             pictureBox3.Image = x3;
+            label3.Text = v7;
            
            // pictureBox4.I
 
@@ -78,7 +79,7 @@ namespace TravelAndTourMS
         private void rjButton1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            cabbooking employeeform = new cabbooking(a, b, c, d,x6,h);
+            cabbooking employeeform = new cabbooking(a, b, c, d, ee, x1, x2, x3, f, g, x4, h, i, j, x5, x6);
             employeeform.ShowDialog(); 
         }
 
@@ -90,6 +91,11 @@ namespace TravelAndTourMS
             this.Hide();
             driver employeeform = new driver(a,b,c,d,ee,x1,x2,x3,f,g,x4,h,i,j,x5,x6);
             employeeform.ShowDialog();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

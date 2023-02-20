@@ -6,8 +6,12 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
+using System.Timers;
 using System.Windows.Forms;
+using WinFormAnimation_NET5;
+using Timer = System.Windows.Forms.Timer;
 
 namespace TravelAndTourMS
 {
@@ -16,47 +20,75 @@ namespace TravelAndTourMS
     {
 
         SqlConnection con = new SqlConnection(@"Data Source =.\SQLEXPRESS01; Initial Catalog= TravelandTour ; Integrated Security = True ; ");
-
+        SqlCommand cmd;
         private Image x;
-        public cabbooking(string a, string b, string c, string d,Image ee,string v)
+        public string p1;
+        public cabbooking(string a,string  b,string  c,string d,string ee,Image x1,Image x2,Image x3,string f,string g,Image x4,string h,string i,string j,Image x5,Image x6)
         {
             InitializeComponent();
             PhoneNum.Text = a;
-            Naam.Text = b;
-            textBox1.Text = v;
-           
-            x = ee;
+            textBox8.Text = b;
+            textBox9.Text = c;
+            textBox5.Text = d;
+            textBox4.Text = ee;
+            textBox1.Text = h;
+            x = x6;
+            p1 = h;
+            CalculateTotalPrice();
         }
-       
+        // Create a timer that runs every minute
+
+
+        /* private  void Timer_Tick(object sender, ElapsedEventArgs e)
+         {
+             DateTime currentTime = DateTime.Now;
+             string query = "SELECT * FROM cabBooking WHERE status = 'booked' AND EndTime < @currentTime";
+             SqlCommand cmd = new SqlCommand(query, con);
+             cmd.Parameters.AddWithValue("@currentTime", currentTime);
+             SqlDataReader reader = cmd.ExecuteReader();
+             while (reader.Read())
+             {
+                 int bookingId = reader.GetInt32(0);
+                 // Update the status of the booking to "free" in the database
+                 // You can use a similar update query like the one used to book the cab
+             }
+             reader.Close();
+         }
+ */
+
+        private void Timer_Tick(object sender, ElapsedEventArgs e)
+        {
+            DateTime currentTime = DateTime.Now;
+            string query = "SELECT * FROM cabBooking WHERE status = 'booked' AND EndTime < @currentTime";
+            SqlCommand cmd = new SqlCommand(query, con);
+            cmd.Parameters.AddWithValue("@currentTime", currentTime);
+            SqlDataReader reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                int bookingId = reader.GetInt32(0);
+                // Update the status of the booking to "free" in the database
+                // You can use a similar update query like the one used to book the cab
+            }
+            reader.Close();
+
+            // Update the UI controls on the main thread
+            BeginInvoke(new Action(() => {
+                // Update UI controls here
+            }));
+        }
+
+
         private void CalculateTotalPrice()
         {
-            if (double.TryParse(textBox1.Text, out double price) && double.TryParse(textBox2.Text, out double totalPrice))
+            if (double.TryParse(textBox1.Text, out double price) && double.TryParse(comboBox2.Text, out double numDays))
             {
-
-              
-                switch (comboBox2.SelectedItem.ToString().ToLower())
-                {
-                    case "daily":
-                        totalPrice = price;
-                        break;
-                    case "weekly":
-                        totalPrice = price * 7;
-                        break;
-                    case "monthly":
-                        totalPrice = price * 30;
-                        break;
-                    default:
-                        totalPrice = 0;
-                        break;
-                }
-
-
+                double totalPrice = price * numDays;
                 textBox2.Text = totalPrice.ToString();
+
+
             }
 
-               // textBox2.Text = (price * numTravellers).ToString();
             
-             
         }
 
 
@@ -68,54 +100,55 @@ namespace TravelAndTourMS
         private string selectedItem;
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            selectedItem = comboBox1.SelectedItem.ToString();
+           // selectedItem = comboBox1.SelectedItem.ToString();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
 
-
-            /*
-                        try
-                        {
-                            con.Open();
+            try
+            {
+                con.Open();
 
 
 
-                            string query = "INSERT INTO TBook (Naam,Addresses,Place,PhoneNum,NTraveller,TravelDate) VALUES (@name, @address,@Place,@phoneNum,@numTravelers, @travelDate )";
-                            SqlCommand cmd = new SqlCommand(query, con);
+                string query = "INSERT INTO cabBooking (Name,PickUpLocation,Destination,StartTime,EndTime,Status,SeatCapacity,NumPassenger,CitizenNum,VehicleType,VehicleNum,BookingOption,Price,TotalPrice,PaymentOption,brand,model,driverNum) VALUES (@Name,@PickUpLocation,@Destination,@StartTime,@EndTime,'Booked',@SeatCapacity,@NumPassenger,@CitizenNum,@VehicleType,@VehicleNum,@BookingOption,@Price,@TotalPrice,@PaymentOption,@brand,@model,@driveNum)";
+                SqlCommand cmd = new SqlCommand(query, con);
 
-                            cmd.Parameters.AddWithValue("@phoneNum", PhoneNum.Text);
-                            cmd.Parameters.AddWithValue("@travelDate", Trav.Text);
-                            cmd.Parameters.AddWithValue("@place", textBox3.Text);
-                            cmd.Parameters.AddWithValue("@name", Naam.Text);
-                            cmd.Parameters.AddWithValue("@address", Addresses.Text);
-                            cmd.Parameters.AddWithValue("@numTravelers", NTraveller.Text);
-                            cmd.ExecuteNonQuery();
-
-
-                            MessageBox.Show("Booking Successfully");
-
-                            con.Close();
-                        }
-
-                        catch (Exception ex)
-                        {
-
-                            MessageBox.Show("Error:" + ex.InnerException);
-                        }
-            */
+                cmd.Parameters.AddWithValue("@Name", Naam.Text);
+                cmd.Parameters.AddWithValue("@PickUpLocation", Addresses.Text);
+                cmd.Parameters.AddWithValue("@Destination", textBox3.Text);
+                cmd.Parameters.AddWithValue("@StartTime", dateTimePicker1.Text);
+                cmd.Parameters.AddWithValue("@EndTime", dateTimePicker2.Text);
+              //  cmd.Parameters.AddWithValue("@Status",);
 
 
+                cmd.Parameters.AddWithValue("@SeatCapacity", textBox5.Text);
+                cmd.Parameters.AddWithValue("@NumPassenger", NTraveller.Text);
+                cmd.Parameters.AddWithValue("@CitizenNum", PhoneNum.Text);
+                cmd.Parameters.AddWithValue("@VehicleType", textBox6.Text);
+                cmd.Parameters.AddWithValue("@VehicleNum", textBox4.Text);
+                cmd.Parameters.AddWithValue("@BookingOption", comboBox2.Text);
+                cmd.Parameters.AddWithValue("@Price", textBox1.Text);
+
+                cmd.Parameters.AddWithValue("@TotalPrice", textBox2.Text);
+                
+                cmd.Parameters.AddWithValue("@PaymentOption", comboBox1.Text);
+                cmd.Parameters.AddWithValue("@brand", textBox8.Text);
+                cmd.Parameters.AddWithValue("model", textBox9.Text);
+                cmd.Parameters.AddWithValue("driverNum", textBox7.Text);
+
+              /*  string formattedDateTime = dateTimePicker1.Value.ToString("yyyy-MM-dd HH:mm:ss");
+                cmd.Parameters.AddWithValue("@StartTime", formattedDateTime);
+
+                string formattedDateTime1 = dateTimePicker2.Value.ToString("yyyy-MM-dd HH:mm:ss");
+                cmd.Parameters.AddWithValue("@EndTime", formattedDateTime1);
+*/
 
 
 
-
-
-
-
-
-                MessageBox.Show("booking successful");
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Booking sucess");
 
                 switch (selectedItem)
                 {
@@ -130,17 +163,36 @@ namespace TravelAndTourMS
                         break;
                         // Add more cases as needed
                 }
+
+
+
+
+                con.Close();
+            }
+
+            catch (Exception ex)
+            {
+                
+                MessageBox.Show("Error:" + ex.InnerException);
+            }
+
+
+
+
+
+
+
             
 
         }
 
         private void cabbooking_Load(object sender, EventArgs e)
         {
-            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
+            /*comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
 
             comboBox2.Items.Add("daily");
             comboBox2.Items.Add("weekly");
-            comboBox2.Items.Add("monthly");
+            comboBox2.Items.Add("monthly");*/
 
         }
 
@@ -182,11 +234,27 @@ namespace TravelAndTourMS
 
         }
 
-       
+        private void calculateDays()
+        {
+            DateTime checkInDate = dateTimePicker1.Value;
+            DateTime checkOutDate = dateTimePicker2.Value;
+
+            TimeSpan diff = checkOutDate - checkInDate;
+            int numberOfDays = diff.Days;
+
+            comboBox2.Text = numberOfDays.ToString();
+
+
+
+
+
+            }
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (double.TryParse(textBox1.Text, out double price) && price > 0)
+            calculateDays();
+            CalculateTotalPrice();
+           /* if (double.TryParse(textBox1.Text, out double price) && price > 0)
             {
                 switch (comboBox2.SelectedItem.ToString().ToLower())
                 {
@@ -207,13 +275,13 @@ namespace TravelAndTourMS
             else
             {
                 textBox2.Text = "Invalid Price";
-            }
+            }*/
 
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-            //CalculateTotalPrice();
+            CalculateTotalPrice();
            
 
                
@@ -227,12 +295,32 @@ namespace TravelAndTourMS
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-           // CalculateTotalPrice();
+            CalculateTotalPrice();
         }
 
         private void label8_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+            string formattedDateTime = dateTimePicker1.Value.ToString("yyyy-MM-dd HH:mm:ss");
+            //cmd.Parameters.AddWithValue("@StartTime", formattedDateTime);
+
+           // dateTimePicker1.CustomFormat = "dd/MM/yyyy hh:mm tt";
+            calculateDays();
+            CalculateTotalPrice();
+        }
+
+        private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
+        {
+            string formattedDateTime = dateTimePicker2.Value.ToString("yyyy-MM-dd HH:mm:ss");
+            //cmd.Parameters.AddWithValue("@EndTime", formattedDateTime);
+
+           // dateTimePicker2.CustomFormat = "dd/MM/yyyy hh:mm tt";
+            calculateDays();
+            CalculateTotalPrice();
         }
     }
 }

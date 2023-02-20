@@ -40,8 +40,8 @@ namespace TravelAndTourMS
         private void image_Load(object sender, EventArgs e)
         {
             load_data();
-            dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
-            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            //dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+           // dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
         private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
@@ -51,8 +51,9 @@ namespace TravelAndTourMS
 
         private void button4_Click(object sender, EventArgs e)
         {
-            openFileDialog1.Filter = " Select image(*.JpG;*.jpeg*.; png; *. Gif) | *.JpG;  *. png; *. Gif ";
-              if(openFileDialog1.ShowDialog() == DialogResult.OK)
+
+            openFileDialog1.Filter = " Select image(*.JpG;*.jpeg*.; png; *. Gif) | *.JpG; *. jpeg;  *. png; *. Gif ";
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 pictureBox1.Image = Image.FromFile(openFileDialog1.FileName);     
                
@@ -61,13 +62,32 @@ namespace TravelAndTourMS
 
         private void button1_Click(object sender, EventArgs e)
         {
-            cmd = new SqlCommand("INSERT INTO Table1 (package_name,price,Photo) VALUES (@package_name,@price,@Photo)", con);
+            cmd = new SqlCommand("INSERT INTO Table1 (package_name,description,price,photo,photo1,photo2,qr) VALUES (@package_name,@description,@price,@photo,@photo1,@photo2,@qr)", con);
             cmd.Parameters.AddWithValue("package_name", textBox1.Text);
             MemoryStream memstr = new MemoryStream();
+            MemoryStream memstr1 = new MemoryStream();
+            MemoryStream memstr2 = new MemoryStream();
+            MemoryStream memstr3 = new MemoryStream();
 
             cmd.Parameters.AddWithValue("price", textBox2.Text);
+            cmd.Parameters.AddWithValue("description", richTextBox1.Text);
+
+
+
             pictureBox1.Image.Save(memstr, pictureBox1.Image.RawFormat);
-            cmd.Parameters.AddWithValue("Photo", memstr.ToArray());  
+            cmd.Parameters.AddWithValue("photo", memstr.ToArray());
+
+            pictureBox3.Image.Save(memstr1, pictureBox3.Image.RawFormat);
+            cmd.Parameters.AddWithValue("photo1", memstr1.ToArray());
+
+            pictureBox4.Image.Save(memstr2, pictureBox4.Image.RawFormat);
+            cmd.Parameters.AddWithValue("photo2", memstr2.ToArray());
+
+            pictureBox2.Image.Save(memstr3, pictureBox2.Image.RawFormat);
+            cmd.Parameters.AddWithValue("qr", memstr3.ToArray());
+
+
+
             con.Open();
             cmd.ExecuteNonQuery();
             con.Close();
@@ -97,21 +117,53 @@ namespace TravelAndTourMS
         {
             id1.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
             textBox1.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
-            MemoryStream ms = new MemoryStream((byte[])dataGridView1.CurrentRow.Cells[3].Value);
+            richTextBox1.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+            textBox2.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+
+
+
+
+
+            MemoryStream ms = new MemoryStream((byte[])dataGridView1.CurrentRow.Cells[4].Value);
             pictureBox1.Image = Image.FromStream(ms);
+
+            MemoryStream ms1 = new MemoryStream((byte[])dataGridView1.CurrentRow.Cells[5].Value);
+            pictureBox3.Image = Image.FromStream(ms1);
+
+            MemoryStream ms2 = new MemoryStream((byte[])dataGridView1.CurrentRow.Cells[6].Value);
+            pictureBox4.Image = Image.FromStream(ms2);
+
+            MemoryStream ms3 = new MemoryStream((byte[])dataGridView1.CurrentRow.Cells[7].Value);
+            pictureBox2.Image = Image.FromStream(ms3);
 
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            cmd = new SqlCommand("UPDATE Table1 SET package_name = @package_name,price = @price, Photo = @Photo WHERE id = @id", con);
+            cmd = new SqlCommand ( "UPDATE Table1 SET package_name = @package_name,description = @description, price = @price, photo = @photo, photo1 = @photo1,photo2 = @photo2, photo3 = @photo3, qr = @qr  WHERE id = @id", con);
             cmd.Parameters.AddWithValue("package_name", textBox1.Text);
             MemoryStream memstr = new MemoryStream();
+            MemoryStream memstr1 = new MemoryStream();
+            MemoryStream memstr2 = new MemoryStream();
+            MemoryStream memstr3 = new MemoryStream();
 
             cmd.Parameters.AddWithValue("price", textBox2.Text);
+            cmd.Parameters.AddWithValue("description", richTextBox1.Text);
+
+
 
             pictureBox1.Image.Save(memstr, pictureBox1.Image.RawFormat);
-            cmd.Parameters.AddWithValue("Photo", memstr.ToArray());
+            cmd.Parameters.AddWithValue("photo", memstr.ToArray());
+
+            pictureBox3.Image.Save(memstr1, pictureBox3.Image.RawFormat);
+            cmd.Parameters.AddWithValue("photo1", memstr1.ToArray());
+
+            pictureBox4.Image.Save(memstr2, pictureBox4.Image.RawFormat);
+            cmd.Parameters.AddWithValue("photo2", memstr2.ToArray());
+
+            pictureBox2.Image.Save(memstr3, pictureBox2.Image.RawFormat);
+            cmd.Parameters.AddWithValue("qr", memstr3.ToArray());
+
             cmd.Parameters.AddWithValue("id", id1.Text);
             con.Open();
             cmd.ExecuteNonQuery();
@@ -174,6 +226,36 @@ namespace TravelAndTourMS
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.Filter = " Select image(*.JpG;*.jpeg*.; png; *. Gif) | *.JpG; *. jpeg;  *. png; *. Gif ";
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                pictureBox2.Image = Image.FromFile(openFileDialog1.FileName);
+
+            }
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.Filter = " Select image(*.JpG;*.jpeg*.; png; *. Gif) | *.JpG; *. jpeg;  *. png; *. Gif ";
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                pictureBox3.Image = Image.FromFile(openFileDialog1.FileName);
+
+            }
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.Filter = " Select image(*.JpG;*.jpeg*.; png; *. Gif) | *.JpG; *. jpeg;  *. png; *. Gif ";
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                pictureBox4.Image = Image.FromFile(openFileDialog1.FileName);
+
+            }
         }
     }
 

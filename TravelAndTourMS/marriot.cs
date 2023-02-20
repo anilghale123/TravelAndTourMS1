@@ -61,6 +61,10 @@ namespace TravelAndTourMS
             label6.Text = v6;
             label5.Text = v7;
             label4.Text = v8;
+           label8.Text = v9;
+            label11.Text = v10;
+            label13.Text = v11;
+            label15.Text = v12;
 
             a = v;
             b = v1;
@@ -118,6 +122,21 @@ namespace TravelAndTourMS
             this.Hide();
             hotelbooking employeeform = new hotelbooking(b,ee,ii,m,w);
             employeeform.ShowDialog();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

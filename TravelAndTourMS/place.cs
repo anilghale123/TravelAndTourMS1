@@ -93,5 +93,10 @@ namespace TravelAndTourMS
             aboutus employeeform = new aboutus();
             employeeform.ShowDialog();
         }
+
+        private void place_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

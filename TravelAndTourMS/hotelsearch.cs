@@ -20,6 +20,19 @@ namespace TravelAndTourMS
         public hotelsearch()
         {
             InitializeComponent();
+             
+            dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = Color.DarkOrange;
+            dataGridView1.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            dataGridView1.ColumnHeadersDefaultCellStyle.Font = new Font(dataGridView1.Font.FontFamily, 14, FontStyle.Bold);
+
+
+
+
+
+            dataGridView1.DefaultCellStyle.Font = new Font(dataGridView1.Font.FontFamily, 11, FontStyle.Regular);
+
+            // dataGridView1.RowsDefaultCellStyle.BackColor = Color.Crimson;
+
         }
 
         private void load_data()
@@ -28,8 +41,15 @@ namespace TravelAndTourMS
             SqlDataAdapter da = new SqlDataAdapter();
             da.SelectCommand = cmd;
             DataTable dt = new DataTable();
-            dt.Clear();
-            da.Fill(dt);
+
+            dt.Columns.Add("id", typeof(string));
+            dt.Columns.Add("place", typeof(string));
+            dt.Columns.Add("hotel", typeof(string));
+            dt.Columns.Add("price", typeof(string));
+
+
+           dt.Clear();
+             da.Fill(dt);
             dataGridView1.RowTemplate.Height = 100;
             dataGridView1.DataSource = dt;
             
@@ -55,6 +75,9 @@ namespace TravelAndTourMS
             dataGridView1.Columns["room4"].Visible = false;
             dataGridView1.Columns["qr"].Visible = false;
 
+            dataGridView1.Columns["picture1"].Visible = false;
+            dataGridView1.Columns["price"].Visible = false;
+
 
 
 
@@ -70,37 +93,29 @@ namespace TravelAndTourMS
 
         private void button5_Click(object sender, EventArgs e)
         {
-           /* try
+           try
             {
                 con.Open();
-                string query = "select count(*) from Hotel where place=@place ";
+               string query = "select * from Hotel where place=@place ";
                 SqlCommand cmd = new SqlCommand(query, con);
                 cmd.Parameters.AddWithValue("@place", place.Text);
-                
-                int count = Convert.ToInt32(cmd.ExecuteScalar());
-                if (count > 0)
-                {
-                   // MessageBox.Show("Here is list");
-                  // string query2 = "select * from Hotel " ;
-                    SqlCommand cmd2 = new SqlCommand(query2, con);
-                    SqlDataAdapter sda = new SqlDataAdapter(cmd2);
+               
+                   
+                    
+                    SqlDataAdapter sda = new SqlDataAdapter(cmd);
                     DataTable dt = new DataTable();
                     sda.Fill(dt);
                     dataGridView1.DataSource = dt;
 
                    dataGridView1.Visible = true;
 
-                }
-                else
-                {
-                    MessageBox.Show("no data");
-                }
+               
                 con.Close();
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error:" + ex.InnerException);
-            }  */
+            }  
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -265,7 +280,13 @@ namespace TravelAndTourMS
 
 
                 }
-            
+
+        private void dataGridView1_ColumnHeadersDefaultCellStyleChanged(object sender, EventArgs e)
+        {
+            dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = Color.DarkOrange;
+            dataGridView1.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+
 
         }
+    }
     }

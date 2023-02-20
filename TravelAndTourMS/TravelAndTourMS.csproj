@@ -18,12 +18,14 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="CircularProgressBar_NET5" Version="3.0.0" />
     <PackageReference Include="FontAwesome.Sharp" Version="6.2.1" />
     <PackageReference Include="MaterialDesignThemes.Wpf" Version="1.0.1" />
     <PackageReference Include="MaterialSkin" Version="0.2.1" />
     <PackageReference Include="MaterialSkin.2" Version="2.3.1" />
     <PackageReference Include="MaterialSkin.Updated" Version="0.2.2" />
     <PackageReference Include="MongoDB.Driver.Core" Version="2.18.0" />
+    <PackageReference Include="PieChart" Version="1.0.1" />
     <PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
     <PackageReference Include="System.IO.FileSystem" Version="4.3.0" />
     <PackageReference Include="ZstdSharp" Version="0.7.2" />

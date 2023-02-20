@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,12 +13,15 @@ namespace TravelAndTourMS
 {
     public partial class hotelbooking : Form
     {
+        SqlConnection con = new SqlConnection(@"Data Source =.\SQLEXPRESS01; Initial Catalog= TravelandTour ; Integrated Security = True ; ");
         private Image im;
         public hotelbooking( string a, string b, string c, string d,Image w)
      {
             InitializeComponent();
+            textBox3.Text = a;
+            textBox6.Text = b;
+            textBox7.Text = c;
             textBox1.Text = d;
-            textBox3.Text = c;
             im = w;
         }
 
@@ -42,7 +46,47 @@ namespace TravelAndTourMS
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("booking successful");
+
+            try
+            {
+                con.Open();
+
+
+
+                string query = "INSERT INTO hotelBooking (Name,NumGuest,NumRoom,Address,PhoneNum,Place,CheckInDate,CheckOutDate,NumOfDays,Price,TotalPrice,PaymentOption) VALUES (@Name,@NumGuest,@NumRoom,@Address,@PhoneNum,@Place,@CheckInDate,@CheckOutDate,@NumOfDays,@Price,@TotalPrice,@PaymentOption )";
+                SqlCommand cmd = new SqlCommand(query, con);
+
+                cmd.Parameters.AddWithValue("@Name", Naam.Text);
+                cmd.Parameters.AddWithValue("@NumGuest", NTraveller.Text);
+                cmd.Parameters.AddWithValue("@NumRoom", textBox4.Text);
+                cmd.Parameters.AddWithValue("@Address", Addresses.Text);
+                cmd.Parameters.AddWithValue("@PhoneNum", PhoneNum.Text);
+                cmd.Parameters.AddWithValue("@Place", textBox3.Text);
+                cmd.Parameters.AddWithValue("@CheckInDate",dateTimePicker1.Text);
+                cmd.Parameters.AddWithValue("@CheckOutDate", dateTimePicker2.Text);
+                cmd.Parameters.AddWithValue("@NumOfDays", textBox5.Text);
+                cmd.Parameters.AddWithValue("@Price", textBox1.Text);
+                cmd.Parameters.AddWithValue("@TotalPrice", textBox2.Text);
+                cmd.Parameters.AddWithValue("@PaymentOption", comboBox1.Text);
+
+
+
+                cmd.ExecuteNonQuery();
+
+
+                MessageBox.Show("Booking Successfull");
+
+                con.Close();
+            }
+
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Error:" + ex.InnerException);
+            }
+
+
+           
 
             switch (selectedItem)
             {
@@ -132,6 +176,11 @@ namespace TravelAndTourMS
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
             CalculateTotalPrice();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

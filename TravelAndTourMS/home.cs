@@ -79,9 +79,15 @@ namespace TravelAndTourMS
 
         private void iconButton7_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            /*this.Hide();
             place employeeform = new place();
-            employeeform.ShowDialog();
+            employeeform.ShowDialog();*/
+
+            place employeeform = new place();
+            employeeform.ShowDialog(); 
+
+
+
         }
 
         private void iconButton10_MouseEnter(object sender, EventArgs e)
