@@ -277,5 +277,21 @@ namespace TravelAndTourMS
                 MessageBox.Show("Please select a row first.");
             }
         }
+
+        private void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (this.dataGridView1.Columns[e.ColumnIndex].Name == "Status")
+            {
+                if (e.Value != null && e.Value.ToString() == "Booked")
+                {
+                    e.CellStyle.ForeColor = Color.Red;
+                }
+                else
+                {
+                    e.CellStyle.ForeColor = Color.Green;
+                }
+            }
+            e.CellStyle.BackColor = Color.BurlyWood;
+        }
     }
 }

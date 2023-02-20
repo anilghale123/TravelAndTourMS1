@@ -50,8 +50,8 @@ namespace TravelAndTourMS
 
         private void button2_Click(object sender, EventArgs e)
         {
-            cmd = new SqlCommand("INSERT INTO cab (type,brand,model,seatnum,number,cab1,cab2,cab3,feature,driverinfo,driver,price,offerinfo,offerprice,offer,qr) VALUES " +
-                "(@type,@brand,@model,@seatnum,@number,@cab1,@cab2,@cab3,@feature,@driverinfo,@driver,@price,@offerinfo,@offerprice,@offer,@qr)", con);
+            cmd = new SqlCommand("INSERT INTO cab (type,brand,model,seatnum,number,cab1,cab2,cab3,feature,driverinfo,driver,price,offerinfo,offerprice,offer,qr,Status) VALUES " +
+                "(@type,@brand,@model,@seatnum,@number,@cab1,@cab2,@cab3,@feature,@driverinfo,@driver,@price,@offerinfo,@offerprice,@offer,@qr,@Status)", con);
            
                  cmd.Parameters.AddWithValue("type", textBox1.Text);
 
@@ -72,6 +72,7 @@ namespace TravelAndTourMS
             cmd.Parameters.AddWithValue("price", textBox6.Text);
             cmd.Parameters.AddWithValue("offerinfo", textBox3.Text);
             cmd.Parameters.AddWithValue("offerprice", textBox2.Text);
+            cmd.Parameters.AddWithValue("Status", comboBox1.Text);
 
 
 
@@ -153,7 +154,7 @@ namespace TravelAndTourMS
 
         private void button9_Click(object sender, EventArgs e)
         {
-            cmd = new SqlCommand("UPDATE cab SET  type = @type,brand = @brand,model = @model,seatnum = @seatnum,number = @number,cab1 = @cab1,cab2 = @cab2,cab3 = @cab3,feature = @feature,driverinfo = @driverinfo,driver = @driver,price = @price,offerinfo = @offerinfo,offerprice = @offerprice,offer = @offer, qr = @qr  WHERE id = @id", con);
+            cmd = new SqlCommand("UPDATE cab SET  type = @type,brand = @brand,model = @model,seatnum = @seatnum,number = @number,cab1 = @cab1,cab2 = @cab2,cab3 = @cab3,feature = @feature,driverinfo = @driverinfo,driver = @driver,price = @price,offerinfo = @offerinfo,offerprice = @offerprice,offer = @offer, qr = @qr, Status = @Status WHERE id = @id", con);
             cmd.Parameters.AddWithValue("type", textBox1.Text);
 
             MemoryStream memstr = new MemoryStream();
@@ -174,6 +175,7 @@ namespace TravelAndTourMS
             cmd.Parameters.AddWithValue("price", textBox6.Text);
             cmd.Parameters.AddWithValue("offerinfo", textBox3.Text);
             cmd.Parameters.AddWithValue("offerprice", textBox2.Text);
+            cmd.Parameters.AddWithValue("Status", comboBox1.Text);
 
 
 
@@ -218,6 +220,7 @@ namespace TravelAndTourMS
             textBox6.Text = dataGridView1.CurrentRow.Cells[12].Value.ToString();
             textBox3.Text = dataGridView1.CurrentRow.Cells[13].Value.ToString();
             textBox2.Text = dataGridView1.CurrentRow.Cells[14].Value.ToString();
+            comboBox1.Text = dataGridView1.CurrentRow.Cells[17].Value.ToString();
 
 
 
