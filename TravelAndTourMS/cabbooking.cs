@@ -339,6 +339,8 @@ namespace TravelAndTourMS
             dateTimePicker1.CustomFormat = "dd/MM/yyyy hh:mm tt";
             calculateDays();
             CalculateTotalPrice();
+
+          
         }
 
         private void dateTimePicker2_ValueChanged(object sender, EventArgs e)

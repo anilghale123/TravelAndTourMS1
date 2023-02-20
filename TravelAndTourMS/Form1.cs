@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MongoDB.Driver.Core.Configuration;
 
 namespace TravelAndTourMS
 {
@@ -58,10 +59,26 @@ namespace TravelAndTourMS
             label8.Text = count2.ToString();
             read.Close();
 
+           // SqlCommand cmd;
+          //  SqlDataReader read;
+            decimal totalPrice = 0;
+            string connectionString = (@"Data Source =.\SQLEXPRESS01; Initial Catalog= TravelandTour ; Integrated Security = True; "); 
+            string sql = "SELECT SUM(TotalPrice) FROM cabBooking WHERE YEAR(StartTime) = 2023";
+            using (SqlConnection con = new SqlConnection(connectionString))
+            {
+                con.Open();
+                cmd = new SqlCommand(sql, con);
+                read = cmd.ExecuteReader();
+                if (read.Read() && !read.IsDBNull(0))
+                {
+                    totalPrice = read.GetDecimal(0);
+                }
+                read.Close();
+            }
+           
+            label3.Text = totalPrice.ToString("N2");
 
 
-
-            con.Close();
 
         }
 
