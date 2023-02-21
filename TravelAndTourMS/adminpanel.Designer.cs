@@ -1,6 +1,6 @@
 ﻿namespace TravelAndTourMS
 {
-    partial class Airticket
+    partial class adminpanel
     {
         /// <summary>
         /// Required designer variable.

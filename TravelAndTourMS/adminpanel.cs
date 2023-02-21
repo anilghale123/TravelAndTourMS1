@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace TravelAndTourMS
 {
-    public partial class Airticket : Form
+    public partial class adminpanel : Form
     {
-        public Airticket()
+        public adminpanel()
         {
             InitializeComponent();
         }

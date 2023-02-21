@@ -37,7 +37,7 @@ namespace TravelAndTourMS
                 {
                     MessageBox.Show("Login  Successfully");
                     this.Hide();
-                    image employeeform = new image();
+                    Form1 employeeform = new Form1();
                     employeeform.ShowDialog();
                 }
                 else

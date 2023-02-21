@@ -34,7 +34,6 @@
             this.Naam = new System.Windows.Forms.TextBox();
             this.PhoneNum = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.TravelDate = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.NTraveller = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -60,17 +59,23 @@
             this.printPreviewDialog2 = new System.Windows.Forms.PrintPreviewDialog();
             this.printPreviewDialog5 = new System.Windows.Forms.PrintPreviewDialog();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.button3 = new System.Windows.Forms.Button();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.iconButton2 = new FontAwesome.Sharp.IconButton();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.iconButton8 = new FontAwesome.Sharp.IconButton();
             this.iconButton7 = new FontAwesome.Sharp.IconButton();
             this.iconButton3 = new FontAwesome.Sharp.IconButton();
             this.panel3 = new System.Windows.Forms.Panel();
             this.iconButton10 = new FontAwesome.Sharp.IconButton();
             this.label12 = new System.Windows.Forms.Label();
+            this.printDocument3 = new System.Drawing.Printing.PrintDocument();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -129,16 +134,6 @@
             this.label4.Size = new System.Drawing.Size(154, 28);
             this.label4.TabIndex = 6;
             this.label4.Text = "Phone Number";
-            // 
-            // TravelDate
-            // 
-            this.TravelDate.BackColor = System.Drawing.SystemColors.Info;
-            this.TravelDate.Location = new System.Drawing.Point(241, 185);
-            this.TravelDate.Multiline = true;
-            this.TravelDate.Name = "TravelDate";
-            this.TravelDate.PlaceholderText = "Enter Date";
-            this.TravelDate.Size = new System.Drawing.Size(182, 38);
-            this.TravelDate.TabIndex = 11;
             // 
             // label6
             // 
@@ -330,7 +325,10 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Controls.Add(this.dateTimePicker1);
+            this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.button4);
+            this.panel1.Controls.Add(this.comboBox1);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.textBox3);
             this.panel1.Controls.Add(this.label3);
@@ -347,7 +345,6 @@
             this.panel1.Controls.Add(this.PhoneNum);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.TravelDate);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.NTraveller);
@@ -356,6 +353,17 @@
             this.panel1.Size = new System.Drawing.Size(895, 534);
             this.panel1.TabIndex = 30;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label8.Location = new System.Drawing.Point(236, 379);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(163, 28);
+            this.label8.TabIndex = 41;
+            this.label8.Text = "Payment option";
             // 
             // button4
             // 
@@ -368,6 +376,18 @@
             this.button4.Text = "Preview";
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click_1);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "esewa",
+            "cash"});
+            this.comboBox1.Location = new System.Drawing.Point(405, 379);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(213, 28);
+            this.comboBox1.TabIndex = 40;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // button3
             // 
@@ -405,6 +425,8 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.Controls.Add(this.iconButton2);
+            this.panel2.Controls.Add(this.iconButton1);
             this.panel2.Controls.Add(this.iconButton8);
             this.panel2.Controls.Add(this.iconButton7);
             this.panel2.Controls.Add(this.iconButton3);
@@ -414,6 +436,52 @@
             this.panel2.Size = new System.Drawing.Size(251, 745);
             this.panel2.TabIndex = 31;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // iconButton2
+            // 
+            this.iconButton2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.iconButton2.FlatAppearance.BorderSize = 0;
+            this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton2.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.iconButton2.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.MountainSun;
+            this.iconButton2.IconColor = System.Drawing.Color.White;
+            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton2.IconSize = 42;
+            this.iconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton2.Location = new System.Drawing.Point(0, 280);
+            this.iconButton2.Name = "iconButton2";
+            this.iconButton2.Padding = new System.Windows.Forms.Padding(20, 0, 10, 0);
+            this.iconButton2.Size = new System.Drawing.Size(251, 70);
+            this.iconButton2.TabIndex = 16;
+            this.iconButton2.Text = "Cab Booking";
+            this.iconButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButton2.UseVisualStyleBackColor = true;
+            this.iconButton2.Click += new System.EventHandler(this.iconButton2_Click);
+            // 
+            // iconButton1
+            // 
+            this.iconButton1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.iconButton1.FlatAppearance.BorderSize = 0;
+            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton1.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.iconButton1.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.MountainSun;
+            this.iconButton1.IconColor = System.Drawing.Color.White;
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton1.IconSize = 42;
+            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton1.Location = new System.Drawing.Point(0, 210);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Padding = new System.Windows.Forms.Padding(20, 0, 10, 0);
+            this.iconButton1.Size = new System.Drawing.Size(251, 70);
+            this.iconButton1.TabIndex = 15;
+            this.iconButton1.Text = "Hotel Booking";
+            this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButton1.UseVisualStyleBackColor = true;
+            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
             // 
             // iconButton8
             // 
@@ -535,6 +603,14 @@
             this.label12.Text = "TOUR MANAGEMENT SYSTEM";
             this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker1.Location = new System.Drawing.Point(241, 196);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(125, 27);
+            this.dateTimePicker1.TabIndex = 42;
+            // 
             // tourbooking
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -566,7 +642,6 @@
         private TextBox Naam;
         private TextBox PhoneNum;
         private Label label4;
-        private TextBox TravelDate;
         private Label label6;
         private TextBox NTraveller;
         private Label label7;
@@ -603,5 +678,11 @@
         private Label label3;
         private Button button4;
         private Button button3;
+        private FontAwesome.Sharp.IconButton iconButton2;
+        private FontAwesome.Sharp.IconButton iconButton1;
+        private System.Drawing.Printing.PrintDocument printDocument3;
+        private Label label8;
+        private ComboBox comboBox1;
+        private DateTimePicker dateTimePicker1;
     }
 }

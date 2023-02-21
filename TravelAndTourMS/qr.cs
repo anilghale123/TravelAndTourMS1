@@ -12,9 +12,15 @@ namespace TravelAndTourMS
 {
     public partial class qr : Form
     {
-        public qr()
+        public qr(string a, string b, string c, string d, string e, string f, string g, Image x)
         {
             InitializeComponent();
+            pictureBox1.Image = x;
+        }
+
+        private void qr_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

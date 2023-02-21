@@ -16,17 +16,19 @@ namespace TravelAndTourMS
     {
         SqlConnection con = new SqlConnection(@"Data Source =.\SQLEXPRESS01; Initial Catalog= TravelandTour ; Integrated Security = True ; ");
 
-      /*  public string Price
-        {
-            get { return textBox1.Text; }
-            set { textBox1.Text = value; }
-        }
-      */
-        public tourbooking(string value,string value1)
+        /*  public string Price
+          {
+              get { return textBox1.Text; }
+              set { textBox1.Text = value; }
+          }
+        */
+        private Image x;
+        public tourbooking(string value,string value1,Image i1)
         {
             InitializeComponent();
             textBox1.Text = value;
             textBox3.Text = value1;
+            x = i1;
           }
         private void printButton_Click(object sender, EventArgs e)
         {
@@ -68,7 +70,7 @@ namespace TravelAndTourMS
                 SqlCommand cmd = new SqlCommand(query, con);
                 
                 cmd.Parameters.AddWithValue("@phoneNum", PhoneNum.Text);
-                cmd.Parameters.AddWithValue("@travelDate", TravelDate.Text);
+                cmd.Parameters.AddWithValue("@travelDate", dateTimePicker1.Text);
                 cmd.Parameters.AddWithValue("@place", textBox3.Text);
                 cmd.Parameters.AddWithValue("@name", Naam.Text);
                 cmd.Parameters.AddWithValue("@address", Addresses.Text);
@@ -77,7 +79,21 @@ namespace TravelAndTourMS
 
 
                 MessageBox.Show("Booking Successfully");
-               
+
+                switch (selectedItem)
+                {
+                    case "esewa":
+                        qr form1 = new qr(Naam.Text, Addresses.Text,dateTimePicker1.Text,NTraveller.Text,textBox1.Text,textBox2.Text,textBox3.Text,x);
+                        form1.Show();
+                        break;
+
+                   /* case "cash":
+                        qr form2 = new qr();
+                        form2.Show();
+                        break;*/
+                        // Add more cases as needed
+                }
+
                 con.Close();
             }
 
@@ -143,7 +159,7 @@ namespace TravelAndTourMS
             // Draw the body text
             e.Graphics.DrawString("Name: " + Naam.Text, bodyFont, Brushes.Black, new Point(60, 140));
             e.Graphics.DrawString("Address: " + Addresses.Text, bodyFont, Brushes.Black, new Point(60, 170));
-            e.Graphics.DrawString("Travel Date: " + TravelDate.Text, bodyFont, Brushes.Black, new Point(60, 200));
+            e.Graphics.DrawString("Travel Date: " + dateTimePicker1.Text, bodyFont, Brushes.Black, new Point(60, 200));
             e.Graphics.DrawString("No. of Travellers: " + NTraveller.Text, bodyFont, Brushes.Black, new Point(60, 230));
             e.Graphics.DrawString("Price: " + textBox1.Text, bodyFont, Brushes.Black, new Point(60, 260));
             e.Graphics.DrawString("Place: " + textBox3.Text, bodyFont, Brushes.Black, new Point(350, 230));
@@ -366,6 +382,25 @@ namespace TravelAndTourMS
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            hotelsearch employeeform = new hotelsearch();
+            employeeform.ShowDialog();
+        }
+
+        private void iconButton2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            cabuser employeeform = new cabuser();
+            employeeform.ShowDialog();
+        }
+        private string selectedItem;
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            selectedItem = comboBox1.SelectedItem.ToString();
         }
     }
 }

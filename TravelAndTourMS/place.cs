@@ -98,5 +98,23 @@ namespace TravelAndTourMS
         {
 
         }
+
+        private void iconButton5_Click(object sender, EventArgs e)
+        {
+                    }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            hotelsearch employeeform = new hotelsearch();
+            employeeform.ShowDialog();
+        }
+
+        private void iconButton4_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            cabuser employeeform = new cabuser();
+            employeeform.ShowDialog();
+        }
     }
 }

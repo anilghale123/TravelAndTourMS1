@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -74,9 +75,17 @@ namespace TravelAndTourMS
                 string price = dataGridView1.Rows[selectedRowIndex].Cells["price"].Value.ToString();
                 string package_name = dataGridView1.Rows[selectedRowIndex].Cells["package_name"].Value.ToString();
 
+                byte[] byteArray = (byte[])dataGridView1.Rows[selectedRowIndex].Cells["qr"].Value;
+
+                Image image;
+                using (var ms = new MemoryStream(byteArray))
+                {
+                    image = Image.FromStream(ms);
+                }
+
 
                 this.Hide();
-                tourbooking employeeform = new tourbooking(price, package_name);
+                tourbooking employeeform = new tourbooking(price, package_name,image);
                 employeeform.ShowDialog();
             }
             else
@@ -315,6 +324,20 @@ namespace TravelAndTourMS
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            hotelsearch employeeform = new hotelsearch();
+            employeeform.ShowDialog();
+        }
+
+        private void iconButton2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            cabuser employeeform = new cabuser();
+            employeeform.ShowDialog();
         }
     }
 }

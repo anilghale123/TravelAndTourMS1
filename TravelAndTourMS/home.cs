@@ -146,12 +146,12 @@ namespace TravelAndTourMS
 
         private void iconButton1_MouseEnter(object sender, EventArgs e)
         {
-            iconButton1.BackColor = Color.Orange;
+            //iconButton1.BackColor = Color.Orange;
         }
 
         private void iconButton1_MouseLeave(object sender, EventArgs e)
         {
-            iconButton1.BackColor = Color.Transparent;
+           // iconButton1.BackColor = Color.Transparent;
         }
 
         private void home_Resize(object sender, EventArgs e)
@@ -166,6 +166,62 @@ namespace TravelAndTourMS
                 control.Size = new Size((int)(originalSizes[control].Width * scaleX), (int)(originalSizes[control].Height * scaleY));
                 control.Location = new Point((int)(originalLocations[control].X * scaleX), (int)(originalLocations[control].Y * scaleY));
             }
+        }
+
+        private void iconButton4_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            hotelsearch employeeform = new hotelsearch();
+            employeeform.ShowDialog();
+        }
+
+        private void iconButton2_Click_2(object sender, EventArgs e)
+        {
+            this.Hide();
+            cabuser employeeform = new cabuser();
+            employeeform.ShowDialog();
+        }
+
+        private void iconButton5_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            login employeeform = new login();
+            employeeform.ShowDialog();
+        }
+
+        private void iconButton10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void iconButton4_MouseEnter(object sender, EventArgs e)
+        {
+            iconButton4.BackColor = Color.Orange;
+        }
+
+        private void iconButton4_MouseLeave(object sender, EventArgs e)
+        {
+            iconButton4.BackColor = Color.Transparent;
+        }
+
+        private void iconButton2_MouseEnter(object sender, EventArgs e)
+        {
+            iconButton2.BackColor = Color.Orange;
+        }
+
+        private void iconButton2_MouseLeave(object sender, EventArgs e)
+        {
+            iconButton2.BackColor = Color.Transparent;
+        }
+
+        private void iconButton5_MouseEnter(object sender, EventArgs e)
+        {
+            iconButton5.BackColor = Color.Orange;
+        }
+
+        private void iconButton5_MouseLeave(object sender, EventArgs e)
+        {
+            iconButton5.BackColor = Color.Transparent;
         }
     }
 }

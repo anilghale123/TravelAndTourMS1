@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using MongoDB.Driver.Core.Misc;
 using static MongoDB.Bson.Serialization.Serializers.SerializerHelper;
 
+
 namespace TravelAndTourMS
 {
     public partial class cabuser : Form
@@ -291,7 +292,56 @@ namespace TravelAndTourMS
                     e.CellStyle.ForeColor = Color.Green;
                 }
             }
-            e.CellStyle.BackColor = Color.BurlyWood;
+         //   e.CellStyle.BackColor = Color.BurlyWood;
+        }
+
+        private void iconButton10_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            home form = new home();
+            form.ShowDialog();
+        }
+
+        private void iconButton3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            image1 form = new image1();
+            form.ShowDialog();
+
+
+        }
+
+        private void iconButton7_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            place form = new place();
+            form.ShowDialog();
+        }
+
+        private void iconButton8_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            aboutus form = new aboutus();
+            form.ShowDialog();
+        }
+
+        private void iconButton4_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            hotelsearch form = new hotelsearch();
+            form.ShowDialog();
+        }
+
+        private void iconButton2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            cabuser form = new cabuser();
+            form.ShowDialog();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

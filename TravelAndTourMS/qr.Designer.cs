@@ -39,6 +39,7 @@
             this.pictureBox1.Location = new System.Drawing.Point(116, 31);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(198, 208);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -88,6 +89,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Name = "qr";
             this.Text = "qr";
+            this.Load += new System.EventHandler(this.qr_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 

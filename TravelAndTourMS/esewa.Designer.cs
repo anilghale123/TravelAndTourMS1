@@ -123,6 +123,7 @@
             this.Controls.Add(this.rjButton1);
             this.Controls.Add(this.label1);
             this.Name = "esewa";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "esewa";
             this.Load += new System.EventHandler(this.esewa_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

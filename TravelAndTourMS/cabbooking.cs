@@ -193,10 +193,10 @@ namespace TravelAndTourMS
                         form1.Show();
                         break;
 
-                    case "qr":
+                   /* case "cash":
                         qr form2 = new qr();
                         form2.Show();
-                        break;
+                        break;*/
                         // Add more cases as needed
                 }
 
@@ -351,6 +351,53 @@ namespace TravelAndTourMS
             dateTimePicker2.CustomFormat = "dd/MM/yyyy hh:mm tt";
             calculateDays();
             CalculateTotalPrice();
+        }
+
+        private void iconButton10_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            home employeeform = new home();
+            employeeform.ShowDialog();
+        }
+
+        private void iconButton3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            image1 employeeform = new image1();
+            employeeform.ShowDialog();
+        }
+
+        private void iconButton7_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            place employeeform = new place();
+            employeeform.ShowDialog();
+        }
+
+        private void iconButton8_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            aboutus employeefrom = new aboutus();
+            employeefrom.ShowDialog();
+        }
+
+        private void iconButton4_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            hotelsearch employeeform = new hotelsearch();
+            employeeform.ShowDialog();
+        }
+
+        private void iconButton2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            cabuser employeeform = new cabuser();
+            employeeform.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
