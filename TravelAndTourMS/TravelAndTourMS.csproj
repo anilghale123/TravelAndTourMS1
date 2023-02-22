@@ -18,6 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="CircularProgressBar" Version="2.8.0.16" />
     <PackageReference Include="CircularProgressBar_NET5" Version="3.0.0" />
     <PackageReference Include="FontAwesome.Sharp" Version="6.2.1" />
     <PackageReference Include="MaterialDesignThemes.Wpf" Version="1.0.1" />
@@ -28,6 +29,7 @@
     <PackageReference Include="PieChart" Version="1.0.1" />
     <PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
     <PackageReference Include="System.IO.FileSystem" Version="4.3.0" />
+    <PackageReference Include="WinFormAnimation" Version="1.6.0.4" />
     <PackageReference Include="ZstdSharp" Version="0.7.2" />
   </ItemGroup>
 

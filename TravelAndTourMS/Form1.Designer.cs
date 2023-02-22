@@ -164,7 +164,6 @@
             this.circularProgressBar1.SecondaryFont = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.circularProgressBar1.Size = new System.Drawing.Size(288, 292);
             this.circularProgressBar1.StartAngle = 270;
-            this.circularProgressBar1.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.circularProgressBar1.SubscriptColor = System.Drawing.Color.Blue;
             this.circularProgressBar1.SubscriptMargin = new System.Windows.Forms.Padding(10, -35, 0, 0);
             this.circularProgressBar1.SubscriptText = ".23";
@@ -174,6 +173,7 @@
             this.circularProgressBar1.TabIndex = 5;
             this.circularProgressBar1.TextMargin = new System.Windows.Forms.Padding(8, 8, 0, 0);
             this.circularProgressBar1.Value = 68;
+          //  this.circularProgressBar1.Click += new System.EventHandler(this.circularProgressBar1_ValueChanged);
             // 
             // label4
             // 

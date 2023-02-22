@@ -10,16 +10,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CircularProgressBar_NET5;
 using MongoDB.Driver.Core.Configuration;
+using CircularProgressBar;
+using WinFormAnimation;
+//using System.Windows.Forms.DataVisualization.Charting;
+
 
 namespace TravelAndTourMS
 {
     public partial class Form1 : Form
     {
-      
+
         SqlConnection con = new SqlConnection(@"Data Source =.\SQLEXPRESS01; Initial Catalog= TravelandTour ; Integrated Security = True ; ");
         SqlCommand cmd;
-       // SqlCommand cmd1;
+        // SqlCommand cmd1;
         public Form1()
         {
             InitializeComponent();
@@ -29,20 +34,20 @@ namespace TravelAndTourMS
             con.Open();
             cmd = new SqlCommand("Select * from hotelBooking", con);
             SqlDataReader read = null;
-            read=cmd.ExecuteReader();
-            while(read.Read())
+            read = cmd.ExecuteReader();
+            while (read.Read())
             {
                 count++;
             }
-            label7.Text=count.ToString();
-           cmd.Dispose();
+            label7.Text = count.ToString();
+            cmd.Dispose();
             read.Close();
 
 
 
-            
+
             cmd = new SqlCommand("Select * from TBook", con);
-             read=cmd.ExecuteReader();
+            read = cmd.ExecuteReader();
             while (read.Read())
             {
                 count1++;
@@ -59,10 +64,10 @@ namespace TravelAndTourMS
             label8.Text = count2.ToString();
             read.Close();
 
-           // SqlCommand cmd;
-          //  SqlDataReader read;
+            // SqlCommand cmd;
+            //  SqlDataReader read;
             decimal totalPrice = 0;
-            string connectionString = (@"Data Source =.\SQLEXPRESS01; Initial Catalog= TravelandTour ; Integrated Security = True; "); 
+            string connectionString = (@"Data Source =.\SQLEXPRESS01; Initial Catalog= TravelandTour ; Integrated Security = True; ");
             string sql = "SELECT SUM(TotalPrice) FROM cabBooking WHERE YEAR(StartTime) = 2023";
             using (SqlConnection con = new SqlConnection(connectionString))
             {
@@ -75,8 +80,13 @@ namespace TravelAndTourMS
                 }
                 read.Close();
             }
-           
+
             label3.Text = totalPrice.ToString("N2");
+
+
+
+           
+
 
 
 
@@ -85,12 +95,12 @@ namespace TravelAndTourMS
         private void iconButton1_Click(object sender, EventArgs e)
         {
             //iconButton1.BackColor = Color.FromArgb(100, 0, 0, 0);
-            
+
         }
 
         private void iconButton1_Paint(object sender, PaintEventArgs e)
         {
-           // iconButton1.BackColor = Color.FromArgb(90, 0, 0, 0);
+            // iconButton1.BackColor = Color.FromArgb(90, 0, 0, 0);
         }
 
         private void Form1_Load(object sender, EventArgs e)
