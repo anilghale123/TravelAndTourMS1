@@ -173,7 +173,6 @@
             this.circularProgressBar1.TabIndex = 5;
             this.circularProgressBar1.TextMargin = new System.Windows.Forms.Padding(8, 8, 0, 0);
             this.circularProgressBar1.Value = 68;
-          //  this.circularProgressBar1.Click += new System.EventHandler(this.circularProgressBar1_ValueChanged);
             // 
             // label4
             // 
@@ -323,6 +322,8 @@
             this.iconButton5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iconButton5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton5.UseVisualStyleBackColor = true;
+            this.iconButton5.MouseEnter += new System.EventHandler(this.iconButton5_MouseEnter);
+            this.iconButton5.MouseLeave += new System.EventHandler(this.iconButton5_MouseLeave);
             // 
             // iconButton1
             // 
@@ -344,6 +345,8 @@
             this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton1.UseVisualStyleBackColor = true;
+            this.iconButton1.MouseEnter += new System.EventHandler(this.iconButton1_MouseEnter);
+            this.iconButton1.MouseLeave += new System.EventHandler(this.iconButton1_MouseLeave);
             // 
             // iconButton4
             // 
@@ -366,6 +369,8 @@
             this.iconButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton4.UseVisualStyleBackColor = true;
             this.iconButton4.Click += new System.EventHandler(this.iconButton4_Click);
+            this.iconButton4.MouseEnter += new System.EventHandler(this.iconButton4_MouseEnter);
+            this.iconButton4.MouseLeave += new System.EventHandler(this.iconButton4_MouseLeave);
             // 
             // iconButton2
             // 
@@ -388,6 +393,8 @@
             this.iconButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton2.UseVisualStyleBackColor = true;
             this.iconButton2.Click += new System.EventHandler(this.iconButton2_Click);
+            this.iconButton2.MouseEnter += new System.EventHandler(this.iconButton2_MouseEnter);
+            this.iconButton2.MouseLeave += new System.EventHandler(this.iconButton2_MouseLeave);
             // 
             // iconButton3
             // 
@@ -410,6 +417,8 @@
             this.iconButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton3.UseVisualStyleBackColor = true;
             this.iconButton3.Click += new System.EventHandler(this.iconButton3_Click);
+            this.iconButton3.MouseEnter += new System.EventHandler(this.iconButton3_MouseEnter);
+            this.iconButton3.MouseLeave += new System.EventHandler(this.iconButton3_MouseLeave);
             // 
             // iconButton10
             // 
@@ -432,6 +441,8 @@
             this.iconButton10.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton10.UseCompatibleTextRendering = true;
             this.iconButton10.UseVisualStyleBackColor = false;
+            this.iconButton10.MouseEnter += new System.EventHandler(this.iconButton10_MouseEnter);
+            this.iconButton10.MouseLeave += new System.EventHandler(this.iconButton10_MouseLeave);
             // 
             // Form1
             // 

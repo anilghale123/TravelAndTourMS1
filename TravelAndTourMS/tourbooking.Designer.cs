@@ -59,6 +59,7 @@
             this.printPreviewDialog2 = new System.Windows.Forms.PrintPreviewDialog();
             this.printPreviewDialog5 = new System.Windows.Forms.PrintPreviewDialog();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label8 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -75,7 +76,6 @@
             this.iconButton10 = new FontAwesome.Sharp.IconButton();
             this.label12 = new System.Windows.Forms.Label();
             this.printDocument3 = new System.Drawing.Printing.PrintDocument();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -354,6 +354,14 @@
             this.panel1.TabIndex = 30;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker1.Location = new System.Drawing.Point(241, 196);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(125, 27);
+            this.dateTimePicker1.TabIndex = 42;
+            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -459,6 +467,8 @@
             this.iconButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton2.UseVisualStyleBackColor = true;
             this.iconButton2.Click += new System.EventHandler(this.iconButton2_Click);
+            this.iconButton2.MouseEnter += new System.EventHandler(this.iconButton2_MouseEnter);
+            this.iconButton2.MouseLeave += new System.EventHandler(this.iconButton2_MouseLeave);
             // 
             // iconButton1
             // 
@@ -482,6 +492,8 @@
             this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton1.UseVisualStyleBackColor = true;
             this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
+            this.iconButton1.MouseEnter += new System.EventHandler(this.iconButton1_MouseEnter);
+            this.iconButton1.MouseLeave += new System.EventHandler(this.iconButton1_MouseLeave);
             // 
             // iconButton8
             // 
@@ -602,14 +614,6 @@
             this.label12.TabIndex = 0;
             this.label12.Text = "TOUR MANAGEMENT SYSTEM";
             this.label12.Click += new System.EventHandler(this.label12_Click);
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(241, 196);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(125, 27);
-            this.dateTimePicker1.TabIndex = 42;
             // 
             // tourbooking
             // 
