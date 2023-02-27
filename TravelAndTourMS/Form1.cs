@@ -14,6 +14,8 @@ using CircularProgressBar_NET5;
 using MongoDB.Driver.Core.Configuration;
 using CircularProgressBar;
 using WinFormAnimation;
+using LiveCharts.Wpf;
+using LiveCharts;
 //using System.Windows.Forms.DataVisualization.Charting;
 
 
@@ -28,7 +30,13 @@ namespace TravelAndTourMS
         public Form1()
         {
             InitializeComponent();
-            int count = 0;
+
+
+
+
+
+            decimal count = 0;
+            decimal tc = 0;
             int count1 = 0;
             int count2 = 0;
             con.Open();
@@ -39,6 +47,7 @@ namespace TravelAndTourMS
             {
                 count++;
             }
+            tc = count;
             label7.Text = count.ToString();
             cmd.Dispose();
             read.Close();
@@ -85,7 +94,44 @@ namespace TravelAndTourMS
 
 
 
-           
+
+
+            // Create a new PieChart control and add it to the form
+            var chart = new LiveCharts.WinForms.PieChart();
+            chart.Dock = DockStyle.Fill;
+            this.Controls.Add(chart);
+
+            Panel panel = new Panel();
+            panel.Controls.Add(chart);
+            panel.Location = new Point(1300, 450); // set the location of the panel
+            panel.Size = new Size(300, 300); // set the size of the panel
+            this.Controls.Add(panel);
+
+            // Set the data for the chart
+            chart.Series.Add(new PieSeries
+            {
+                Title = "Upasana Expense ",
+                Values = new ChartValues<decimal> {15 },
+                DataLabels = true
+            });
+            chart.Series.Add(new PieSeries
+            {
+                Title = "Sova Expense",
+                Values = new ChartValues<decimal> { tc },
+                DataLabels = true
+            });
+            chart.Series.Add(new PieSeries
+            {
+                Title = "Rinjha Expense",
+                Values = new ChartValues<double> { 30 },
+                DataLabels = true
+            });
+            chart.Series.Add(new PieSeries
+            {
+                Title = "Srijana Expense",
+                Values = new ChartValues<double> { 15 },
+                DataLabels = true
+            });
 
 
 
@@ -193,6 +239,11 @@ namespace TravelAndTourMS
         private void iconButton5_MouseLeave(object sender, EventArgs e)
         {
             iconButton5.BackColor = Color.Transparent;
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

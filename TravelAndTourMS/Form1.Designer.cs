@@ -41,7 +41,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.panel5 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
@@ -117,7 +116,7 @@
             this.panel2.Controls.Add(this.circularProgressBar1);
             this.panel2.Location = new System.Drawing.Point(715, 385);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(478, 468);
+            this.panel2.Size = new System.Drawing.Size(364, 468);
             this.panel2.TabIndex = 1;
             // 
             // label6
@@ -194,6 +193,7 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(321, 146);
             this.panel3.TabIndex = 1;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // label7
             // 
@@ -206,14 +206,6 @@
             this.label7.TabIndex = 3;
             this.label7.Text = "1500";
             this.label7.Click += new System.EventHandler(this.label7_Click);
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.Transparent;
-            this.panel4.Location = new System.Drawing.Point(1303, 271);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(339, 224);
-            this.panel4.TabIndex = 2;
             // 
             // imageList1
             // 
@@ -454,7 +446,6 @@
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
-            this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -481,7 +472,6 @@
         private Panel panel1;
         private Panel panel2;
         private Panel panel3;
-        private Panel panel4;
         private ImageList imageList1;
         private Label label1;
         private Label label3;
