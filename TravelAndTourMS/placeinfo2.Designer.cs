@@ -30,6 +30,9 @@
         {
             this.circularProgressBar1 = new CircularProgressBar.CircularProgressBar();
             this.angularGauge1 = new LiveCharts.WinForms.AngularGauge();
+            this.cartesianChart1 = new LiveCharts.WinForms.CartesianChart();
+            this.pieChart1 = new LiveCharts.WinForms.PieChart();
+            this.materialCheckedListBox1 = new MaterialSkin.Controls.MaterialCheckedListBox();
             this.SuspendLayout();
             // 
             // circularProgressBar1
@@ -72,11 +75,43 @@
             this.angularGauge1.TabIndex = 1;
             this.angularGauge1.Text = "angularGauge1";
             // 
+            // cartesianChart1
+            // 
+            this.cartesianChart1.Location = new System.Drawing.Point(998, 359);
+            this.cartesianChart1.Name = "cartesianChart1";
+            this.cartesianChart1.Size = new System.Drawing.Size(250, 125);
+            this.cartesianChart1.TabIndex = 2;
+            this.cartesianChart1.Text = "cartesianChart1";
+            // 
+            // pieChart1
+            // 
+            this.pieChart1.Location = new System.Drawing.Point(209, 205);
+            this.pieChart1.Name = "pieChart1";
+            this.pieChart1.Size = new System.Drawing.Size(250, 125);
+            this.pieChart1.TabIndex = 3;
+            this.pieChart1.Text = "pieChart1";
+            // 
+            // materialCheckedListBox1
+            // 
+            this.materialCheckedListBox1.AutoScroll = true;
+            this.materialCheckedListBox1.BackColor = System.Drawing.SystemColors.Control;
+            this.materialCheckedListBox1.Depth = 0;
+            this.materialCheckedListBox1.Location = new System.Drawing.Point(414, 233);
+            this.materialCheckedListBox1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialCheckedListBox1.Name = "materialCheckedListBox1";
+            this.materialCheckedListBox1.Size = new System.Drawing.Size(250, 125);
+            this.materialCheckedListBox1.Striped = false;
+            this.materialCheckedListBox1.StripeDarkColor = System.Drawing.Color.Empty;
+            this.materialCheckedListBox1.TabIndex = 4;
+            // 
             // placeinfo2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1924, 1055);
+            this.Controls.Add(this.materialCheckedListBox1);
+            this.Controls.Add(this.pieChart1);
+            this.Controls.Add(this.cartesianChart1);
             this.Controls.Add(this.angularGauge1);
             this.Controls.Add(this.circularProgressBar1);
             this.Name = "placeinfo2";
@@ -90,5 +125,8 @@
 
         private CircularProgressBar.CircularProgressBar circularProgressBar1;
         private LiveCharts.WinForms.AngularGauge angularGauge1;
+        private LiveCharts.WinForms.CartesianChart cartesianChart1;
+        private LiveCharts.WinForms.PieChart pieChart1;
+        private MaterialSkin.Controls.MaterialCheckedListBox materialCheckedListBox1;
     }
 }
