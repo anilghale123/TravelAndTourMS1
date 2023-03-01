@@ -140,7 +140,7 @@ namespace TravelAndTourMS
 
         private void button2_Click(object sender, EventArgs e)
         {
-            cmd = new SqlCommand ( "UPDATE Table1 SET package_name = @package_name,description = @description, price = @price, photo = @photo, photo1 = @photo1,photo2 = @photo2, photo3 = @photo3, qr = @qr  WHERE id = @id", con);
+            cmd = new SqlCommand ( "UPDATE Table1 SET package_name = @package_name,description = @description, price = @price, photo = @photo, photo1 = @photo1,photo2 = @photo2, qr = @qr  WHERE id = @id", con);
             cmd.Parameters.AddWithValue("package_name", textBox1.Text);
             MemoryStream memstr = new MemoryStream();
             MemoryStream memstr1 = new MemoryStream();
@@ -160,6 +160,8 @@ namespace TravelAndTourMS
 
             pictureBox4.Image.Save(memstr2, pictureBox4.Image.RawFormat);
             cmd.Parameters.AddWithValue("photo2", memstr2.ToArray());
+
+           
 
             pictureBox2.Image.Save(memstr3, pictureBox2.Image.RawFormat);
             cmd.Parameters.AddWithValue("qr", memstr3.ToArray());
