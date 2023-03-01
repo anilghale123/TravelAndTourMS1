@@ -65,6 +65,7 @@ namespace TravelAndTourMS
 
         private void Timer_Tick(object sender, ElapsedEventArgs e)
         {
+            //MessageBox.Show("Timer");
             DateTime currentTime = DateTime.Now;
             string query = "SELECT * FROM cabBooking WHERE Status = 'booked' AND EndTime < @currentTime";
 
