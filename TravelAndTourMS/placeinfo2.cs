@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DnsClient;
+using System.Windows.Media;
 
 namespace TravelAndTourMS
 {
@@ -55,11 +57,50 @@ namespace TravelAndTourMS
                 // set the initial y position to 120
                 int currentY = 120;
 
+                int a = 20, b = 20;
+                int pictureBoxWidth = 200, pictureBoxHeight = 200;
+                int spacing = 10;
+                int descriptionWidth = 200;
+                Font font = new Font("Arial", 12);
+
+
                 // loop through the rows of the DataTable
                 for (int i = 0; i < dataTable.Rows.Count; i++)
                 {
-                    // create a new PictureBox control and set its properties
                     PictureBox pictureBox = new PictureBox();
+                    // create a new label to show package name
+                    Label lblPackageName = new Label();
+                    lblPackageName.AutoSize = true;
+                    lblPackageName.Text = dataTable.Rows[i]["package_name"].ToString();
+                    lblPackageName.Location = new Point(x, currentY - 20); // adjust y position as needed
+                    panel.Controls.Add(lblPackageName);
+
+
+                    // Create RichTextBox for displaying the description
+                    RichTextBox rtb = new RichTextBox();
+                    rtb.Size = new Size(descriptionWidth, 0);
+                    rtb.Location = new Point(a, b + pictureBoxHeight + spacing);
+                    rtb.Font = font;
+                    rtb.Text = dataTable.Rows[i]["description"].ToString();
+                    rtb.ReadOnly = true;
+                    rtb.BorderStyle = BorderStyle.None;
+                    rtb.BackColor = this.BackColor;
+                    this.Controls.Add(rtb);
+                    rtb.Height = rtb.GetPreferredSize(rtb.Size).Height;
+
+                    // Calculate new position for next PictureBox and RichTextBox
+                    a += pictureBoxWidth + spacing;
+
+                    if (a + pictureBoxWidth + spacing + descriptionWidth > this.ClientSize.Width)
+                    {
+                        a = 20;
+                        b += pictureBoxHeight + spacing + rtb.Height + spacing;
+                    }
+
+                    // create a new PictureBox control and set its properties
+
+
+
                     Size currentSize = pictureBox.Size;
                     Size newSize = new Size((int)(currentSize.Width * 3), (int)(currentSize.Height * 5.5));
                     pictureBox.Size = newSize;
@@ -86,6 +127,7 @@ namespace TravelAndTourMS
                     //this.Controls.Add(pictureBox);
                     // add the PictureBox to the panel instead of directly to the form's Controls collection
                     panel.Controls.Add(pictureBox);
+                   // panel.Controls.Add(lblPackageName);
                     // increment the X coordinate by the width of the PictureBox plus the gap
                     x += pictureBox.Width + 40;
 
@@ -114,4 +156,6 @@ namespace TravelAndTourMS
         }
 
     }
+
+
 }
