@@ -88,9 +88,9 @@
             // 
             this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBox1.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.richTextBox1.Location = new System.Drawing.Point(434, 431);
+            this.richTextBox1.Location = new System.Drawing.Point(722, 431);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(1333, 499);
+            this.richTextBox1.Size = new System.Drawing.Size(718, 499);
             this.richTextBox1.TabIndex = 4;
             this.richTextBox1.Text = "";
             // 

@@ -13,13 +13,6 @@ namespace TravelAndTourMS
             ApplicationConfiguration.Initialize();
             Application.Run(new placeinfo2());
 
-
-
-
-
-
-
-
             /*    static void Main()
                 {
                     Application.EnableVisualStyles();

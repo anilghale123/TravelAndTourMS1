@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DnsClient;
 using System.Windows.Media;
+using System.Drawing.Text;
 
 namespace TravelAndTourMS
 {
@@ -17,6 +18,7 @@ namespace TravelAndTourMS
     {
         SqlConnection con = new SqlConnection(@"Data Source =.\SQLEXPRESS01; Initial Catalog= TravelandTour ; user id = sa;password = anil123 ");
         SqlCommand cmd;
+        private String a;
         public placeinfo2()
         {
             InitializeComponent();
@@ -40,7 +42,7 @@ namespace TravelAndTourMS
             // Add the panel to the form's Controls collection
             this.Controls.Add(panel);
 
-
+            
 
             using (SqlConnection connection = new SqlConnection(con.ConnectionString))
             {
@@ -51,23 +53,47 @@ namespace TravelAndTourMS
                 {
                     SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                     adapter.Fill(dataTable);
+                    
+
+
+
+
                 }
                 // set the initial location of the first PictureBox
                 int x = 300;
                 // set the initial y position to 120
                 int currentY = 120;
 
-                int a = 20, b = 20;
-                int pictureBoxWidth = 200, pictureBoxHeight = 200;
-                int spacing = 10;
-                int descriptionWidth = 200;
-                Font font = new Font("Arial", 12);
+               
 
 
                 // loop through the rows of the DataTable
                 for (int i = 0; i < dataTable.Rows.Count; i++)
                 {
                     PictureBox pictureBox = new PictureBox();
+                    // attach the Click event handler to the PictureBox control
+                    pictureBox.Click += pictureBox_Click;
+
+                    pictureBox.Name = dataTable.Rows[i]["package_name"].ToString();
+                    //  pictureBox.Name = dataTable.Rows[i]["package_name"].ToString();
+
+
+                    // Get the byte[] array for the image from the "photo1" column in the DataTable
+                    byte[] imageData1 = (byte[])dataTable.Rows[i]["photo1"];
+
+                    // Load the image from the byte[] array
+                    using (MemoryStream stream = new MemoryStream(imageData1))
+                    {
+                        Image image = Image.FromStream(stream);
+
+                        // Set the PictureBox.Name property to the value in the "package_name" column
+                       // pictureBox.Name = dataTable.Rows[i]["package_name"].ToString();
+
+                        // Set the PictureBox.Image property to the loaded image
+                        pictureBox.Image = image;
+                    }
+
+
                     // create a new label to show package name
                     Label lblPackageName = new Label();
                     lblPackageName.AutoSize = true;
@@ -76,26 +102,16 @@ namespace TravelAndTourMS
                     panel.Controls.Add(lblPackageName);
 
 
-                    // Create RichTextBox for displaying the description
-                    RichTextBox rtb = new RichTextBox();
-                    rtb.Size = new Size(descriptionWidth, 0);
-                    rtb.Location = new Point(a, b + pictureBoxHeight + spacing);
-                    rtb.Font = font;
-                    rtb.Text = dataTable.Rows[i]["description"].ToString();
-                    rtb.ReadOnly = true;
-                    rtb.BorderStyle = BorderStyle.None;
-                    rtb.BackColor = this.BackColor;
-                    this.Controls.Add(rtb);
-                    rtb.Height = rtb.GetPreferredSize(rtb.Size).Height;
+                     RichTextBox lblPackageName1 = new RichTextBox();
+                     lblPackageName1.AutoSize = true;
+                     lblPackageName1.Width = 300;
+                     lblPackageName1.Height = 150;
+                     lblPackageName1.Text = dataTable.Rows[i]["description"].ToString();
+                     lblPackageName1.Location = new Point(x, currentY + 300); // adjust y position as needed
+                     panel.Controls.Add(lblPackageName1);
 
-                    // Calculate new position for next PictureBox and RichTextBox
-                    a += pictureBoxWidth + spacing;
 
-                    if (a + pictureBoxWidth + spacing + descriptionWidth > this.ClientSize.Width)
-                    {
-                        a = 20;
-                        b += pictureBoxHeight + spacing + rtb.Height + spacing;
-                    }
+
 
                     // create a new PictureBox control and set its properties
 
@@ -155,7 +171,34 @@ namespace TravelAndTourMS
            
         }
 
+        private void pictureBox_Click(object sender, EventArgs e)
+        {
+            // cast the sender object to a PictureBox control
+            PictureBox clickedPictureBox = sender as PictureBox;
+
+            // get the package name and other data associated with the clicked PictureBox
+            // string packageName = clickedPictureBox.Tag.ToString(); // set the Tag property of each PictureBox to the package name when you create them
+            // ...
+
+            // Create an instance of the form you want to open
+            string package_name = clickedPictureBox.Name;
+            Image photo1 = clickedPictureBox.Image;
+            placeinfo form2 = new placeinfo(package_name,photo1);
+
+            // Show the form
+            form2.Show();
+
+            // Hide the current form if needed
+            this.Hide();
+        }
+
+
+
+
+
     }
+
+
 
 
 }
