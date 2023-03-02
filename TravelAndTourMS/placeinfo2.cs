@@ -53,31 +53,25 @@ namespace TravelAndTourMS
                 {
                     SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                     adapter.Fill(dataTable);
-                    
-
-
-
-
+              
                 }
                 // set the initial location of the first PictureBox
                 int x = 300;
                 // set the initial y position to 120
                 int currentY = 120;
 
-               
-
-
                 // loop through the rows of the DataTable
                 for (int i = 0; i < dataTable.Rows.Count; i++)
                 {
+                  
                     PictureBox pictureBox = new PictureBox();
                     // attach the Click event handler to the PictureBox control
                     pictureBox.Click += pictureBox_Click;
 
-                    pictureBox.Name = dataTable.Rows[i]["package_name"].ToString();
-                    //  pictureBox.Name = dataTable.Rows[i]["package_name"].ToString();
+                      pictureBox.Name = dataTable.Rows[i]["package_name"].ToString();
+                      pictureBox.Name = dataTable.Rows[i]["description"].ToString();
 
-
+                    //helps to pass image in the next form
                     // Get the byte[] array for the image from the "photo1" column in the DataTable
                     byte[] imageData1 = (byte[])dataTable.Rows[i]["photo1"];
 
@@ -182,8 +176,11 @@ namespace TravelAndTourMS
 
             // Create an instance of the form you want to open
             string package_name = clickedPictureBox.Name;
+            
             Image photo1 = clickedPictureBox.Image;
-            placeinfo form2 = new placeinfo(package_name,photo1);
+            string description = clickedPictureBox.Name;
+          
+            placeinfo form2 = new placeinfo(package_name,photo1,description);
 
             // Show the form
             form2.Show();

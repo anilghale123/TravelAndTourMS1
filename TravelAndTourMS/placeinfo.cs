@@ -20,19 +20,34 @@ namespace TravelAndTourMS
         SqlCommand cmd;
 
         string package_name;
+        string description;
         Image photo3;
-        public placeinfo(string package_name, Image photo1)
+        public placeinfo(string package_name, Image photo1,string description)
         {
             
             InitializeComponent();
-            this.package_name = package_name;
+           // this.package_name = package_name;
             this.photo3 = photo1;
+            this.description = description;
+
+            con.Open();
+            cmd = new SqlCommand("Select * from Table1", con);
+            SqlDataReader read = null;
+            read = cmd.ExecuteReader();
+            while (read.Read())
+            {
+                string data = read["package_name"].ToString();
+                label1.Text = data;
+            }
+
+            //label1.Text = ;
+            cmd.Dispose();
+            read.Close();
         }
 
         private void placeinfo_Load(object sender, EventArgs e)
         {
-            label1.Text = package_name;
-            pictureBox1.Image = photo3;
+            
             // Create a new panel to hold the picture boxes
             Panel panel = new Panel();
 
@@ -42,6 +57,10 @@ namespace TravelAndTourMS
 
             // Add the panel to the form's Controls collection
             this.Controls.Add(panel);
+
+           // label1.Text = package_name;
+            pictureBox1.Image = photo3;
+            richTextBox1.Text = description;
 
             /*  // Create a new instance of PictureBox
               PictureBox pictureBox = new PictureBox();
