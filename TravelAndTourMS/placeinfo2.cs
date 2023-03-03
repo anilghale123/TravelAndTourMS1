@@ -16,6 +16,7 @@ namespace TravelAndTourMS
 {
     public partial class placeinfo2 : Form
     {
+        private const BorderStyle fixedSingle = BorderStyle.FixedSingle;
         SqlConnection con = new SqlConnection(@"Data Source =.\SQLEXPRESS01; Initial Catalog= TravelandTour ; user id = sa;password = anil123 ");
         SqlCommand cmd;
         private String a;
@@ -90,7 +91,7 @@ namespace TravelAndTourMS
                 // set the initial location of the first PictureBox
                 int x = 300;
                 // set the initial y position to 120
-                int currentY = 120;
+                int currentY = 200;
 
                 // loop through the rows of the DataTable
                 for (int i = 0; i < dataTable.Rows.Count; i++)
@@ -103,28 +104,42 @@ namespace TravelAndTourMS
                    
                   //  pictureBox1.Image = Image.FromFile(dataTable.Rows[i]["image_path"].ToString());
                     pictureBox.Name = dataTable.Rows[i]["id"].ToString();
-                   // pictureBox.Name = dataTable.Rows[i]["description"].ToString();
+                    // pictureBox.Name = dataTable.Rows[i]["description"].ToString();
 
 
-                  /*  pictureBox.Name = dataTable.Rows[i]["package_name"].ToString();
-                      pictureBox.Name = dataTable.Rows[i]["description"].ToString();
-*/
+                    /*  pictureBox.Name = dataTable.Rows[i]["package_name"].ToString();
+                        pictureBox.Name = dataTable.Rows[i]["description"].ToString();
+  */
                     //helps to pass image in the next form
                     // Get the byte[] array for the image from the "photo1" column in the DataTable
-                  /*  byte[] imageData1 = (byte[])dataTable.Rows[i]["photo1"];
+                    /*  byte[] imageData1 = (byte[])dataTable.Rows[i]["photo1"];
 
-                    // Load the image from the byte[] array
-                    using (MemoryStream stream = new MemoryStream(imageData1))
-                    {
-                        Image image = Image.FromStream(stream);
+                      // Load the image from the byte[] array
+                      using (MemoryStream stream = new MemoryStream(imageData1))
+                      {
+                          Image image = Image.FromStream(stream);
 
-                        // Set the PictureBox.Name property to the value in the "package_name" column
-                       // pictureBox.Name = dataTable.Rows[i]["package_name"].ToString();
+                          // Set the PictureBox.Name property to the value in the "package_name" column
+                         // pictureBox.Name = dataTable.Rows[i]["package_name"].ToString();
 
-                        // Set the PictureBox.Image property to the loaded image
-                        pictureBox.Image = image;
-                    }
-*/
+                          // Set the PictureBox.Image property to the loaded image
+                          pictureBox.Image = image;
+                      }
+  */
+
+                    //Panel panel1 = new Panel();
+                    Label label1 = new Label();
+                  //  panel1.BackColor = Color.LightGray;
+                    label1.Text = "Tour Management System";
+                    label1.Font = new Font("Arial", 47, FontStyle.Bold);
+                    label1.AutoSize = true;
+                    label1.ForeColor = System.Drawing.Color.White;
+                    label1.BackColor = System.Drawing.Color.Transparent;
+                    label1.Location = new Point(450, 40);
+                    panel.Controls.Add(label1);
+                   // label1.BorderStyle  = fixedSingle;
+                    //  this.Controls.Add(panel);
+
 
                     // create a new label to show package name
                     Label lblPackageName = new Label();
@@ -136,7 +151,7 @@ namespace TravelAndTourMS
 
                      RichTextBox lblPackageName1 = new RichTextBox();
                      lblPackageName1.AutoSize = true;
-                     lblPackageName1.Width = 360;
+                     lblPackageName1.Width = 350;
                      lblPackageName1.Height = 150;
                      lblPackageName1.Text = dataTable.Rows[i]["description"].ToString();
                      lblPackageName1.Location = new Point(x, currentY + 300); // adjust y position as needed
@@ -150,7 +165,7 @@ namespace TravelAndTourMS
 
 
                     Size currentSize = pictureBox.Size;
-                    Size newSize = new Size((int)(currentSize.Width * 3.6), (int)(currentSize.Height * 6));
+                    Size newSize = new Size((int)(currentSize.Width * 3.5), (int)(currentSize.Height * 6));
                     pictureBox.Size = newSize;
 
 

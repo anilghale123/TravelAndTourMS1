@@ -49,11 +49,11 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.iconButton4 = new FontAwesome.Sharp.IconButton();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
-            this.iconButton10 = new FontAwesome.Sharp.IconButton();
             this.iconButton8 = new FontAwesome.Sharp.IconButton();
             this.iconButton7 = new FontAwesome.Sharp.IconButton();
             this.iconButton3 = new FontAwesome.Sharp.IconButton();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.iconButton10 = new FontAwesome.Sharp.IconButton();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -314,29 +314,6 @@
             this.iconButton1.UseVisualStyleBackColor = true;
             this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
             // 
-            // iconButton10
-            // 
-            this.iconButton10.FlatAppearance.BorderSize = 0;
-            this.iconButton10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton10.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.iconButton10.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.iconButton10.IconChar = FontAwesome.Sharp.IconChar.Home;
-            this.iconButton10.IconColor = System.Drawing.Color.White;
-            this.iconButton10.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton10.Location = new System.Drawing.Point(32, 135);
-            this.iconButton10.Name = "iconButton10";
-            this.iconButton10.Padding = new System.Windows.Forms.Padding(20, 0, 10, 0);
-            this.iconButton10.Size = new System.Drawing.Size(203, 57);
-            this.iconButton10.TabIndex = 8;
-            this.iconButton10.Text = "Home";
-            this.iconButton10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton10.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton10.UseVisualStyleBackColor = true;
-            this.iconButton10.Click += new System.EventHandler(this.iconButton10_Click);
-            this.iconButton10.MouseEnter += new System.EventHandler(this.iconButton10_MouseEnter);
-            this.iconButton10.MouseLeave += new System.EventHandler(this.iconButton10_MouseLeave);
-            // 
             // iconButton8
             // 
             this.iconButton8.Dock = System.Windows.Forms.DockStyle.Top;
@@ -418,6 +395,29 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(226, 124);
             this.panel2.TabIndex = 8;
+            // 
+            // iconButton10
+            // 
+            this.iconButton10.FlatAppearance.BorderSize = 0;
+            this.iconButton10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton10.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.iconButton10.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.iconButton10.IconChar = FontAwesome.Sharp.IconChar.Home;
+            this.iconButton10.IconColor = System.Drawing.Color.White;
+            this.iconButton10.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton10.Location = new System.Drawing.Point(32, 135);
+            this.iconButton10.Name = "iconButton10";
+            this.iconButton10.Padding = new System.Windows.Forms.Padding(20, 0, 10, 0);
+            this.iconButton10.Size = new System.Drawing.Size(203, 57);
+            this.iconButton10.TabIndex = 8;
+            this.iconButton10.Text = "Home";
+            this.iconButton10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton10.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButton10.UseVisualStyleBackColor = true;
+            this.iconButton10.Click += new System.EventHandler(this.iconButton10_Click);
+            this.iconButton10.MouseEnter += new System.EventHandler(this.iconButton10_MouseEnter);
+            this.iconButton10.MouseLeave += new System.EventHandler(this.iconButton10_MouseLeave);
             // 
             // label1
             // 
@@ -522,7 +522,7 @@
             this.label8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label8.ForeColor = System.Drawing.Color.Transparent;
-            this.label8.Location = new System.Drawing.Point(687, 30);
+            this.label8.Location = new System.Drawing.Point(721, 30);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(748, 69);
             this.label8.TabIndex = 32;
