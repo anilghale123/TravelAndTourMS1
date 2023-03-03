@@ -25,10 +25,29 @@ namespace TravelAndTourMS
         public placeinfo2()
         {
             InitializeComponent();
+            SetBackgroundImage();
+        }
+
+        private void SetBackgroundImage()
+        {
+            // Specify the path to the image file
+            string imagePath = @"C:\photos\IMG-20230202-WA0003-01.jpeg";
+
+            // Check if the file exists
+            if (File.Exists(imagePath))
+            {
+                // Set the image as the background of the form
+                this.BackgroundImage = Image.FromFile(imagePath);
+            }
+            else
+            {
+                MessageBox.Show("Image file not found.");
+            }
         }
 
         private void placeinfo2_Load(object sender, EventArgs e)
         {
+            SetBackgroundImage();
             // Create a new panel to hold the picture boxes
             Panel panel = new Panel();
 
@@ -42,10 +61,19 @@ namespace TravelAndTourMS
             // Set the panel's AutoScroll property to true to enable scrolling
             panel.AutoScroll = true;
 
+
+
+            // Load the background image from a file
+            Image backgroundImage = Image.FromFile(@"C:\photos\th-1339064553-01.jpeg");
+
+            // Set the panel's background image and set its background image layout to stretch
+            panel.BackgroundImage = backgroundImage;
+            panel.BackgroundImageLayout = ImageLayout.Stretch;
+
             // Add the panel to the form's Controls collection
             this.Controls.Add(panel);
 
-
+          
             
 
             using (SqlConnection connection = new SqlConnection(con.ConnectionString))
@@ -108,7 +136,7 @@ namespace TravelAndTourMS
 
                      RichTextBox lblPackageName1 = new RichTextBox();
                      lblPackageName1.AutoSize = true;
-                     lblPackageName1.Width = 300;
+                     lblPackageName1.Width = 360;
                      lblPackageName1.Height = 150;
                      lblPackageName1.Text = dataTable.Rows[i]["description"].ToString();
                      lblPackageName1.Location = new Point(x, currentY + 300); // adjust y position as needed
@@ -122,7 +150,7 @@ namespace TravelAndTourMS
 
 
                     Size currentSize = pictureBox.Size;
-                    Size newSize = new Size((int)(currentSize.Width * 3), (int)(currentSize.Height * 5.5));
+                    Size newSize = new Size((int)(currentSize.Width * 3.6), (int)(currentSize.Height * 6));
                     pictureBox.Size = newSize;
 
 
@@ -199,10 +227,20 @@ namespace TravelAndTourMS
             this.Hide();
         }
 
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
 
+        }
 
+        private void iconButton8_Click(object sender, EventArgs e)
+        {
 
+        }
 
+        private void iconButton4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
 

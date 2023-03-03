@@ -277,5 +277,10 @@ namespace TravelAndTourMS
         {
             iconButton2.BackColor = Color.Transparent;
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
