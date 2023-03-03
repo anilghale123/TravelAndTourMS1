@@ -19,6 +19,9 @@ namespace TravelAndTourMS
         SqlConnection con = new SqlConnection(@"Data Source =.\SQLEXPRESS01; Initial Catalog= TravelandTour ; user id = sa;password = anil123 ");
         SqlCommand cmd;
         private String a;
+
+       
+
         public placeinfo2()
         {
             InitializeComponent();
@@ -41,6 +44,7 @@ namespace TravelAndTourMS
 
             // Add the panel to the form's Controls collection
             this.Controls.Add(panel);
+
 
             
 
@@ -68,12 +72,18 @@ namespace TravelAndTourMS
                     // attach the Click event handler to the PictureBox control
                     pictureBox.Click += pictureBox_Click;
 
-                      pictureBox.Name = dataTable.Rows[i]["package_name"].ToString();
-                      pictureBox.Name = dataTable.Rows[i]["description"].ToString();
+                   
+                  //  pictureBox1.Image = Image.FromFile(dataTable.Rows[i]["image_path"].ToString());
+                    pictureBox.Name = dataTable.Rows[i]["id"].ToString();
+                   // pictureBox.Name = dataTable.Rows[i]["description"].ToString();
 
+
+                  /*  pictureBox.Name = dataTable.Rows[i]["package_name"].ToString();
+                      pictureBox.Name = dataTable.Rows[i]["description"].ToString();
+*/
                     //helps to pass image in the next form
                     // Get the byte[] array for the image from the "photo1" column in the DataTable
-                    byte[] imageData1 = (byte[])dataTable.Rows[i]["photo1"];
+                  /*  byte[] imageData1 = (byte[])dataTable.Rows[i]["photo1"];
 
                     // Load the image from the byte[] array
                     using (MemoryStream stream = new MemoryStream(imageData1))
@@ -86,7 +96,7 @@ namespace TravelAndTourMS
                         // Set the PictureBox.Image property to the loaded image
                         pictureBox.Image = image;
                     }
-
+*/
 
                     // create a new label to show package name
                     Label lblPackageName = new Label();
@@ -174,13 +184,13 @@ namespace TravelAndTourMS
             // string packageName = clickedPictureBox.Tag.ToString(); // set the Tag property of each PictureBox to the package name when you create them
             // ...
 
+            // get the package name and other data associated with the clicked PictureBox
+            string id = clickedPictureBox.Name;
+          //  Image photo1 = clickedPictureBox.Image;
+           // string description = clickedPictureBox.Name; // set the Tag property of each PictureBox to the description when you create them
+
             // Create an instance of the form you want to open
-            string package_name = clickedPictureBox.Name;
-            
-            Image photo1 = clickedPictureBox.Image;
-            string description = clickedPictureBox.Name;
-          
-            placeinfo form2 = new placeinfo(package_name,photo1,description);
+            placeinfo form2 = new placeinfo(id);
 
             // Show the form
             form2.Show();
