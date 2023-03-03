@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Drawing;
 using System.Drawing.Printing;
 using System.Linq;
@@ -23,13 +24,40 @@ namespace TravelAndTourMS
           }
         */
         private Image x;
-        public tourbooking(string value,string value1,Image i1)
+        string id;
+        public tourbooking(string id ,string a, Image b)
         {
             InitializeComponent();
-            textBox1.Text = value;
-            textBox3.Text = value1;
-            x = i1;
-          }
+            string packageName = "";
+           
+            string price = "";
+            this.id = id;
+            // textBox1.Text = id;
+            /*textBox3.Text = value1;
+            x = i1;*/
+           using (SqlConnection connection = new SqlConnection(con.ConnectionString))
+            {
+                connection.Open();
+
+                SqlCommand command = new SqlCommand("SELECT package_name, price FROM Table1 WHERE id = @id", connection);
+                command.Parameters.AddWithValue("@id", id);
+
+                SqlDataReader reader = command.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    packageName = reader.GetString(0);
+                    
+                    price = reader.GetString(1);
+                
+                }
+
+                reader.Close();
+            }
+            textBox1.Text = price;
+            textBox3.Text = packageName;
+
+        }
         private void printButton_Click(object sender, EventArgs e)
         {
             PrintDocument printDocument = new PrintDocument();
@@ -46,6 +74,7 @@ namespace TravelAndTourMS
         private void Form9_Load(object sender, EventArgs e)
         {
             panel1.BackColor = Color.FromArgb(100, 0, 0, 0);
+            
         }
 
         private void label8_Click(object sender, EventArgs e)
@@ -83,7 +112,7 @@ namespace TravelAndTourMS
                 switch (selectedItem)
                 {
                     case "esewa":
-                        qr form1 = new qr(Naam.Text, Addresses.Text,dateTimePicker1.Text,NTraveller.Text,textBox1.Text,textBox2.Text,textBox3.Text,x);
+                        qr form1 = new qr(Naam.Text, Addresses.Text,dateTimePicker1.Text,NTraveller.Text,textBox1.Text,textBox2.Text,textBox3.Text,id);
                         form1.Show();
                         break;
 
