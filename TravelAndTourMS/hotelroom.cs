@@ -185,7 +185,28 @@ namespace TravelAndTourMS
         private void rjButton1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            hotelbooking form = new hotelbooking(label16.Text,label1.Text,label4.Text,label15.Text);
+            hotelbooking form = new hotelbooking(label16.Text,label1.Text,label7.Text,label8.Text);
+            form.ShowDialog();
+        }
+
+        private void rjButton2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            hotelbooking form = new hotelbooking(label16.Text, label1.Text, label6.Text, label11.Text);
+            form.ShowDialog();
+        }
+
+        private void rjButton4_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            hotelbooking form = new hotelbooking(label16.Text, label1.Text, label5.Text, label13.Text);
+            form.ShowDialog();
+        }
+
+        private void rjButton3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            hotelbooking form = new hotelbooking(label16.Text, label1.Text, label4.Text, label15.Text);
             form.ShowDialog();
         }
     }
