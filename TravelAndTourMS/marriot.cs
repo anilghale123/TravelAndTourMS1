@@ -94,7 +94,7 @@ namespace TravelAndTourMS
         public void rjButton1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            hotelbooking employeeform = new hotelbooking (b,ee,f,j,w);
+            hotelbooking employeeform = new hotelbooking (b,ee,f,j);
             employeeform.ShowDialog();
         }
 
@@ -106,21 +106,21 @@ namespace TravelAndTourMS
         private void rjButton2_Click(object sender, EventArgs e)
         {
             this.Hide();
-            hotelbooking employeeform = new hotelbooking(b,ee,g,k,w);
+            hotelbooking employeeform = new hotelbooking(b,ee,g,k);
             employeeform.ShowDialog();
         }
 
         private void rjButton4_Click(object sender, EventArgs e)
         {
             this.Hide();
-            hotelbooking employeeform = new hotelbooking(b,ee,h,l,w);
+            hotelbooking employeeform = new hotelbooking(b,ee,h,l);
             employeeform.ShowDialog();
         }
 
         private void rjButton3_Click(object sender, EventArgs e)
         {
             this.Hide();
-            hotelbooking employeeform = new hotelbooking(b,ee,ii,m,w);
+            hotelbooking employeeform = new hotelbooking(b,ee,ii,m);
             employeeform.ShowDialog();
         }
 

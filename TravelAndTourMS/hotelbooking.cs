@@ -15,14 +15,14 @@ namespace TravelAndTourMS
     {
         SqlConnection con = new SqlConnection(@"Data Source =.\SQLEXPRESS01; Initial Catalog= TravelandTour ; Integrated Security = True ; ");
         private Image im;
-        public hotelbooking( string a, string b, string c, string d,Image w)
+        public hotelbooking( string a, string b, string c, string d)
      {
             InitializeComponent();
             textBox3.Text = a;
             textBox6.Text = b;
             textBox7.Text = c;
             textBox1.Text = d;
-            im = w;
+         //   im = w;
         }
 
         private void CalculateTotalPrice()
