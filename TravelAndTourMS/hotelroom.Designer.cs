@@ -85,9 +85,9 @@
             this.panel1.Controls.Add(this.iconButton8);
             this.panel1.Controls.Add(this.iconButton7);
             this.panel1.Controls.Add(this.iconButton10);
-            this.panel1.Location = new System.Drawing.Point(22, 121);
+            this.panel1.Location = new System.Drawing.Point(26, 237);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(253, 489);
+            this.panel1.Size = new System.Drawing.Size(253, 440);
             this.panel1.TabIndex = 70;
             // 
             // iconButton4
@@ -101,10 +101,10 @@
             this.iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton4.IconSize = 42;
             this.iconButton4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton4.Location = new System.Drawing.Point(-3, 339);
+            this.iconButton4.Location = new System.Drawing.Point(3, 295);
             this.iconButton4.Name = "iconButton4";
             this.iconButton4.Padding = new System.Windows.Forms.Padding(20, 0, 10, 0);
-            this.iconButton4.Size = new System.Drawing.Size(284, 75);
+            this.iconButton4.Size = new System.Drawing.Size(247, 75);
             this.iconButton4.TabIndex = 16;
             this.iconButton4.Text = "Hotel Booking";
             this.iconButton4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -122,10 +122,10 @@
             this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton2.IconSize = 42;
             this.iconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton2.Location = new System.Drawing.Point(-3, 411);
+            this.iconButton2.Location = new System.Drawing.Point(3, 353);
             this.iconButton2.Name = "iconButton2";
             this.iconButton2.Padding = new System.Windows.Forms.Padding(20, 0, 10, 0);
-            this.iconButton2.Size = new System.Drawing.Size(284, 75);
+            this.iconButton2.Size = new System.Drawing.Size(247, 75);
             this.iconButton2.TabIndex = 15;
             this.iconButton2.Text = "Cab Booking";
             this.iconButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -143,10 +143,10 @@
             this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton3.IconSize = 42;
             this.iconButton3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton3.Location = new System.Drawing.Point(-3, 78);
+            this.iconButton3.Location = new System.Drawing.Point(3, 78);
             this.iconButton3.Name = "iconButton3";
             this.iconButton3.Padding = new System.Windows.Forms.Padding(20, 0, 10, 0);
-            this.iconButton3.Size = new System.Drawing.Size(256, 75);
+            this.iconButton3.Size = new System.Drawing.Size(247, 75);
             this.iconButton3.TabIndex = 9;
             this.iconButton3.Text = "Tour Booking";
             this.iconButton3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -164,10 +164,10 @@
             this.iconButton8.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton8.IconSize = 42;
             this.iconButton8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton8.Location = new System.Drawing.Point(0, 240);
+            this.iconButton8.Location = new System.Drawing.Point(3, 223);
             this.iconButton8.Name = "iconButton8";
             this.iconButton8.Padding = new System.Windows.Forms.Padding(20, 0, 10, 0);
-            this.iconButton8.Size = new System.Drawing.Size(284, 110);
+            this.iconButton8.Size = new System.Drawing.Size(247, 84);
             this.iconButton8.TabIndex = 14;
             this.iconButton8.Text = "About Us";
             this.iconButton8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -185,10 +185,10 @@
             this.iconButton7.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton7.IconSize = 42;
             this.iconButton7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton7.Location = new System.Drawing.Point(-3, 159);
+            this.iconButton7.Location = new System.Drawing.Point(3, 159);
             this.iconButton7.Name = "iconButton7";
             this.iconButton7.Padding = new System.Windows.Forms.Padding(20, 0, 10, 0);
-            this.iconButton7.Size = new System.Drawing.Size(284, 104);
+            this.iconButton7.Size = new System.Drawing.Size(247, 88);
             this.iconButton7.TabIndex = 13;
             this.iconButton7.Text = "Place Info";
             this.iconButton7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -206,10 +206,10 @@
             this.iconButton10.IconColor = System.Drawing.Color.White;
             this.iconButton10.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton10.Location = new System.Drawing.Point(21, 26);
+            this.iconButton10.Location = new System.Drawing.Point(3, 27);
             this.iconButton10.Name = "iconButton10";
             this.iconButton10.Padding = new System.Windows.Forms.Padding(20, 0, 10, 0);
-            this.iconButton10.Size = new System.Drawing.Size(203, 57);
+            this.iconButton10.Size = new System.Drawing.Size(247, 57);
             this.iconButton10.TabIndex = 8;
             this.iconButton10.Text = "Home";
             this.iconButton10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -546,7 +546,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(819, 9);
+            this.label1.Location = new System.Drawing.Point(881, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(143, 46);
             this.label1.TabIndex = 41;
