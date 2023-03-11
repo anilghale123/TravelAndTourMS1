@@ -26,29 +26,16 @@ namespace TravelAndTourMS
         public placeinfo2()
         {
             InitializeComponent();
-            SetBackgroundImage();
+           
         }
-
-        private void SetBackgroundImage()
-        {
-            // Specify the path to the image file
-            string imagePath = @"C:\photos\IMG-20230202-WA0003-01.jpeg";
-
-            // Check if the file exists
-            if (File.Exists(imagePath))
-            {
-                // Set the image as the background of the form
-                this.BackgroundImage = Image.FromFile(imagePath);
-            }
-            else
-            {
-                MessageBox.Show("Image file not found.");
-            }
-        }
-
         private void placeinfo2_Load(object sender, EventArgs e)
         {
-            SetBackgroundImage();
+            LoadData();
+        }
+
+        private void LoadData()
+        {
+            
             // Create a new panel to hold the picture boxes
             Panel panel = new Panel();
 
@@ -71,11 +58,14 @@ namespace TravelAndTourMS
             panel.BackgroundImage = backgroundImage;
             panel.BackgroundImageLayout = ImageLayout.Stretch;
 
+           
             // Add the panel to the form's Controls collection
             this.Controls.Add(panel);
 
-          
-            
+
+/*            this.Controls.Add(comboBox1);
+            this.Controls.Add(button1);
+            this.Controls.Add(iconPictureBox1);*/
 
             using (SqlConnection connection = new SqlConnection(con.ConnectionString))
             {
@@ -101,33 +91,8 @@ namespace TravelAndTourMS
                     // attach the Click event handler to the PictureBox control
                     pictureBox.Click += pictureBox_Click;
 
-                   
-                  //  pictureBox1.Image = Image.FromFile(dataTable.Rows[i]["image_path"].ToString());
                     pictureBox.Name = dataTable.Rows[i]["id"].ToString();
-                    // pictureBox.Name = dataTable.Rows[i]["description"].ToString();
-
-
-                    /*  pictureBox.Name = dataTable.Rows[i]["package_name"].ToString();
-                        pictureBox.Name = dataTable.Rows[i]["description"].ToString();
-  */
-                    //helps to pass image in the next form
-                    // Get the byte[] array for the image from the "photo1" column in the DataTable
-                    /*  byte[] imageData1 = (byte[])dataTable.Rows[i]["photo1"];
-
-                      // Load the image from the byte[] array
-                      using (MemoryStream stream = new MemoryStream(imageData1))
-                      {
-                          Image image = Image.FromStream(stream);
-
-                          // Set the PictureBox.Name property to the value in the "package_name" column
-                         // pictureBox.Name = dataTable.Rows[i]["package_name"].ToString();
-
-                          // Set the PictureBox.Image property to the loaded image
-                          pictureBox.Image = image;
-                      }
-  */
-
-                    //Panel panel1 = new Panel();
+                  
                     Label label1 = new Label();
                   //  panel1.BackColor = Color.LightGray;
                     label1.Text = "Tour Management System";
@@ -162,20 +127,12 @@ namespace TravelAndTourMS
                      panel.Controls.Add(lblPackageName1);
 
 
-
-
-                    // create a new PictureBox control and set its properties
-
-
-
                     Size currentSize = pictureBox.Size;
                     Size newSize = new Size((int)(currentSize.Width * 3.7), (int)(currentSize.Height * 6));
                     pictureBox.Size = newSize;
 
 
-                    //pictureBox.Size = new Size(100, 100);
-                    // pictureBox.Location = new Point(i * 110 + 300, 120);
-                    /* pictureBox.Location = new Point(x, y);*/
+                   
                     pictureBox.Location = new Point(x, currentY);
 
                     pictureBox.BorderStyle = BorderStyle.FixedSingle;
@@ -190,29 +147,20 @@ namespace TravelAndTourMS
                         pictureBox.Image = Image.FromStream(memoryStream);
                     }
 
-                    // add the PictureBox to the form
-                    //this.Controls.Add(pictureBox);
-                    // add the PictureBox to the panel instead of directly to the form's Controls collection
+                   
                     panel.Controls.Add(pictureBox);
                    // panel.Controls.Add(lblPackageName);
                     // increment the X coordinate by the width of the PictureBox plus the gap
                     x += pictureBox.Width + 40;
 
-                    // update the currentY position to be below the current PictureBox
-                    /*if(dataTable.Rows.Count >= 4)
-                    {
-                        currentY = pictureBox.Bottom + 10;
-                    }
-                   */
+                   
                     if ((i + 1) % 4 == 0)
                     {
                         x = 300;
                         currentY += 500;
                         //currentY = panel.Controls.OfType<PictureBox>().Last().Bottom + 10;
                     }
-                    //panel.Padding = new Padding(0, 0, 0, 100);
-                    //panel.Controls.OfType<PictureBox>().Last().Margin = new Padding(0, 0, 0, 50);
-
+                    
                     panel.AutoScrollMargin = new Size(0, 250);
 
                 }
@@ -227,10 +175,7 @@ namespace TravelAndTourMS
             // cast the sender object to a PictureBox control
             PictureBox clickedPictureBox = sender as PictureBox;
 
-            // get the package name and other data associated with the clicked PictureBox
-            // string packageName = clickedPictureBox.Tag.ToString(); // set the Tag property of each PictureBox to the package name when you create them
-            // ...
-
+       
             // get the package name and other data associated with the clicked PictureBox
             string id = clickedPictureBox.Name;
           //  Image photo1 = clickedPictureBox.Image;
@@ -259,6 +204,149 @@ namespace TravelAndTourMS
         private void iconButton4_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            // Create a new panel to hold the picture boxes
+            Panel panel = new Panel();
+
+            // Set the panel's Dock and AutoSize properties
+            panel.Dock = DockStyle.Top;
+            panel.AutoSize = false;
+
+            // Set the panel's size to match the form's size
+            panel.Size = new Size(this.ClientSize.Width, this.ClientSize.Height);
+
+            // Set the panel's AutoScroll property to true to enable scrolling
+            panel.AutoScroll = true;
+
+
+
+            // Load the background image from a file
+            Image backgroundImage = Image.FromFile(@"C:\photos\th-1339064553-01.jpeg");
+
+            // Set the panel's background image and set its background image layout to stretch
+            panel.BackgroundImage = backgroundImage;
+            panel.BackgroundImageLayout = ImageLayout.Stretch;
+
+            // Add the panel to the form's Controls collection
+            this.Controls.Add(panel);
+
+           /* this.Controls.Add(comboBox1);
+            this.Controls.Add(button1);
+            this.Controls.Add(iconPictureBox1);*/
+
+
+
+
+            using (SqlConnection connection = new SqlConnection(con.ConnectionString))
+            {
+
+                // create a DataTable and fill it with data from the database
+                DataTable dataTable = new DataTable();
+                using (SqlCommand cmd = new SqlCommand("SELECT * FROM Table1 where package_name = @package_name", connection))
+                {
+                    cmd.Parameters.AddWithValue("package_name", comboBox1.Text);
+                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                    adapter.Fill(dataTable);
+
+                }
+                // set the initial location of the first PictureBox
+                int x = 300;
+                // set the initial y position to 120
+                int currentY = 200;
+
+                // loop through the rows of the DataTable
+                for (int i = 0; i < dataTable.Rows.Count; i++)
+                {
+
+                    PictureBox pictureBox = new PictureBox();
+                    // attach the Click event handler to the PictureBox control
+                    pictureBox.Click += pictureBox_Click;
+
+                    pictureBox.Name = dataTable.Rows[i]["id"].ToString();
+
+                    Label label1 = new Label();
+                    //  panel1.BackColor = Color.LightGray;
+                    label1.Text = "Tour Management System";
+                    label1.Font = new Font("Arial", 47, FontStyle.Bold);
+                    label1.AutoSize = true;
+                    label1.ForeColor = System.Drawing.Color.White;
+                    label1.BackColor = System.Drawing.Color.Transparent;
+                    label1.Location = new Point(450, 40);
+                    panel.Controls.Add(label1);
+                    // label1.BorderStyle  = fixedSingle;
+                    //  this.Controls.Add(panel);
+
+
+                    // create a new label to show package name
+                    Label lblPackageName = new Label();
+                    lblPackageName.AutoSize = true;
+                    lblPackageName.Text = dataTable.Rows[i]["package_name"].ToString();
+                    lblPackageName.Font = new Font("Sans-Serif", 20, FontStyle.Bold);
+                    lblPackageName.BackColor = System.Drawing.Color.Transparent;
+                    lblPackageName.Location = new Point(x + 80, currentY - 45); // adjust y position as needed
+                    panel.Controls.Add(lblPackageName);
+
+
+                    RichTextBox lblPackageName1 = new RichTextBox();
+                    lblPackageName1.AutoSize = true;
+                    lblPackageName1.Width = 350;
+                    lblPackageName1.Height = 150;
+                    lblPackageName1.Text = dataTable.Rows[i]["description"].ToString();
+                    lblPackageName1.Location = new Point(x, currentY + 300); // adjust y position as needed
+                    lblPackageName1.BorderStyle = BorderStyle.None;
+                    lblPackageName1.BackColor = System.Drawing.Color.LightYellow;
+                    panel.Controls.Add(lblPackageName1);
+
+
+                    Size currentSize = pictureBox.Size;
+                    Size newSize = new Size((int)(currentSize.Width * 3.7), (int)(currentSize.Height * 6));
+                    pictureBox.Size = newSize;
+
+
+
+                    pictureBox.Location = new Point(x, currentY);
+
+                    pictureBox.BorderStyle = BorderStyle.FixedSingle;
+                    pictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
+
+                    // get the image data from the appropriate column in the current row
+                    byte[] imageData = (byte[])dataTable.Rows[i]["photo" + (1)];
+
+                    // create a MemoryStream from the image data and set it as the PictureBox's image
+                    using (MemoryStream memoryStream = new MemoryStream(imageData))
+                    {
+                        pictureBox.Image = Image.FromStream(memoryStream);
+                    }
+
+
+                    panel.Controls.Add(pictureBox);
+                    // panel.Controls.Add(lblPackageName);
+                    // increment the X coordinate by the width of the PictureBox plus the gap
+                    x += pictureBox.Width + 40;
+
+
+                    if ((i + 1) % 4 == 0)
+                    {
+                        x = 300;
+                        currentY += 500;
+                        //currentY = panel.Controls.OfType<PictureBox>().Last().Bottom + 10;
+                    }
+
+                    panel.AutoScrollMargin = new Size(0, 250);
+
+                }
+
+
+            }
+        }
+
+        private void iconPictureBox1_Click(object sender, EventArgs e)
+        {
+            LoadData();
         }
     }
 
