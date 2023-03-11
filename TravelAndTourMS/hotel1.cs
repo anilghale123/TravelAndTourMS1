@@ -195,5 +195,10 @@ namespace TravelAndTourMS
             // Hide the current form if needed
             this.Hide();
         }
+
+        private void iconPictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

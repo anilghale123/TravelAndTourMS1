@@ -22,7 +22,7 @@ namespace TravelAndTourMS
         }
 
 
-        private void hotel_Load(object sender, EventArgs e)
+        private void hotelLoad()
         {
 
 
@@ -51,8 +51,10 @@ namespace TravelAndTourMS
             // Add the panel to the form's Controls collection
             this.Controls.Add(panel);
 
-          
 
+            panel.Controls.Add(comboBox1);
+            panel.Controls.Add(button1);
+            panel.Controls.Add(iconPictureBox1);
 
             using (SqlConnection connection = new SqlConnection(con.ConnectionString))
             {
@@ -203,7 +205,9 @@ namespace TravelAndTourMS
             // Add the panel to the form's Controls collection
             this.Controls.Add(panel);
 
-           
+            panel.Controls.Add(comboBox1);
+            panel.Controls.Add(button1);
+            panel.Controls.Add(iconPictureBox1);
 
             using (SqlConnection connection = new SqlConnection(con.ConnectionString))
             {
@@ -303,11 +307,21 @@ namespace TravelAndTourMS
                     }
 
                     panel.AutoScrollMargin = new Size(0, 250);
-
+                  
                 }
 
 
             }
+        }
+
+        private void hotel_Load(object sender, EventArgs e)
+        {
+            hotelLoad();
+        }
+
+        private void iconPictureBox1_Click(object sender, EventArgs e)
+        {
+            hotelLoad();
         }
     }
 }
