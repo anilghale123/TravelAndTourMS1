@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Diagnostics;
 using System.Drawing;
 using System.Drawing.Printing;
@@ -18,7 +19,8 @@ namespace TravelAndTourMS
 
 
     {
-
+        SqlConnection con = new SqlConnection(@"Data Source =.\SQLEXPRESS01; Initial Catalog= TravelandTour ; user id = sa;password = anil123 ");
+        SqlCommand cmd;
         private string name;
         private string address;
         private string travelDate;
@@ -26,9 +28,10 @@ namespace TravelAndTourMS
         private string price;
         private string totalPrice;
         private string place;
-
+        string id;
+        Image qr;
         private Image im;
-        public esewa(string name, string address, string travelDate, string nTraveller, string price, string totalPrice, string place)
+        public esewa(string name, string address, string travelDate, string nTraveller, string price, string totalPrice, string place,string id)
         {
             InitializeComponent();
             this.name = name;
@@ -38,9 +41,36 @@ namespace TravelAndTourMS
             this.price = price;
             this.totalPrice = totalPrice;
             this.place = place;
-           
+            this.id = id;
 
             pictureBox1.Image = im;
+
+
+            using (SqlConnection connection = new SqlConnection(con.ConnectionString))
+            {
+                connection.Open();
+
+                SqlCommand command = new SqlCommand("SELECT  qr FROM cab WHERE id = @id", connection);
+                command.Parameters.AddWithValue("@id", id);
+
+                SqlDataReader reader = command.ExecuteReader();
+
+                if (reader.Read())
+                {
+
+                    // Convert the byte array to an Image object
+                    byte[] photo2Bytes = (byte[])reader.GetValue(0);
+                    using (MemoryStream ms = new MemoryStream(photo2Bytes))
+                    {
+                        qr = Image.FromStream(ms);
+                    }
+
+
+                }
+
+                reader.Close();
+            }
+            pictureBox1.Image = qr;
 
 
         }

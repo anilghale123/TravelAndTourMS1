@@ -224,7 +224,7 @@ namespace TravelAndTourMS
                 switch (selectedItem)
                 {
                     case "esewa":
-                        esewa form1 = new esewa(Naam.Text, Addresses.Text, dateTimePicker1.Text, NTraveller.Text, textBox1.Text, textBox2.Text, textBox3.Text);
+                        esewa form1 = new esewa(Naam.Text, Addresses.Text, dateTimePicker1.Text, NTraveller.Text, textBox1.Text, textBox2.Text, textBox3.Text,id);
                         form1.Show();
                         break;
 
