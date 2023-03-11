@@ -1,6 +1,6 @@
 ﻿namespace TravelAndTourMS
 {
-    partial class hotel
+    partial class hotel1
     {
         /// <summary>
         /// Required designer variable.
@@ -36,21 +36,21 @@
             // 
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
-            "Kathmandu",
+            "Kathmandu ",
             "Pokhara",
-            "Chitawan",
-            "Poonhill",
             "Rasuwa",
-            "Solulkhumbu",
-            "Mustang"});
-            this.comboBox1.Location = new System.Drawing.Point(126, 42);
+            "Chitwan",
+            "Lumbini",
+            "Mustang",
+            "Poonhill"});
+            this.comboBox1.Location = new System.Drawing.Point(286, 96);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(151, 28);
             this.comboBox1.TabIndex = 0;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(283, 42);
+            this.button1.Location = new System.Drawing.Point(443, 96);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(94, 29);
             this.button1.TabIndex = 1;
@@ -58,16 +58,15 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // hotel
+            // hotel1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1924, 1055);
+            this.ClientSize = new System.Drawing.Size(1840, 859);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.comboBox1);
-            this.Name = "hotel";
-            this.Text = "hotel";
-            this.Load += new System.EventHandler(this.hotel_Load);
+            this.Name = "hotel1";
+            this.Text = "hotel1";
             this.ResumeLayout(false);
 
         }
