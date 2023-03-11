@@ -35,7 +35,7 @@ namespace TravelAndTourMS
 
         private void LoadData()
         {
-            
+
             // Create a new panel to hold the picture boxes
             Panel panel = new Panel();
 
@@ -58,14 +58,18 @@ namespace TravelAndTourMS
             panel.BackgroundImage = backgroundImage;
             panel.BackgroundImageLayout = ImageLayout.Stretch;
 
-           
             // Add the panel to the form's Controls collection
             this.Controls.Add(panel);
 
 
-/*            this.Controls.Add(comboBox1);
-            this.Controls.Add(button1);
-            this.Controls.Add(iconPictureBox1);*/
+            panel.Controls.Add(comboBox1);
+            panel.Controls.Add(button1);
+            panel.Controls.Add(iconPictureBox1);
+            panel.Controls.Add(iconButton10);
+            panel.Controls.Add(iconButton3);
+            panel.Controls.Add(iconButton4);
+            panel.Controls.Add(iconButton2);
+            panel.Controls.Add(iconButton8);
 
             using (SqlConnection connection = new SqlConnection(con.ConnectionString))
             {
@@ -234,12 +238,14 @@ namespace TravelAndTourMS
             // Add the panel to the form's Controls collection
             this.Controls.Add(panel);
 
-           /* this.Controls.Add(comboBox1);
-            this.Controls.Add(button1);
-            this.Controls.Add(iconPictureBox1);*/
-
-
-
+            panel.Controls.Add(comboBox1);
+            panel.Controls.Add(button1);
+            panel.Controls.Add(iconPictureBox1);
+            panel.Controls.Add(iconButton10);
+            panel.Controls.Add(iconButton3);
+            panel.Controls.Add(iconButton4);
+            panel.Controls.Add(iconButton2);
+            panel.Controls.Add(iconButton8);
 
             using (SqlConnection connection = new SqlConnection(con.ConnectionString))
             {
