@@ -99,7 +99,11 @@ namespace TravelAndTourMS
                     Label lblPackageName = new Label();
                     lblPackageName.AutoSize = true;
                     lblPackageName.Text = dataTable.Rows[i]["hotel"].ToString();
-                    lblPackageName.Location = new Point(x, currentY - 20); // adjust y position as needed
+                    lblPackageName.Location = new Point(x + 100, currentY - 45); // adjust y position as needed
+                    lblPackageName.BackColor = System.Drawing.Color.Transparent;
+                    lblPackageName.ForeColor = System.Drawing.Color.White;
+                    lblPackageName.Font = new Font("Arial", 20, FontStyle.Bold);
+                   
                     panel.Controls.Add(lblPackageName);
 
 
@@ -109,6 +113,8 @@ namespace TravelAndTourMS
                     lblPackageName1.Height = 150;
                     lblPackageName1.Text = dataTable.Rows[i]["description"].ToString();
                     lblPackageName1.Location = new Point(x, currentY + 300); // adjust y position as needed
+                    lblPackageName1.BorderStyle = BorderStyle.None;
+                    lblPackageName1.BackColor = Color.LightYellow;
                     panel.Controls.Add(lblPackageName1);
 
                     Size currentSize = pictureBox.Size;

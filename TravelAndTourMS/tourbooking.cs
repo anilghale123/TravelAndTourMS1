@@ -107,12 +107,13 @@ namespace TravelAndTourMS
                 cmd.ExecuteNonQuery();
 
 
-                MessageBox.Show("Booking Successfully");
+                //MessageBox.Show("Booking Successfully");
 
                 switch (selectedItem)
                 {
                     case "esewa":
                         qr form1 = new qr(Naam.Text, Addresses.Text,dateTimePicker1.Text,NTraveller.Text,textBox1.Text,textBox2.Text,textBox3.Text,id);
+                        this.Hide();
                         form1.Show();
                         break;
 
