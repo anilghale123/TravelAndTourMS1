@@ -58,7 +58,7 @@ namespace TravelAndTourMS
         private void iconButton3_Click(object sender, EventArgs e)
         {
             this.Hide();
-            image1 employeeform = new image1();
+            placeinfo2 employeeform = new placeinfo2();
             employeeform.ShowDialog();
         }
 
@@ -171,7 +171,7 @@ namespace TravelAndTourMS
         private void iconButton4_Click_1(object sender, EventArgs e)
         {
             this.Hide();
-            hotelsearch employeeform = new hotelsearch();
+            hotel employeeform = new hotel();
             employeeform.ShowDialog();
         }
 

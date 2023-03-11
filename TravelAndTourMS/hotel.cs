@@ -212,7 +212,13 @@ namespace TravelAndTourMS
 
             panel.Controls.Add(comboBox1);
             panel.Controls.Add(button1);
+           
             panel.Controls.Add(iconPictureBox1);
+            panel.Controls.Add(iconButton10);
+            panel.Controls.Add(iconButton3);
+            panel.Controls.Add(iconButton4);
+            panel.Controls.Add(iconButton2);
+            panel.Controls.Add(iconButton8);
 
             using (SqlConnection connection = new SqlConnection(con.ConnectionString))
             {
@@ -327,6 +333,28 @@ namespace TravelAndTourMS
         private void iconPictureBox1_Click(object sender, EventArgs e)
         {
             hotelLoad();
+        }
+
+        private void iconButton10_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            home form = new home();
+            form.ShowDialog();
+
+        }
+
+        private void iconButton3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            placeinfo2 form = new placeinfo2();
+            form.ShowDialog();
+        }
+
+        private void iconButton8_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            aboutus form = new aboutus();
+            form.ShowDialog();
         }
     }
 }

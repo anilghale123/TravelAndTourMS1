@@ -15,13 +15,15 @@ namespace TravelAndTourMS
     {
         SqlConnection con = new SqlConnection(@"Data Source =.\SQLEXPRESS01; Initial Catalog= TravelandTour ; Integrated Security = True ; ");
         private Image im;
-        public hotelbooking( string a, string b, string c, string d)
+        string id;
+        public hotelbooking( string a, string b, string c, string d,string id)
      {
             InitializeComponent();
             textBox3.Text = a;
             textBox6.Text = b;
             textBox7.Text = c;
             textBox1.Text = d;
+            this.id = id;
          //   im = w;
         }
 
@@ -74,7 +76,7 @@ namespace TravelAndTourMS
                 cmd.ExecuteNonQuery();
 
 
-                MessageBox.Show("Booking Successfull");
+                //MessageBox.Show("Booking Successfull");
 
                 con.Close();
             }
@@ -91,7 +93,7 @@ namespace TravelAndTourMS
             switch (selectedItem)
             {
                 case "esewa":
-                    esewa1 form1 = new esewa1(Naam.Text, Addresses.Text, NTraveller.Text, PhoneNum.Text,  textBox4.Text,  textBox3.Text,dateTimePicker1.Text,dateTimePicker2.Text  ,textBox5.Text, textBox1.Text, textBox2.Text,comboBox1.Text, im);
+                    esewa1 form1 = new esewa1(Naam.Text, Addresses.Text, NTraveller.Text, PhoneNum.Text,  textBox4.Text,  textBox3.Text,dateTimePicker1.Text,dateTimePicker2.Text  ,textBox5.Text, textBox1.Text, textBox2.Text,comboBox1.Text, id);
                     form1.Show();
                     break;
 

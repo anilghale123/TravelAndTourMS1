@@ -103,7 +103,7 @@ namespace TravelAndTourMS
                     label1.Font = new Font("Arial", 47, FontStyle.Bold);
                     label1.AutoSize = true;
                     label1.ForeColor = System.Drawing.Color.White;
-                    label1.BackColor = System.Drawing.Color.Transparent;
+                    label1.BackColor = System.Drawing.Color.Orange;
                     label1.Location = new Point(450, 40);
                     panel.Controls.Add(label1);
                    // label1.BorderStyle  = fixedSingle;
@@ -202,12 +202,16 @@ namespace TravelAndTourMS
 
         private void iconButton8_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            aboutus form = new aboutus();
+            form.ShowDialog();
         }
 
         private void iconButton4_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            hotel form = new hotel();
+            form.ShowDialog();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -280,7 +284,7 @@ namespace TravelAndTourMS
                     label1.Font = new Font("Arial", 47, FontStyle.Bold);
                     label1.AutoSize = true;
                     label1.ForeColor = System.Drawing.Color.White;
-                    label1.BackColor = System.Drawing.Color.Transparent;
+                    label1.BackColor = System.Drawing.Color.Orange;
                     label1.Location = new Point(450, 40);
                     panel.Controls.Add(label1);
                     // label1.BorderStyle  = fixedSingle;
@@ -354,9 +358,13 @@ namespace TravelAndTourMS
         {
             LoadData();
         }
+
+        private void iconButton10_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            home form = new home();
+            form.ShowDialog();
+        }
     }
-
-
-
 
 }

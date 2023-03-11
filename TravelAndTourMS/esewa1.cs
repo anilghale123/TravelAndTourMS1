@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
@@ -16,6 +17,9 @@ namespace TravelAndTourMS
 {
     public partial class esewa1 : Form
     {
+        SqlConnection con = new SqlConnection(@"Data Source =.\SQLEXPRESS01; Initial Catalog= TravelandTour ; user id = sa;password = anil123 ");
+        SqlCommand cmd;
+
         private string name;
         private string address;
         private string nGuest;
@@ -29,8 +33,9 @@ namespace TravelAndTourMS
         private string totalPrice;
         private string payment;
 
-        private Image im;
-        public esewa1(string name, string address, string nGuest, string phone, string Nroom, string place, string checkIn,string checkOut,string Ndays,string price,string totalPrice,string payment,Image i)
+        private Image qr;
+        string id;
+        public esewa1(string name, string address, string nGuest, string phone, string Nroom, string place, string checkIn,string checkOut,string Ndays,string price,string totalPrice,string payment,string id)
         {
             InitializeComponent();
             this.name = name;
@@ -46,9 +51,38 @@ namespace TravelAndTourMS
             this.totalPrice = totalPrice;
             this.payment = payment;
 
-            this.im = i;
 
-            pictureBox1.Image = i;
+
+
+            using (SqlConnection connection = new SqlConnection(con.ConnectionString))
+            {
+                connection.Open();
+
+                SqlCommand command = new SqlCommand("SELECT  qr FROM Hotel WHERE id = @id", connection);
+                command.Parameters.AddWithValue("@id", id);
+
+                SqlDataReader reader = command.ExecuteReader();
+
+                if (reader.Read())
+                {
+
+                    // Convert the byte array to an Image object
+                    byte[] photo2Bytes = (byte[])reader.GetValue(0);
+                    using (MemoryStream ms = new MemoryStream(photo2Bytes))
+                    {
+                        qr = Image.FromStream(ms);
+                    }
+
+
+                }
+
+                reader.Close();
+            }
+            pictureBox1.Image = qr;
+
+            // this.im = i;
+
+            //pictureBox1.Image = i;
         }
 
         private void esewa1_Load(object sender, EventArgs e)
@@ -117,6 +151,14 @@ namespace TravelAndTourMS
             {
                 printDocument1.Print();
             }
+        }
+
+        private void rjButton3_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Booking SUcessful");
+            this.Hide();
+            home form = new home();
+            form.ShowDialog();
         }
     }
 }

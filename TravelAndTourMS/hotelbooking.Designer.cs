@@ -106,7 +106,7 @@
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.NTraveller);
-            this.panel1.Location = new System.Drawing.Point(433, 237);
+            this.panel1.Location = new System.Drawing.Point(427, 131);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(935, 754);
             this.panel1.TabIndex = 31;
@@ -419,11 +419,11 @@
             // 
             this.button1.BackColor = System.Drawing.SystemColors.Info;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(534, 660);
+            this.button1.Location = new System.Drawing.Point(533, 670);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(129, 50);
             this.button1.TabIndex = 20;
-            this.button1.Text = "Confirm";
+            this.button1.Text = "Continue";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
