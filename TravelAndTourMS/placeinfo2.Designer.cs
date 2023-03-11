@@ -162,7 +162,7 @@
             this.iconPictureBox1.IconColor = System.Drawing.SystemColors.ControlText;
             this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconPictureBox1.IconSize = 55;
-            this.iconPictureBox1.Location = new System.Drawing.Point(208, 12);
+            this.iconPictureBox1.Location = new System.Drawing.Point(112, 12);
             this.iconPictureBox1.Name = "iconPictureBox1";
             this.iconPictureBox1.Size = new System.Drawing.Size(55, 56);
             this.iconPictureBox1.TabIndex = 19;
@@ -171,7 +171,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(365, 74);
+            this.button1.Location = new System.Drawing.Point(269, 74);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(94, 29);
             this.button1.TabIndex = 18;
@@ -190,7 +190,7 @@
             "Rasuwa",
             "Solulkhumbu",
             "Mustang"});
-            this.comboBox1.Location = new System.Drawing.Point(208, 74);
+            this.comboBox1.Location = new System.Drawing.Point(112, 74);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(151, 28);
             this.comboBox1.TabIndex = 17;
