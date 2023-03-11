@@ -28,7 +28,7 @@ namespace TravelAndTourMS
         private string place;
 
         private Image im;
-        public esewa(string name, string address, string travelDate, string nTraveller, string price, string totalPrice, string place, Image y)
+        public esewa(string name, string address, string travelDate, string nTraveller, string price, string totalPrice, string place)
         {
             InitializeComponent();
             this.name = name;
@@ -38,7 +38,7 @@ namespace TravelAndTourMS
             this.price = price;
             this.totalPrice = totalPrice;
             this.place = place;
-            this.im = y;
+           
 
             pictureBox1.Image = im;
 

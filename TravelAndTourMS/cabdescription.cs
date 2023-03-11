@@ -82,5 +82,12 @@ namespace TravelAndTourMS
         {
 
         }
+
+        private void rjButton1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            cabbooking form = new cabbooking(id);
+            form.ShowDialog();
+        }
     }
 }

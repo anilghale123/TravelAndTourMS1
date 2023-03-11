@@ -79,8 +79,8 @@ namespace TravelAndTourMS
         private void rjButton1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            cabbooking employeeform = new cabbooking(a, b, c, d, ee, x1, x2, x3, f, g, x4, h, i, j, x5, x6);
-            employeeform.ShowDialog(); 
+            cabbooking form = new cabbooking(a);
+            form.ShowDialog(); 
         }
 
         private void rjButton2_Click(object sender, EventArgs e)

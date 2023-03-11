@@ -270,7 +270,7 @@ namespace TravelAndTourMS
 
 
                 this.Hide();
-                cabbooking employeeform = new cabbooking(type, brand, model, seatnum, number, image, image1, image2, feature, driverinfo, image3, price, offerinfo, offerprice, image4, image5);
+                cabbooking employeeform = new cabbooking(type);
                 employeeform.ShowDialog();
             }
             else

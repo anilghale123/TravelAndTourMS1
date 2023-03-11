@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -10,6 +11,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Timers;
 using System.Windows.Forms;
+using MongoDB.Driver.Core.Misc;
 using WinFormAnimation_NET5;
 using Timer = System.Windows.Forms.Timer;
 
@@ -21,27 +23,59 @@ namespace TravelAndTourMS
 
         SqlConnection con = new SqlConnection(@"Data Source =.\SQLEXPRESS01; Initial Catalog= TravelandTour ; user id = sa;password = anil123 ");
         SqlCommand cmd;
-        private Image x;
-        public string p1;
-        public cabbooking(string a,string  b,string  c,string d,string ee,Image x1,Image x2,Image x3,string f,string g,Image x4,string h,string i,string j,Image x5,Image x6)
+        
+        
+        string id;
+        string type;
+        string brand;
+        string model;
+        string seat_capacity;
+        string cab_number;
+       
+        string price;
+        public cabbooking(string id)
         {
             InitializeComponent();
-            PhoneNum.Text = a;
-            textBox8.Text = b;
-            textBox9.Text = c;
-            textBox5.Text = d;
-            textBox4.Text = ee;
-            textBox1.Text = h;
-            x = x6;
-            p1 = h;
+            this.id = id;
             CalculateTotalPrice();
 
 
             // Start the timer to run every minute
-            System.Timers.Timer timer = new System.Timers.Timer();
+            /*System.Timers.Timer timer = new System.Timers.Timer();
             timer.Elapsed += new ElapsedEventHandler(Timer_Tick);
             timer.Interval = 60000;
-            timer.Start();
+            timer.Start();*/
+
+            using (SqlConnection connection = new SqlConnection(con.ConnectionString))
+            {
+                connection.Open();
+
+                SqlCommand command = new SqlCommand("SELECT type,brand,model,seatnum,number,price FROM cab WHERE id = @id", connection);
+                command.Parameters.AddWithValue("@id", id);
+
+                SqlDataReader reader = command.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    type = reader.GetString(0);
+                    brand = reader.GetString(1);
+                    model = reader.GetString(2);
+                    seat_capacity = reader.GetString(3);
+                    cab_number = reader.GetString(4);
+                    
+                    price = reader.GetString(5);
+
+                }
+
+                reader.Close();
+            }
+            textBox5.Text = seat_capacity;
+            textBox4.Text = cab_number;
+            PhoneNum.Text = type;
+            textBox8.Text = brand;
+            textBox9.Text = model;
+            textBox1.Text = price;
+
         }
         // Create a timer that runs every minute
 
@@ -190,7 +224,7 @@ namespace TravelAndTourMS
                 switch (selectedItem)
                 {
                     case "esewa":
-                        esewa form1 = new esewa(Naam.Text, Addresses.Text, dateTimePicker1.Text, NTraveller.Text, textBox1.Text, textBox2.Text, textBox3.Text, x);
+                        esewa form1 = new esewa(Naam.Text, Addresses.Text, dateTimePicker1.Text, NTraveller.Text, textBox1.Text, textBox2.Text, textBox3.Text);
                         form1.Show();
                         break;
 
