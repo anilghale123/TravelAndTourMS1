@@ -200,7 +200,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(91, 74);
+            this.label7.Location = new System.Drawing.Point(105, 74);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(100, 46);
             this.label7.TabIndex = 3;
