@@ -37,7 +37,6 @@
             this.iconButton7 = new FontAwesome.Sharp.IconButton();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.rjButton2 = new TravelAndTourMS.RJButton();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -210,24 +209,6 @@
             this.label3.TabIndex = 21;
             this.label3.Text = "label3";
             // 
-            // rjButton2
-            // 
-            this.rjButton2.BackColor = System.Drawing.Color.Crimson;
-            this.rjButton2.BackgroundColor = System.Drawing.Color.Crimson;
-            this.rjButton2.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.rjButton2.BorderRadius = 20;
-            this.rjButton2.BorderSize = 0;
-            this.rjButton2.FlatAppearance.BorderSize = 0;
-            this.rjButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton2.ForeColor = System.Drawing.Color.White;
-            this.rjButton2.Location = new System.Drawing.Point(1077, 993);
-            this.rjButton2.Name = "rjButton2";
-            this.rjButton2.Size = new System.Drawing.Size(188, 50);
-            this.rjButton2.TabIndex = 20;
-            this.rjButton2.Text = "Driver Information";
-            this.rjButton2.TextColor = System.Drawing.Color.White;
-            this.rjButton2.UseVisualStyleBackColor = false;
-            // 
             // richTextBox1
             // 
             this.richTextBox1.BackColor = System.Drawing.SystemColors.ControlLightLight;
@@ -286,7 +267,7 @@
             this.rjButton1.FlatAppearance.BorderSize = 0;
             this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton1.ForeColor = System.Drawing.Color.White;
-            this.rjButton1.Location = new System.Drawing.Point(535, 993);
+            this.rjButton1.Location = new System.Drawing.Point(766, 983);
             this.rjButton1.Name = "rjButton1";
             this.rjButton1.Size = new System.Drawing.Size(188, 50);
             this.rjButton1.TabIndex = 13;
@@ -303,7 +284,6 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.rjButton2);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox3);
@@ -333,7 +313,6 @@
         private FontAwesome.Sharp.IconButton iconButton7;
         private Label label4;
         private Label label3;
-        private RJButton rjButton2;
         private RichTextBox richTextBox1;
         private Label label1;
         private PictureBox pictureBox3;
