@@ -209,38 +209,47 @@ namespace TravelAndTourMS
 
         private void dataGridView1_Click(object sender, EventArgs e)
         {
-            id1.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
-         textBox1.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
-            textBox5.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
-            textBox4.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
-            textBox9.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
-            textBox7.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
-            textBox11.Text = dataGridView1.CurrentRow.Cells[9].Value.ToString();
-            textBox10.Text = dataGridView1.CurrentRow.Cells[10].Value.ToString();
-            textBox6.Text = dataGridView1.CurrentRow.Cells[12].Value.ToString();
-            textBox3.Text = dataGridView1.CurrentRow.Cells[13].Value.ToString();
-            textBox2.Text = dataGridView1.CurrentRow.Cells[14].Value.ToString();
-            comboBox1.Text = dataGridView1.CurrentRow.Cells[17].Value.ToString();
+
+            try
+            {
+                id1.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+                textBox1.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+                textBox5.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+                textBox4.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+                textBox9.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
+                textBox7.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
+                textBox11.Text = dataGridView1.CurrentRow.Cells[9].Value.ToString();
+                textBox10.Text = dataGridView1.CurrentRow.Cells[10].Value.ToString();
+                textBox6.Text = dataGridView1.CurrentRow.Cells[12].Value.ToString();
+                textBox3.Text = dataGridView1.CurrentRow.Cells[13].Value.ToString();
+                textBox2.Text = dataGridView1.CurrentRow.Cells[14].Value.ToString();
+                comboBox1.Text = dataGridView1.CurrentRow.Cells[17].Value.ToString();
 
 
 
 
-            MemoryStream ms = new MemoryStream((byte[])dataGridView1.CurrentRow.Cells[6].Value);
-            MemoryStream ms1 = new MemoryStream((byte[])dataGridView1.CurrentRow.Cells[7].Value);
-            MemoryStream ms2 = new MemoryStream((byte[])dataGridView1.CurrentRow.Cells[8].Value);
-            MemoryStream ms3 = new MemoryStream((byte[])dataGridView1.CurrentRow.Cells[11].Value);
-            MemoryStream ms4 = new MemoryStream((byte[])dataGridView1.CurrentRow.Cells[15].Value);
-            MemoryStream ms5 = new MemoryStream((byte[])dataGridView1.CurrentRow.Cells[16].Value);
+                MemoryStream ms = new MemoryStream((byte[])dataGridView1.CurrentRow.Cells[6].Value);
+                MemoryStream ms1 = new MemoryStream((byte[])dataGridView1.CurrentRow.Cells[7].Value);
+                MemoryStream ms2 = new MemoryStream((byte[])dataGridView1.CurrentRow.Cells[8].Value);
+                MemoryStream ms3 = new MemoryStream((byte[])dataGridView1.CurrentRow.Cells[11].Value);
+                MemoryStream ms4 = new MemoryStream((byte[])dataGridView1.CurrentRow.Cells[15].Value);
+                MemoryStream ms5 = new MemoryStream((byte[])dataGridView1.CurrentRow.Cells[16].Value);
 
 
 
-            pictureBox1.Image = Image.FromStream(ms);
-            pictureBox2.Image = Image.FromStream(ms1);
-            pictureBox3.Image = Image.FromStream(ms2);
-            pictureBox4.Image = Image.FromStream(ms3);
-            pictureBox5.Image = Image.FromStream(ms4);
-            pictureBox6.Image = Image.FromStream(ms5);
+                pictureBox1.Image = Image.FromStream(ms);
+                pictureBox2.Image = Image.FromStream(ms1);
+                pictureBox3.Image = Image.FromStream(ms2);
+                pictureBox4.Image = Image.FromStream(ms3);
+                pictureBox5.Image = Image.FromStream(ms4);
+                pictureBox6.Image = Image.FromStream(ms5);
+            }
 
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Error: " + ex.Message + "\n\n" + ex.StackTrace);
+            }
 
 
 
@@ -251,18 +260,31 @@ namespace TravelAndTourMS
 
         private void button8_Click(object sender, EventArgs e)
         {
-            cmd = new SqlCommand("DELETE FROM cab WHERE  id = @id", con);
-            cmd.Parameters.AddWithValue("id", id1.Text);
-            con.Open();
-            cmd.ExecuteNonQuery();
-            con.Close();
-            load_data();
-            pictureBox1.Image = null;
-            //textBox8.Text = "";
-            textBox6.Text = "";
-            //categori.Text = "";
-          //  place.Text = "";
-            id1.Text = "";
+            try
+                {
+                con.Open();
+                cmd = new SqlCommand("DELETE FROM cab WHERE  id = @id", con);
+                cmd.Parameters.AddWithValue("id", id1.Text);
+                con.Open();
+                cmd.ExecuteNonQuery();
+                con.Close();
+                load_data();
+                pictureBox1.Image = null;
+                //textBox8.Text = "";
+                textBox6.Text = "";
+                //categori.Text = "";
+                //  place.Text = "";
+                id1.Text = "";
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Error: " + ex.Message + "\n\n" + ex.StackTrace);
+            }
+
+
+
         }
 
         private void button10_Click(object sender, EventArgs e)
