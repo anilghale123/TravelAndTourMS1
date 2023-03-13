@@ -185,5 +185,12 @@ namespace TravelAndTourMS
 
             }
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            hoteladmin form = new hoteladmin();
+            form.ShowDialog();
+        }
     }
 }

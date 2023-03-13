@@ -197,7 +197,7 @@ namespace TravelAndTourMS
         private void iconButton1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            admin employeeform = new admin();
+            Form1 employeeform = new Form1();
             employeeform.ShowDialog();
         }
 

@@ -114,5 +114,12 @@ namespace TravelAndTourMS
 
             }
         }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            image form = new image();
+            form.ShowDialog();
+        }
     }
 }
