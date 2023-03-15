@@ -89,5 +89,39 @@ namespace TravelAndTourMS
             cabbooking form = new cabbooking(id);
             form.ShowDialog();
         }
+
+        private void iconButton10_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            home form = new home();
+            form.ShowDialog();
+        }
+
+        private void iconButton3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            placeinfo2 form = new placeinfo2();
+            form.ShowDialog();
+        }
+
+        private void iconButton7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void iconButton4_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            hotel form = new hotel();
+            form.ShowDialog();
+        }
+
+        private void iconButton2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            cabs form = new cabs();
+            form.ShowDialog();
+
+        }
     }
 }

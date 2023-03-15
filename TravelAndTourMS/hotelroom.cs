@@ -209,5 +209,41 @@ namespace TravelAndTourMS
             hotelbooking form = new hotelbooking(label16.Text, label1.Text, label4.Text, label15.Text,id);
             form.ShowDialog();
         }
+
+        private void iconButton10_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            home form = new home();
+            form.ShowDialog();
+        }
+
+        private void iconButton3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            placeinfo2 form = new placeinfo2();
+            form.ShowDialog();
+        }
+
+        private void iconButton8_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            aboutus form = new aboutus();
+            form.ShowDialog();
+        }
+
+        private void iconButton4_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            hotel form = new hotel();
+            form.ShowDialog();
+        }
+
+        private void iconButton2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            cabs form = new cabs();
+            form.ShowDialog();
+
+        }
     }
 }
