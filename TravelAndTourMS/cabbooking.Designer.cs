@@ -55,8 +55,6 @@
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -281,8 +279,6 @@
             this.panel1.Controls.Add(this.textBox8);
             this.panel1.Controls.Add(this.comboBox2);
             this.panel1.Controls.Add(this.label15);
-            this.panel1.Controls.Add(this.label14);
-            this.panel1.Controls.Add(this.textBox7);
             this.panel1.Controls.Add(this.label13);
             this.panel1.Controls.Add(this.textBox6);
             this.panel1.Controls.Add(this.label12);
@@ -381,7 +377,7 @@
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(258, 584);
+            this.comboBox2.Location = new System.Drawing.Point(249, 526);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(233, 28);
             this.comboBox2.TabIndex = 49;
@@ -392,32 +388,11 @@
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label15.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label15.Location = new System.Drawing.Point(83, 580);
+            this.label15.Location = new System.Drawing.Point(74, 522);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(167, 28);
             this.label15.TabIndex = 48;
             this.label15.Text = "Number of Days";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label14.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label14.Location = new System.Drawing.Point(83, 444);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(154, 28);
-            this.label14.TabIndex = 46;
-            this.label14.Text = "Driver Number";
-            // 
-            // textBox7
-            // 
-            this.textBox7.BackColor = System.Drawing.SystemColors.Info;
-            this.textBox7.Location = new System.Drawing.Point(258, 444);
-            this.textBox7.Multiline = true;
-            this.textBox7.Name = "textBox7";
-            this.textBox7.PlaceholderText = "Driver Number";
-            this.textBox7.Size = new System.Drawing.Size(233, 35);
-            this.textBox7.TabIndex = 47;
             // 
             // label13
             // 
@@ -468,7 +443,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label9.Location = new System.Drawing.Point(98, 507);
+            this.label9.Location = new System.Drawing.Point(89, 449);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(163, 28);
             this.label9.TabIndex = 40;
@@ -477,7 +452,7 @@
             // textBox4
             // 
             this.textBox4.BackColor = System.Drawing.SystemColors.Info;
-            this.textBox4.Location = new System.Drawing.Point(267, 507);
+            this.textBox4.Location = new System.Drawing.Point(258, 449);
             this.textBox4.Multiline = true;
             this.textBox4.Name = "textBox4";
             this.textBox4.PlaceholderText = "Vehicle Number";
@@ -719,8 +694,6 @@
         private DateTimePicker dateTimePicker1;
         private Label label8;
         private ComboBox comboBox1;
-        private Label label14;
-        private TextBox textBox7;
         private Label label13;
         private TextBox textBox6;
         private Label label12;

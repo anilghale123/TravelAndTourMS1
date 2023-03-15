@@ -174,7 +174,7 @@ namespace TravelAndTourMS
 
 
 
-        string query = "INSERT INTO cabBooking (Name,PickUpLocation,Destination,StartTime,EndTime,Status,SeatCapacity,NumPassenger,CitizenNum,VehicleType,VehicleNum,BookingOption,Price,TotalPrice,PaymentOption,brand,model,driverNum) VALUES  (@Name,@PickUpLocation,@Destination,@StartTime,@EndTime,'Booked',@SeatCapacity,@NumPassenger,@CitizenNum,@VehicleType,@VehicleNum,@BookingOption,@Price,@TotalPrice,@PaymentOption,@brand,@model,@driverNum)";
+        string query = "INSERT INTO cabBooking (Name,PickUpLocation,Destination,StartTime,EndTime,Status,SeatCapacity,NumPassenger,CitizenNum,VehicleType,VehicleNum,BookingOption,Price,TotalPrice,PaymentOption,brand,model) VALUES  (@Name,@PickUpLocation,@Destination,@StartTime,@EndTime,'Booked',@SeatCapacity,@NumPassenger,@CitizenNum,@VehicleType,@VehicleNum,@BookingOption,@Price,@TotalPrice,@PaymentOption,@brand,@model)";
                 SqlCommand cmd = new SqlCommand(query, con);
 
                 cmd.Parameters.AddWithValue("@Name", Naam.Text);
@@ -203,7 +203,7 @@ namespace TravelAndTourMS
                 cmd.Parameters.AddWithValue("@PaymentOption", comboBox1.Text);
                 cmd.Parameters.AddWithValue("@brand", textBox8.Text);
                 cmd.Parameters.AddWithValue("@model", textBox9.Text);
-                cmd.Parameters.AddWithValue("@driverNum", textBox7.Text);
+              
 
 
                 // Assign the generated BookingID value
