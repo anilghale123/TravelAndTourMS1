@@ -104,6 +104,9 @@
             this.iconButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iconButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton2.UseVisualStyleBackColor = false;
+            this.iconButton2.Click += new System.EventHandler(this.iconButton2_Click);
+            this.iconButton2.MouseEnter += new System.EventHandler(this.iconButton2_MouseEnter);
+            this.iconButton2.MouseLeave += new System.EventHandler(this.iconButton2_MouseLeave);
             // 
             // iconButton4
             // 
@@ -126,6 +129,8 @@
             this.iconButton4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iconButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton4.UseVisualStyleBackColor = false;
+            this.iconButton4.MouseEnter += new System.EventHandler(this.iconButton4_MouseEnter);
+            this.iconButton4.MouseLeave += new System.EventHandler(this.iconButton4_MouseLeave);
             // 
             // iconButton10
             // 
@@ -148,6 +153,8 @@
             this.iconButton10.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton10.UseVisualStyleBackColor = false;
             this.iconButton10.Click += new System.EventHandler(this.iconButton10_Click);
+            this.iconButton10.MouseEnter += new System.EventHandler(this.iconButton10_MouseEnter);
+            this.iconButton10.MouseLeave += new System.EventHandler(this.iconButton10_MouseLeave);
             // 
             // iconButton8
             // 
@@ -171,6 +178,8 @@
             this.iconButton8.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton8.UseVisualStyleBackColor = false;
             this.iconButton8.Click += new System.EventHandler(this.iconButton8_Click);
+            this.iconButton8.MouseEnter += new System.EventHandler(this.iconButton8_MouseEnter);
+            this.iconButton8.MouseLeave += new System.EventHandler(this.iconButton8_MouseLeave);
             // 
             // iconButton3
             // 
@@ -194,6 +203,8 @@
             this.iconButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton3.UseVisualStyleBackColor = false;
             this.iconButton3.Click += new System.EventHandler(this.iconButton3_Click);
+            this.iconButton3.MouseEnter += new System.EventHandler(this.iconButton3_MouseEnter);
+            this.iconButton3.MouseLeave += new System.EventHandler(this.iconButton3_MouseLeave);
             // 
             // hotel
             // 
