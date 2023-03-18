@@ -55,7 +55,7 @@ namespace TravelAndTourMS
             dataGridView1.Columns["cab3"].Visible = false;
             dataGridView1.Columns["feature"].Visible = false;
         //    dataGridView1.Columns["description"].Visible = false;
-            dataGridView1.Columns["driverinfo"].Visible = false;
+         //   dataGridView1.Columns["driverinfo"].Visible = false;
             dataGridView1.Columns["driver"].Visible = false;
             dataGridView1.Columns["offerinfo"].Visible = false;
             dataGridView1.Columns["offerprice"].Visible = false;

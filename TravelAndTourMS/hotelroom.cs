@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -150,7 +151,7 @@ namespace TravelAndTourMS
 
             // Assign the data to the controls on Form2
             label1.Text = hotel;
-            label8.Text = room1price;
+            
             // label1.Text = price;
             richTextBox1.Text = description;
             pictureBox1.Image = picture1;
@@ -158,21 +159,21 @@ namespace TravelAndTourMS
             pictureBox3.Image = picture3;
             pictureBox4.Image = picture4;
 
-            pictureBox5.Image = room1;
-            label15.Text = room1price;
-            label4.Text = room1name;
+            pictureBox8.Image = room1;
+            label8.Text = room1price;
+            label7.Text = room1name;
 
-            pictureBox6.Image = room2;
-            label13.Text = room2price;
-            label5.Text = room2name;
+            pictureBox7.Image = room2;
+            label11.Text = room2price;
+            label6.Text = room2name;
 
-            pictureBox7.Image = room3;
-            label11.Text = room3price;
-            label6.Text = room3name;
+            pictureBox6.Image = room3;
+            label13.Text = room3price;
+            label5.Text = room3name;
 
-            pictureBox8.Image = room4;
-            label8.Text = room4price;
-            label7.Text = room4name;
+            pictureBox5.Image = room4;
+            label15.Text = room4price;
+            label4.Text = room4name;
 
             label16.Text = place;
         }
@@ -244,6 +245,66 @@ namespace TravelAndTourMS
             cabs form = new cabs();
             form.ShowDialog();
 
+        }
+
+        private void iconButton10_MouseEnter(object sender, EventArgs e)
+        {
+            iconButton10.BackColor = Color.Orange;
+        }
+
+        private void iconButton10_MouseLeave(object sender, EventArgs e)
+        {
+            iconButton10.BackColor = Color.Orange;
+        }
+
+        private void iconButton3_MouseEnter(object sender, EventArgs e)
+        {
+            iconButton3.BackColor = Color.Orange;
+        }
+
+        private void iconButton3_MouseLeave(object sender, EventArgs e)
+        {
+            iconButton3.BackColor = Color.Transparent;
+        }
+
+        private void iconButton7_MouseEnter(object sender, EventArgs e)
+        {
+            iconButton7.BackColor = Color.Orange;
+        }
+
+        private void iconButton7_MouseLeave(object sender, EventArgs e)
+        {
+            iconButton7.BackColor = Color.Transparent;
+        }
+
+        private void iconButton8_MouseEnter(object sender, EventArgs e)
+        {
+            iconButton8.BackColor = Color.Orange;
+        }
+
+        private void iconButton8_MouseLeave(object sender, EventArgs e)
+        {
+            iconButton8.BackColor = Color.Transparent;
+        }
+
+        private void iconButton4_MouseEnter(object sender, EventArgs e)
+        {
+            iconButton4.BackColor = Color.Orange;
+        }
+
+        private void iconButton4_MouseLeave(object sender, EventArgs e)
+        {
+            iconButton4.BackColor = Color.Transparent;
+        }
+
+        private void iconButton2_MouseEnter(object sender, EventArgs e)
+        {
+            iconButton2.BackColor = Color.Orange;
+        }
+
+        private void iconButton2_MouseLeave(object sender, EventArgs e)
+        {
+            iconButton2.BackColor = Color.Transparent;
         }
     }
 }

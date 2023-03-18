@@ -11,7 +11,7 @@ namespace TravelAndTourMS
             // To customize application configuration such as set high DPI settings or default font,
             //see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new home());
+            Application.Run(new Form1());
 
             /*    static void Main()
                 {

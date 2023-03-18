@@ -257,5 +257,16 @@ namespace TravelAndTourMS
             hoteladmin form = new hoteladmin();
             form.ShowDialog();
         }
+
+        private void iconButton10_Click(object sender, EventArgs e)
+        {
+            
+
+        }
+
+        private void pictureBox9_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

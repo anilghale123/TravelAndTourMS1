@@ -95,7 +95,7 @@ namespace TravelAndTourMS
 
 
 
-                string query = "INSERT INTO TBook (Naam,Addresses,Place,PhoneNum,NTraveller,TravelDate) VALUES (@name, @address,@Place,@phoneNum,@numTravelers, @travelDate )";
+                string query = "INSERT INTO tourBooking (Naam,Addresses,Place,PhoneNum,NTraveller,TravelDate,Price,TotalPrice,PaymentOption) VALUES (@name, @address,@Place,@phoneNum,@numTravelers, @travelDate, @Price, @TotalPrice, @PaymentOption )";
                 SqlCommand cmd = new SqlCommand(query, con);
                 
                 cmd.Parameters.AddWithValue("@phoneNum", PhoneNum.Text);
@@ -104,6 +104,12 @@ namespace TravelAndTourMS
                 cmd.Parameters.AddWithValue("@name", Naam.Text);
                 cmd.Parameters.AddWithValue("@address", Addresses.Text);
                 cmd.Parameters.AddWithValue("@numTravelers", NTraveller.Text);
+
+                cmd.Parameters.AddWithValue("@Price", textBox1.Text);
+                cmd.Parameters.AddWithValue("@TotalPrice", textBox2.Text);
+                cmd.Parameters.AddWithValue("@PaymentOption", comboBox1.Text);
+
+
                 cmd.ExecuteNonQuery();
 
 

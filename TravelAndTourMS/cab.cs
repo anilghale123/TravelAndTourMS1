@@ -152,5 +152,48 @@ namespace TravelAndTourMS
             form.Show();
 
         }
+
+        private void iconButton10_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form1 form = new Form1();
+            form.ShowDialog();
+        }
+
+        private void iconButton3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            image form = new image();
+            form.ShowDialog();
+        }
+
+        private void iconButton4_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            hoteladmin form = new hoteladmin();
+            form.ShowDialog();
+        }
+
+        private void iconButton2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            cab form = new cab();
+            form.ShowDialog();
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            User form = new User();
+            form.ShowDialog();
+
+        }
+
+        private void iconButton5_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Headmin form = new Headmin();
+            form.ShowDialog();
+        }
     }
 }

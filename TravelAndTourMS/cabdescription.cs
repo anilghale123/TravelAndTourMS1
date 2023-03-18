@@ -123,5 +123,70 @@ namespace TravelAndTourMS
             form.ShowDialog();
 
         }
+
+        private void iconButton10_MouseEnter(object sender, EventArgs e)
+        {
+            iconButton10.BackColor = Color.Orange;
+        }
+
+        private void iconButton10_MouseLeave(object sender, EventArgs e)
+        {
+            iconButton10.BackColor = Color.Transparent;
+        }
+
+        private void iconButton3_MouseEnter(object sender, EventArgs e)
+        {
+            iconButton3.BackColor = Color.Orange;
+        }
+
+        private void iconButton10_DragEnter(object sender, DragEventArgs e)
+        {
+
+        }
+
+        private void iconButton3_MouseLeave(object sender, EventArgs e)
+        {
+            iconButton3.BackColor = Color.Transparent;
+        }
+
+        private void iconButton7_MouseEnter(object sender, EventArgs e)
+        {
+            iconButton7.BackColor = Color.Orange;
+        }
+
+        private void iconButton7_MouseLeave(object sender, EventArgs e)
+        {
+            iconButton7.BackColor = Color.Transparent;
+        }
+
+        private void iconButton8_MouseEnter(object sender, EventArgs e)
+        {
+            iconButton8.BackColor = Color.Orange;
+        }
+
+        private void iconButton8_MouseLeave(object sender, EventArgs e)
+        {
+            iconButton8.BackColor = Color.Transparent;
+        }
+
+        private void iconButton4_MouseEnter(object sender, EventArgs e)
+        {
+            iconButton4.BackColor = Color.Orange;
+        }
+
+        private void iconButton4_MouseLeave(object sender, EventArgs e)
+        {
+            iconButton4.BackColor = Color.Transparent;
+        }
+
+        private void iconButton2_MouseEnter(object sender, EventArgs e)
+        {
+            iconButton2.BackColor = Color.Orange;
+        }
+
+        private void iconButton2_MouseLeave(object sender, EventArgs e)
+        {
+            iconButton2.BackColor = Color.Transparent;
+        }
     }
 }

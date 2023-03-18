@@ -48,20 +48,20 @@ namespace TravelAndTourMS
                 count++;
             }
             tc = count;
-            label7.Text = count.ToString();
+           // label8.Text = count.ToString();
             cmd.Dispose();
             read.Close();
 
 
 
 
-            cmd = new SqlCommand("Select * from TBook", con);
+            cmd = new SqlCommand("Select * from tourBooking", con);
             read = cmd.ExecuteReader();
             while (read.Read())
             {
                 count1++;
             }
-            label10.Text = count1.ToString();
+           // label10.Text = count1.ToString();
             read.Close();
 
             cmd = new SqlCommand("Select * from cabBooking", con);
@@ -70,12 +70,12 @@ namespace TravelAndTourMS
             {
                 count2++;
             }
-            label8.Text = count2.ToString();
+            //label8.Text = count2.ToString();
             read.Close();
 
             // SqlCommand cmd;
             //  SqlDataReader read;
-            decimal totalPrice = 0;
+            decimal totalPrice = 0,tp =0,tq = 0,totalRevenue = 0;
             string connectionString = (@"Data Source =.\SQLEXPRESS01; Initial Catalog= TravelandTour ; Integrated Security = True; ");
             string sql = "SELECT SUM(TotalPrice) FROM cabBooking WHERE YEAR(StartTime) = 2023";
             using (SqlConnection con = new SqlConnection(connectionString))
@@ -86,14 +86,51 @@ namespace TravelAndTourMS
                 if (read.Read() && !read.IsDBNull(0))
                 {
                     totalPrice = read.GetDecimal(0);
+                    
                 }
                 read.Close();
+                con.Close();
             }
 
-            label3.Text = totalPrice.ToString("N2");
+            label3.Text = totalPrice.ToString("N1");
+
+            string sq = "SELECT SUM(TotalPrice) FROM hotelBooking WHERE YEAR(CheckInDate) = 2023";
+            using (SqlConnection con = new SqlConnection(connectionString))
+            {
+                con.Open();
+                cmd = new SqlCommand(sq, con);
+                read = cmd.ExecuteReader();
+                if (read.Read() && !read.IsDBNull(0))
+                {
+                    tp = read.GetDecimal(0);
+                }
+                read.Close();
+                con.Close();
+            }
+
+            label7.Text = tp.ToString("N1");
+            
 
 
+            string sqm = "SELECT SUM(TotalPrice) FROM tourBooking WHERE YEAR(TravelDate) = 2023";
+            using (SqlConnection con = new SqlConnection(connectionString))
+            {
+                con.Open();
+                cmd = new SqlCommand(sqm, con);
+                read = cmd.ExecuteReader();
+                if (read.Read() && !read.IsDBNull(0))
+                {
+                    tq = read.GetDecimal(0);
+                }
+                read.Close();
+                con.Close();
+            }
 
+            label8.Text = tq.ToString("N1");
+
+
+            totalRevenue = totalPrice + tp + tq;
+            label15.Text = totalRevenue.ToString();
 
 
             // Create a new PieChart control and add it to the form
@@ -103,35 +140,30 @@ namespace TravelAndTourMS
 
             Panel panel = new Panel();
             panel.Controls.Add(chart);
-            panel.Location = new Point(1300, 450); // set the location of the panel
+            panel.Location = new Point(1100, 450); // set the location of the panel
             panel.Size = new Size(300, 300); // set the size of the panel
             this.Controls.Add(panel);
 
             // Set the data for the chart
             chart.Series.Add(new PieSeries
             {
-                Title = "Upasana Expense ",
-                Values = new ChartValues<decimal> {15 },
+                Title = "Total Hotel Booked ",
+                Values = new ChartValues<decimal> {tc },
                 DataLabels = true
             });
             chart.Series.Add(new PieSeries
             {
-                Title = "Sova Expense",
-                Values = new ChartValues<decimal> { tc },
+                Title = "Total Cab Booked",
+                Values = new ChartValues<decimal> { count2 },
                 DataLabels = true
             });
             chart.Series.Add(new PieSeries
             {
-                Title = "Rinjha Expense",
-                Values = new ChartValues<double> { 30 },
+                Title = "Total Tour Booked",
+                Values = new ChartValues<double> { count1 },
                 DataLabels = true
             });
-            chart.Series.Add(new PieSeries
-            {
-                Title = "Srijana Expense",
-                Values = new ChartValues<double> { 15 },
-                DataLabels = true
-            });
+           
 
 
 
@@ -183,7 +215,7 @@ namespace TravelAndTourMS
 
         private void iconButton10_MouseEnter(object sender, EventArgs e)
         {
-            iconButton10.BackColor = Color.Orange;
+            iconButton10.BackColor = Color.DarkOrange;
         }
 
         private void iconButton10_MouseLeave(object sender, EventArgs e)
@@ -243,6 +275,28 @@ namespace TravelAndTourMS
 
         private void panel3_Paint(object sender, PaintEventArgs e)
         {
+
+        }
+
+        private void iconButton1_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            User form = new User();
+            form.ShowDialog();
+        }
+
+        private void iconButton5_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Headmin form = new Headmin();
+            form.ShowDialog();
+        }
+
+        private void iconButton6_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            admin form = new admin();
+            form.ShowDialog();
 
         }
     }

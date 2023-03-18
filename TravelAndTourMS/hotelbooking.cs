@@ -64,8 +64,11 @@ namespace TravelAndTourMS
                 cmd.Parameters.AddWithValue("@Address", Addresses.Text);
                 cmd.Parameters.AddWithValue("@PhoneNum", PhoneNum.Text);
                 cmd.Parameters.AddWithValue("@Place", textBox3.Text);
-                cmd.Parameters.AddWithValue("@CheckInDate",dateTimePicker1.Text);
-                cmd.Parameters.AddWithValue("@CheckOutDate", dateTimePicker2.Text);
+                string formattedStartTime = dateTimePicker1.Value.ToString("yyyy-MM-dd HH:mm:ss");
+                cmd.Parameters.AddWithValue("@CheckInDate", formattedStartTime);
+
+                string formattedEndTime = dateTimePicker2.Value.ToString("yyyy-MM-dd HH:mm:ss");
+                cmd.Parameters.AddWithValue("@CheckOutDate", formattedEndTime);
                 cmd.Parameters.AddWithValue("@NumOfDays", textBox5.Text);
                 cmd.Parameters.AddWithValue("@Price", textBox1.Text);
                 cmd.Parameters.AddWithValue("@TotalPrice", textBox2.Text);
@@ -79,36 +82,36 @@ namespace TravelAndTourMS
                 //MessageBox.Show("Booking Successfull");
 
                 con.Close();
+                switch (selectedItem)
+                {
+                    case "esewa":
+                        esewa1 form1 = new esewa1(Naam.Text, Addresses.Text, NTraveller.Text, PhoneNum.Text, textBox4.Text, textBox3.Text, dateTimePicker1.Text, dateTimePicker2.Text, textBox5.Text, textBox1.Text, textBox2.Text, comboBox1.Text, id);
+                        form1.Show();
+                        break;
+
+                        /*case "cash":
+                            qr form2 = new qr();
+                            form2.Show();
+                            break;*/
+                        // Add more cases as needed
+                }
             }
 
             catch (Exception ex)
             {
 
-                MessageBox.Show("Error:" + ex.InnerException);
+                MessageBox.Show("Error: " + ex.Message + "\n\n" + ex.StackTrace);
             }
 
 
-           
 
-            switch (selectedItem)
-            {
-                case "esewa":
-                    esewa1 form1 = new esewa1(Naam.Text, Addresses.Text, NTraveller.Text, PhoneNum.Text,  textBox4.Text,  textBox3.Text,dateTimePicker1.Text,dateTimePicker2.Text  ,textBox5.Text, textBox1.Text, textBox2.Text,comboBox1.Text, id);
-                    form1.Show();
-                    break;
 
-                /*case "cash":
-                    qr form2 = new qr();
-                    form2.Show();
-                    break;*/
-                    // Add more cases as needed
-            }
 
 
 
         }
 
-       
+
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {

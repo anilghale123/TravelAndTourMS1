@@ -111,6 +111,8 @@
             this.iconButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton4.UseVisualStyleBackColor = true;
             this.iconButton4.Click += new System.EventHandler(this.iconButton4_Click);
+            this.iconButton4.MouseEnter += new System.EventHandler(this.iconButton4_MouseEnter);
+            this.iconButton4.MouseLeave += new System.EventHandler(this.iconButton4_MouseLeave);
             // 
             // iconButton2
             // 
@@ -133,6 +135,8 @@
             this.iconButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton2.UseVisualStyleBackColor = true;
             this.iconButton2.Click += new System.EventHandler(this.iconButton2_Click);
+            this.iconButton2.MouseEnter += new System.EventHandler(this.iconButton2_MouseEnter);
+            this.iconButton2.MouseLeave += new System.EventHandler(this.iconButton2_MouseLeave);
             // 
             // iconButton3
             // 
@@ -155,6 +159,8 @@
             this.iconButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton3.UseVisualStyleBackColor = true;
             this.iconButton3.Click += new System.EventHandler(this.iconButton3_Click);
+            this.iconButton3.MouseEnter += new System.EventHandler(this.iconButton3_MouseEnter);
+            this.iconButton3.MouseLeave += new System.EventHandler(this.iconButton3_MouseLeave);
             // 
             // iconButton8
             // 
@@ -177,6 +183,8 @@
             this.iconButton8.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton8.UseVisualStyleBackColor = true;
             this.iconButton8.Click += new System.EventHandler(this.iconButton8_Click);
+            this.iconButton8.MouseEnter += new System.EventHandler(this.iconButton8_MouseEnter);
+            this.iconButton8.MouseLeave += new System.EventHandler(this.iconButton8_MouseLeave);
             // 
             // iconButton7
             // 
@@ -198,6 +206,8 @@
             this.iconButton7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iconButton7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton7.UseVisualStyleBackColor = true;
+            this.iconButton7.MouseEnter += new System.EventHandler(this.iconButton7_MouseEnter);
+            this.iconButton7.MouseLeave += new System.EventHandler(this.iconButton7_MouseLeave);
             // 
             // iconButton10
             // 
@@ -210,16 +220,18 @@
             this.iconButton10.IconColor = System.Drawing.Color.White;
             this.iconButton10.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton10.Location = new System.Drawing.Point(3, 27);
+            this.iconButton10.Location = new System.Drawing.Point(3, 3);
             this.iconButton10.Name = "iconButton10";
             this.iconButton10.Padding = new System.Windows.Forms.Padding(20, 0, 10, 0);
-            this.iconButton10.Size = new System.Drawing.Size(247, 57);
+            this.iconButton10.Size = new System.Drawing.Size(247, 81);
             this.iconButton10.TabIndex = 8;
             this.iconButton10.Text = "Home";
             this.iconButton10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iconButton10.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton10.UseVisualStyleBackColor = false;
             this.iconButton10.Click += new System.EventHandler(this.iconButton10_Click);
+            this.iconButton10.MouseEnter += new System.EventHandler(this.iconButton10_MouseEnter);
+            this.iconButton10.MouseLeave += new System.EventHandler(this.iconButton10_MouseLeave);
             // 
             // label12
             // 
