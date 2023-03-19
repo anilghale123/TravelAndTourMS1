@@ -594,7 +594,7 @@
             this.iconButton5.Location = new System.Drawing.Point(23, 558);
             this.iconButton5.Name = "iconButton5";
             this.iconButton5.Padding = new System.Windows.Forms.Padding(20, 0, 10, 0);
-            this.iconButton5.Size = new System.Drawing.Size(303, 75);
+            this.iconButton5.Size = new System.Drawing.Size(325, 75);
             this.iconButton5.TabIndex = 204;
             this.iconButton5.Text = "Admin Management";
             this.iconButton5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -616,7 +616,7 @@
             this.iconButton1.Location = new System.Drawing.Point(23, 501);
             this.iconButton1.Name = "iconButton1";
             this.iconButton1.Padding = new System.Windows.Forms.Padding(20, 0, 10, 0);
-            this.iconButton1.Size = new System.Drawing.Size(303, 62);
+            this.iconButton1.Size = new System.Drawing.Size(325, 62);
             this.iconButton1.TabIndex = 203;
             this.iconButton1.Text = "User Management";
             this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -638,7 +638,7 @@
             this.iconButton2.Location = new System.Drawing.Point(23, 438);
             this.iconButton2.Name = "iconButton2";
             this.iconButton2.Padding = new System.Windows.Forms.Padding(20, 0, 10, 0);
-            this.iconButton2.Size = new System.Drawing.Size(303, 65);
+            this.iconButton2.Size = new System.Drawing.Size(325, 65);
             this.iconButton2.TabIndex = 201;
             this.iconButton2.Text = "Cab Management";
             this.iconButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -660,7 +660,7 @@
             this.iconButton4.Location = new System.Drawing.Point(23, 378);
             this.iconButton4.Name = "iconButton4";
             this.iconButton4.Padding = new System.Windows.Forms.Padding(20, 0, 10, 0);
-            this.iconButton4.Size = new System.Drawing.Size(303, 65);
+            this.iconButton4.Size = new System.Drawing.Size(325, 65);
             this.iconButton4.TabIndex = 202;
             this.iconButton4.Text = "Hotel Management";
             this.iconButton4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -682,7 +682,7 @@
             this.iconButton3.Location = new System.Drawing.Point(23, 328);
             this.iconButton3.Name = "iconButton3";
             this.iconButton3.Padding = new System.Windows.Forms.Padding(20, 0, 10, 0);
-            this.iconButton3.Size = new System.Drawing.Size(303, 57);
+            this.iconButton3.Size = new System.Drawing.Size(325, 57);
             this.iconButton3.TabIndex = 200;
             this.iconButton3.Text = "Tour Management";
             this.iconButton3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -700,10 +700,10 @@
             this.iconButton10.IconColor = System.Drawing.Color.White;
             this.iconButton10.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton10.Location = new System.Drawing.Point(23, 279);
+            this.iconButton10.Location = new System.Drawing.Point(23, 265);
             this.iconButton10.Name = "iconButton10";
             this.iconButton10.Padding = new System.Windows.Forms.Padding(20, 0, 10, 0);
-            this.iconButton10.Size = new System.Drawing.Size(303, 57);
+            this.iconButton10.Size = new System.Drawing.Size(325, 68);
             this.iconButton10.TabIndex = 199;
             this.iconButton10.Text = "Dashboard";
             this.iconButton10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
