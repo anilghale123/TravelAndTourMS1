@@ -12,8 +12,11 @@ using DnsClient;
 using System.Windows.Media;
 using System.Drawing.Text;
 
-namespace TravelAndTourMS
-{
+
+
+
+ namespace TravelAndTourMS
+  {
     public partial class placeinfo2 : Form
     {
         private const BorderStyle fixedSingle = BorderStyle.FixedSingle;
@@ -263,6 +266,7 @@ namespace TravelAndTourMS
                     adapter.Fill(dataTable);
 
                 }
+
                 // set the initial location of the first PictureBox
                 int x = 300;
                 // set the initial y position to 120
